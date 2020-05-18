@@ -401,10 +401,4 @@ body.custom-background { background-color: #ffffff; }
                                 <p id = "learn_more">
                                     <a id="link" href="">Click here to learn more!</a>
                                 </p>
-                            
-</main></div></div><div class="feedback_band">
-        <div class="innertube">
-            <div>Is this page useful?&nbsp;&nbsp;&nbsp;<a class="useful-yes">Yes</a>&nbsp;&nbsp;&nbsp;<a class="useful-no">No</a></div>
-            <div><a class="useful-yes">Is there anything wrong with this page?</a></div>
-        </div>
-    </div>Error: Cannot create object
+
