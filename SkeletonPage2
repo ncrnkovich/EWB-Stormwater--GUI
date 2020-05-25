@@ -271,7 +271,17 @@ body.custom-background { background-color: #ffffff; }
                             	color: black;
                             	cursor: pointer;
                             }
-                            
+                            #alert {
+				visibility: hidden;
+				background: #bd222e;
+				padding: 10px 20px 10px 20px;
+				width: 400px;
+				border-radius: 20px;
+				float: left;
+				margin-left: 300px;
+				font-size: 16px;
+				color: white;
+				}
                             #after_submit1 {
                             	visibility: hidden;
                             	background: #bd222e;
@@ -455,9 +465,11 @@ body.custom-background { background-color: #ffffff; }
                                 <p id = "learn_more">
                                     <a id="link" href="">Click here to learn more!</a>
                                 </p>
+				</div>
                                 
                             <div id = "after_submit2">
                                 <b> <p id = "option_result2"></p> </b>
                                 <p id = "learn_more">
                                     <a id="link" href="">Click here to learn more!</a>
                                 </p>
+				</div>
