@@ -1,0 +1,133 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <!-- Leaflet CSS file-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css" />
+    <!-- Leaflet JavaScript file-->
+    <link rel="stylesheet" href="leaflet-measure.css">
+
+    <!-- Geocoding Extensions -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css" />
+    <script src="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js"></script>
+
+    <style>
+        body {
+            font-size: 14px;
+            font-family: Helvetica, sans-serif;
+            font-weight: 400;
+            line-height: 1;
+            /* controls color of all text */
+            color: rgb(0, 0, 0);
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        body {
+            margin: 0 20px 20px;
+        }
+        
+        h1,
+        h2 {
+            margin: 20px 0 0;
+            font-size: 1.4em;
+            font-weight: normal;
+            line-height: 1;
+        }
+        
+        h1 {
+            display: inline-block;
+            font-size: 1.4em;
+        }
+        
+        h2 {
+            font-size: 1.1em;
+        }
+        
+        pre {
+            line-height: 1.5em;
+        }
+        
+        p.github {
+            display: inline-block;
+            margin: 20px 0 0 20px;
+            font-size: 1.2em;
+        }
+        
+        a,
+        a:visited,
+        a:hover,
+        a:active,
+        a:focus {
+            text-decoration: none;
+        }
+        
+        #map {
+            height: 500px;
+            margin: 20px 20px 0 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- places the map in the webpage-->
+    <div id="mapid" style="width: 600px; height: 400px;"></div>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <!-- Add Leaflet Measuring tool -->
+    <script src="leaflet-measure.js"></script>
+    <script>
+        // this is JavaScript now, embedded in the HTML file instead of being separate
+
+        // Creates the map element, names it "mapid" and sets the view. Those are the coords of downtown SB.
+        // Adds Mapbox Streets tile layer
+        const mymap = L.map('mapid', {
+            measureControl: true, // Enables measuring
+            center: [41.68, -86.25], // Coordinates of DT south bend
+            //sets start/min/max zoom level for the layer. May need to change to work on individual properties
+            zoom: 13,
+            minZoom: 10,
+            maxZoom: 25,
+            doubleClickZoom: true, //useful UI settings
+            boxZoom: true, // can zoom by holding shift and dragging box with cursor
+
+        });
+
+
+        // Add satellite layer to map
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            // mapbox/streets-v11 tiles from Mapbox's Static Tiles API
+            // Attribution gives the copyright stuff at the bottom of the map. Important since this is for the government and we don't want them to get sued.
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            // this id specifies the type of layer. Satellite view with location tiles
+            id: 'mapbox/satellite-streets-v10',
+            // id: 'mapbox/streets-v11',
+            tileSize: 512,
+            // API automatically returns 512x512 tiles, need to specify tile size and offset zoom
+            zoomOffset: -1,
+            maxZoom: 25
+        }).addTo(mymap);
+
+        // Add geocoding layers
+        const search = new GeoSearch.GeoSearchCOntrol({
+            provider: new GeoSearch.OpenStreetMapProvider()
+        });
+        mymap.addControl(search);
+
+
+
+        //create popup marker
+        var popup = L.popup()
+            //control where it is on map with Latitude/longitude
+            .setLatLng([41.68, -86.25])
+            .setContent("Welcome to South Bend!")
+            .openOn(mymap) //places on the map called "mymap"
+            //openOn automatically closes previously opened popup when opening new one
+    </script>
+
+</body>
+
+</html>
