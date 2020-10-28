@@ -367,7 +367,7 @@
         j = (0, i.default)(m.areaPopupTemplate, y);
     L.Control.Measure = L.Control.extend({
         _className: "leaflet-control-measure",
-        options: { units: {}, position: "topright", primaryLengthUnit: "feet", secondaryLengthUnit: "miles", primaryAreaUnit: "acres", activeColor: "#ABE67E", completedColor: "#C8F2BE", captureZIndex: 1e4, popupOptions: { className: "leaflet-measure-resultpopup", autoPanPadding: [10, 10] } },
+        options: { units: {}, position: "topright", primaryLengthUnit: "feet", secondaryLengthUnit: "miles", primaryAreaUnit: "sqfeet", activeColor: "#ABE67E", completedColor: "#C8F2BE", captureZIndex: 1e4, popupOptions: { className: "leaflet-measure-resultpopup", autoPanPadding: [10, 10] } },
         initialize: function(e) {
             L.setOptions(this, e);
             var t = this.options,
