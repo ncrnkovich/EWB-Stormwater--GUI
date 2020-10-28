@@ -349,49 +349,49 @@ body.custom-background { background-color: #ffffff; }
 				    }else if (question1<=200){
 				       option[1]++; 
 				    }else{
-					option[2]++;
+						option[2]++;
 				    }
 
 					if (question2<100) {
 						option[0]++;
 				    }else if(question2>100){
-					option[1]++;
+						option[1]++;
 				    }else{
-					option[2]++;
+						option[2]++;
 				    }
 
 					if (question3 <100) {
 						option[0]++;
 				    }else if(question3 >100){
-					option[1]++;
+						option[1]++;
 				    }else{
-					option[2]++;
+						option[2]++;
 				    }
 
 					if (question4 == "A") {
 						option[0]++;
 				    }else if(question4 == "B"){
-					option[1]++;
+						option[1]++;
 				    }else{
-					option[2]++;
+						option[2]++;
 				    }
 
 				    if (question5 == "A") {
 						option[0]++;
 				    }else if(question5 == "B"){
-					option[1]++;
+						option[1]++;
 				    }else{
-					option[2]++;
+						option[2]++;
 				    }
 
 				// CALCULATE RESULT (which option with the most points)
 					var result = option[0];
 					var resultNum = 0;
 					for (i = 0; i < numQuestions; i++) {
-					if (option[i]>result){
-					    result = option[i];
-					    resultNum = i;
-					}
+						if (option[i]>result){
+					    	result = option[i];
+					   	 resultNum = i;
+						}
 				    }
 
 				// DISPLAY results
@@ -400,15 +400,15 @@ body.custom-background { background-color: #ffffff; }
 				    var optionLinks = ["https://quizlet.com/", "https://nd.edu", "https://www.google.com/"];
 
 				    if (isNaN(question1) || isNaN(question2) ||isNaN(question3)){
-					document.getElementById("alert").style.visibility = "visible";
-					document.getElementById("after_submit").style.visibility = "hidden";
+						document.getElementById("alert").style.visibility = "visible";
+						document.getElementById("after_submit").style.visibility = "hidden";
 				    } else {
-					document.getElementById("after_submit").style.visibility = "visible";
-					document.getElementById("option_result1").innerHTML = "1. Option " + (resultNum + 1);
-					document.getElementById("option_result2").innerHTML = "2. Option " + (resultNum + 1);
-					document.getElementById("option_result3").innerHTML = "3. Option " + (resultNum + 1);
-					document.getElementById("link").href = optionLinks[resultNum];
-					document.getElementById("alert").style.visibility = "hidden";
+						document.getElementById("after_submit").style.visibility = "visible";
+						document.getElementById("option_result1").innerHTML = "1. Option " + (resultNum + 1);
+						document.getElementById("option_result2").innerHTML = "2. Option " + (resultNum + 1);
+						document.getElementById("option_result3").innerHTML = "3. Option " + (resultNum + 1);
+						document.getElementById("link").href = optionLinks[resultNum];
+						document.getElementById("alert").style.visibility = "hidden";
 				    }
 
 				    }
