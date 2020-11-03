@@ -43,6 +43,7 @@
 }
 
 .leaflet-control-measure {
+    /* CHANGE THE DIMENSIONS OF THE MEASURE TOOL */
     max-width: 280px;
     background: #fff
 }
@@ -70,6 +71,7 @@
 
 .leaflet-touch .leaflet-control-measure .leaflet-control-measure-toggle,
 .leaflet-touch .leaflet-control-measure .leaflet-control-measure-toggle:hover {
+    /* Controls size of ruler picture for measure button */
     background-size: 16px 16px
 }
 

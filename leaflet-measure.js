@@ -411,6 +411,8 @@
             }
             var n = this.options.units;
             return { lengthDisplay: t(e.length, this.options.primaryLengthUnit, this.options.secondaryLengthUnit, this.options.decPoint, this.options.thousandsSep), areaDisplay: t(e.area, this.options.primaryAreaUnit, this.options.secondaryAreaUnit, this.options.decPoint, this.options.thousandsSep) }
+            // return { lengthDisplay: t(e.length, this.options.primaryLengthUnit, this.options.decPoint, this.options.thousandsSep), areaDisplay: t(e.area, this.options.primaryAreaUnit) }
+
         },
         _updateResults: function() {
             var e = (0, l.default)(this._latlngs),
