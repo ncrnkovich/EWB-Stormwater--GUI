@@ -12,6 +12,25 @@
     <link rel="alternate" type="application/rss+xml" title="South Bend, Indiana &raquo; Comments Feed" href="https://southbendin.gov/comments/feed/" />
     <link rel="alternate" type="text/calendar" title="South Bend, Indiana &raquo; iCal Feed" href="https://southbendin.gov/events/?ical=1" />
     <link rel="canonical" href="https://southbendin.gov/board/special-event-committee/" />
+
+    <!-- All code required for Map in header -->
+    <!-- Load Leaflet from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <!-- Load Esri Leaflet from CDN (Geocoding)-->
+    <script src="https://unpkg.com/esri-leaflet@2.5.1/dist/esri-leaflet.js" integrity="sha512-q7X96AASUF0hol5Ih7AeZpRF6smJS55lcvy+GLWzJfZN+31/BQ8cgNx2FGF+IQSA4z2jHwB20vml+drmooqzzQ==" crossorigin=""></script>
+
+    <!-- Load Esri Leaflet Geocoder from CDN (Geocoding)-->
+    <link rel="stylesheet" href="searchControl.css">
+    <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.js" integrity="sha512-HrFUyCEtIpxZloTgEKKMq4RFYhxjJkCiF5sDxuAokklOeZ68U2NPfh4MFtyIVWlsKtVbK5GD2/JzFyAfvT5ejA==" crossorigin=""></script>
+
+    <!-- Leaflet Measure JavaScript file-->
+    <link rel="stylesheet" href="leaflet-measure.css">
+
+    <!-- End Map Code -->
+
+
     <script type="text/javascript">
         window._wpemojiSettings = {
             "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/",
@@ -635,6 +654,13 @@
                                     </script>
 
                                     <body>
+
+                                        <!-- places the map in the webpage-->
+                                        <div id="mapid" style="width: 1000px; height: 500px;"></div>
+
+                                        <!-- Add Leaflet Measuring tool -->
+                                        <script src="leaflet-measure.js"></script>
+                                        <script src="mapscript.js"></script>
 
                                         <form id="quiz" name="quiz">
 
