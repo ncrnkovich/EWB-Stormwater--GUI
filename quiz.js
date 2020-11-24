@@ -9,70 +9,36 @@ function check() {
     var numQuestions = 5; // number of questions
 
     // OPTION CALCULATOR (points system)
-    var option = new Array(numQuestions); //array of options
+	var validOptions = ["after_submit1", "after_submit2", "after_submit3"];
+
     var i;
     for (i = 0; i < (numQuestions); i++) {
         option[i] = 0; // initializes each option point counter as 0
     }
 
-    // add a point to the option if the user answers a question that corresponds
-    // with the option
-    if (question1 <= 100) {
-        option[0]++;
-    } else if (question1 <= 200) {
-        option[1]++;
-    } else {
-        option[2]++;
-    }
-
-    if (question2 < 100) {
-        option[0]++;
-    } else if (question2 > 100) {
-        option[1]++;
-    } else {
-        option[2]++;
-    }
-
-    if (question3 < 100) {
-        option[0]++;
-    } else if (question3 > 100) {
-        option[1]++;
-    } else {
-        option[2]++;
-    }
-
-    if (question4 == "A") {
-        option[0]++;
-    } else if (question4 == "B") {
-        option[1]++;
-    } else {
-        option[2]++;
-    }
-
-    if (question5 == "A") {
-        option[0]++;
-    } else if (question5 == "B") {
-        option[1]++;
-    } else {
-        option[2]++;
-    }
-
-    // CALCULATE RESULT (which option with the most points)
-    var result = option[0];
-    var resultNum = 0;
-    for (i = 0; i < numQuestions; i++) {
-        if (option[i] > result) {
-            result = option[i];
-            resultNum = i;
-        }
-    }
+    // Series of NESTED if/else statements... if (condition) then delete an option from the array (it is not applicable for the user's property type)
+    if(question1 <=100){
+		delete validOptions[0]; //this means that the first option is not valid & deletes it from the array
+	}else{
+		delete validOptions[1];
+	}
 
     // DISPLAY results
-    //each element of this array coordinates with the details of each option
-    // i just put in random links for now
-    var optionLinks = ["https://quizlet.com/", "https://nd.edu", "https://www.google.com/"];
+    //each element of this array coordinates with each option
+    var optionLinks = ["https://quizlet.com/", "https://nd.edu", "https://www.google.com/"];//more information about each option, just put in random links there for now
 
-    if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
+	if(isNaN(question1) || isNaN(question2) || isNaN(question3)){
+      	document.getElementById("alert").style.visibility = "visible";
+       	document.getElementById("after_submit").style.visibility = "hidden";
+	}
+	
+	for(i=0; i< (validOptions.length); i++){
+		if(validOptions[i] != undefined){
+			document.getElementById(validOptions[i]).style.visibility = "visible";
+		}
+	}
+
+    /*if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
         document.getElementById("alert").style.visibility = "visible";
         document.getElementById("after_submit").style.visibility = "hidden";
     } else {
@@ -82,6 +48,6 @@ function check() {
         document.getElementById("option_result3").innerHTML = "3. Option " + (resultNum + 1);
         document.getElementById("link").href = optionLinks[resultNum];
         document.getElementById("alert").style.visibility = "hidden";
-    }
+    }*/
 
 }
