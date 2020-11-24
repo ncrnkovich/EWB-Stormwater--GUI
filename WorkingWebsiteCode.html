@@ -470,7 +470,7 @@
                                         will then offer suggestions for stormwater management solutions which will result in a tax credit. It will explain how much you can save, and over how many years.</p>
 
                                     <style>
-                                        #quiz {
+										#quiz {
                                             margin-left: 300px;
                                             background: #d2def2;
                                             padding: 10px 20px 10px 20px;
@@ -662,48 +662,57 @@
                                         <script src="leaflet-measure.js"></script>
                                         <script src="mapscript.js"></script>
 
+
+										<!-- QUIZ QUESTIONS
+										make questions bold, under class= questions
+										id= textbox is free response question
+										id= radio is a multiple choice question-->
+	
                                         <form id="quiz" name="quiz">
+                							<b>
+				    							<p class = "questions">Total Area of Property (in square feet):</p>
+											</b>
+                							<input id="textbox" type="text" name="question1"> *Note: you must manually enter the value calculated from map section above.
 
+                							<b>
+				   								<p class = "questions">Area of Impermable Land (in square feet):</p>
+											</b>
+                 							<input id="textbox" type="text" name="question2"> *Note: you must manually enter the value calculated from map section above.
 
-                                            <b>
-				    <p class = "questions">Total Area of Property (in square feet):</p>
-				</b>
-                                            <input id="textbox" type="text" name="question1"> *Note: you must manually enter the value calculated from map section above.
+                							<b>
+				    							<p class = "questions">Area of Roof (in square feet):</p>
+											</b>
+                							<input id="textbox" type="text" name="question3"> *Note: you must manually enter the value calculated from map section above.
 
-                                            <b>
-				    <p class = "questions">Area of Impermable Land (in square feet):</p>
-				</b>
-                                            <input id="textbox" type="text" name="question2"> *Note: you must manually enter the value calculated from map section above.
+                							<b>
+				    							<p class = "questions">Which best describes your property?</p>
+											</b>
+                							<input type="radio" id="mc" name="question4" value="A" checked> Residential<br>
+              	 							<input type="radio" id="mc" name="question4" value="B"> Commercial<br>
+                							<input type="radio" id="mc" name="question4" value="C"> Industrial<br>
 
-                                            <b>
-				    <p class = "questions">Area of Roof (in square feet):</p>
-				</b>
-                                            <input id="textbox" type="text" name="question3"> *Note: you must manually enter the value calculated from map section above.
+                							<b>
+				    							<p class = "questions"> Do you have any bodies of water on your property?</p>
+											</b>
+                							<input type="radio" id="mc" name="question5" value="A" checked> Yes<br>
+                							<input type="radio" id="mc" name="question5" value="B"> No<br>
+                							<input type="radio" id="mc" name="question5" value="C"> Not sure<br>
 
-                                            <b>
-				    <p class = "questions">Which best describes your property?</p>
-				</b>
-                                            <input type="radio" id="mc" name="question4" value="A" checked> Residential<br>
-                                            <input type="radio" id="mc" name="question4" value="B"> Commercial<br>
-                                            <input type="radio" id="mc" name="question4" value="C"> Industrial<br>
+                							<input id="button" type="button" value="Get Results!" onclick="check();">
 
-                                            <b>
-				    <p class = "questions"> Do you have any bodies of water on your property?</p>
-				</b>
-                                            <input type="radio" id="mc" name="question5" value="A" checked> Yes<br>
-                                            <input type="radio" id="mc" name="question5" value="B"> No<br>
-                                            <input type="radio" id="mc" name="question5" value="C"> Not sure<br>
+                						</form>
 
-                                            <input id="button" type="button" value="Get Results!" onclick="check();">
-
-                                        </form>
-
-                                        <div id="alert">
+                                        <!-- SHOW OPTIONS
+										each should be in a between <div id="option#"> </div>
+										bold option name, you should add a paragraph about each option
+										-->
+										<div id="alert">
                                             <b> Please answer all questions.</b>
                                         </div>
 
+
                                         <div id="after_submit1">
-                                            <b> <p id = "option_result1"></p> </b>
+                                            <b> <p id = "op1"></p> </b>
                                             <p id="learn_more">
                                                 <a id="link" href="">Click here to learn more!</a>
                                             </p>
