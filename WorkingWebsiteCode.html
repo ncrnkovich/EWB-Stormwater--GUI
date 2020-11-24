@@ -547,9 +547,9 @@
 
                                             if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
                                                 document.getElementById("alert").style.visibility = "visible";
-                                                document.getElementById("after_submit").style.visibility = "hidden";
+                                                document.getElementById("after_submit1").style.visibility = "hidden";
                                             } else {
-                                                document.getElementById("after_submit").style.visibility = "visible";
+                                                document.getElementById("after_submit1").style.visibility = "visible";
                                                 document.getElementById("option_result1").innerHTML = "1. Option " + (resultNum + 1);
                                                 document.getElementById("option_result2").innerHTML = "2. Option " + (resultNum + 1);
                                                 document.getElementById("option_result3").innerHTML = "3. Option " + (resultNum + 1);
@@ -616,7 +616,6 @@
                                         <div id="alert">
                                             <b> Please answer all questions.</b>
                                         </div>
-
 
                                         <div id="after_submit1">
                                             <b> <p id = "op1"></p> </b>
