@@ -49,7 +49,7 @@ input {
     font-size: 16px;
     color: white;
 }
-
+/* copy and paste after_submit# options but change name based on option number */
 #after_submit1 {
     visibility: hidden;
     background: #bd222e;
