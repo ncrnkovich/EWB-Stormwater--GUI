@@ -36,18 +36,6 @@ function check() {
 		if(validOptions[i] != undefined){
 			document.getElementById(validOptions[i]).style.visibility = "visible";
 		}
-	}
-
-    /*if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
-        document.getElementById("alert").style.visibility = "visible";
-        document.getElementById("after_submit").style.visibility = "hidden";
-    } else {
-        document.getElementById("after_submit").style.visibility = "visible";
-        document.getElementById("option_result1").innerHTML = "1. Option " + (resultNum + 1);
-        document.getElementById("option_result2").innerHTML = "2. Option " + (resultNum + 1);
-        document.getElementById("option_result3").innerHTML = "3. Option " + (resultNum + 1);
-        document.getElementById("link").href = optionLinks[resultNum];
-        document.getElementById("alert").style.visibility = "hidden";
-    }*/
+	} 
 
 }
