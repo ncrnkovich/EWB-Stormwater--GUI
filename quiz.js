@@ -9,33 +9,32 @@ function check() {
     var question5 = document.quiz.question5.value;
 
     var i;
+
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
-    var validOptions = ["after_submit1", "after_submit2", "after_submit3"];
+    var GSIoptions = ["after_submit1", "after_submit2", "after_submit3"];
+    var GSIoptionsBool = [0, 0, 0];
 
-    // Series of NESTED if/else statements... if (condition) then delete an option from the array (it is not applicable for the user's property type)
-    if (question1 <= 10000) {
-        delete validOptions[0]; //this means that the first option is not valid & deletes it from the array
-    } else {
-        delete validOptions[1];
+    // // Series of NESTED if/else statements... if (condition) then delete an option from the array (it is not applicable for the user's property type)
+    if (question1 >= 10000) {
+        GSIoptionsBool[0] = 1;
     }
-
-    // DISPLAY results
-    //each element of this array coordinates with each option
-    // HI BRIDGET this is where we're trying to control everything. It doesn't seem to do anything though.
-    for (i = 0; i < validOptions.length; i++) {
-        document.getElementById(validOptions[i]).style.visibility = "hidden";
+    if (question2 >= 5000) {
+        GSIoptionsBool[1] = 1;
+    }
+    for (i = 0; i < GSIoptions.length - 1; i++) {
+        document.getElementById(GSIoptions[i]).style.display = "none";
     }
 
     if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
-        // document.getElementById("alert").style.visibility = "visible";
-        document.getElementById("alert").style.visibility = "visible";
+        document.getElementById("alert").style.display = "block";
     } else {
-        document.getElementById("alert").style.visibility = "hidden";
-        for (i = 0; i < (validOptions.length); i++) {
-            if (validOptions[i] != undefined) {
-                document.getElementById(validOptions[i]).style.visibility = "visible";
+        document.getElementById("alert").style.display = "none";
+        for (i = 0; i < GSIoptions.length - 1; i++) {
+            if (GSIoptionsBool[i]) {
+                document.getElementById(GSIoptions[i]).style.display = "block";
             }
         }
     }
+
 }
