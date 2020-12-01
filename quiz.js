@@ -8,9 +8,7 @@ function check() {
     var question4 = document.quiz.question4.value;
     var question5 = document.quiz.question5.value;
 
-    var numQuestions = 5; // number of questions
     var i;
-
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
     var validOptions = ["after_submit1", "after_submit2", "after_submit3"];
@@ -24,33 +22,20 @@ function check() {
 
     // DISPLAY results
     //each element of this array coordinates with each option
-
     for (i = 0; i < validOptions.length; i++) {
-        document.getElementById(validOptions[i]).style.visibility = "hidden";
+        document.getElementById(validOptions[i]).style.display = "none";
     }
 
     if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
         document.getElementById("alert").style.visibility = "visible";
-    }
-    var str = null;
-    for (i = 0; i < (validOptions.length); i++) {
-        document.getElementById("alert").style.visibility = "hidden";
-        if (validOptions[i] != undefined) {
-            document.getElementById(validOptions[i]).style.visibility = "visible";
-            document.getElementById(validOptions[i]).style.display = "block";
+        document.getElementById("alert").style.display = "block";
+        document.getElementById("after_submit").style.display = "none";
+    } else {
+        document.getElementById("alert").style.display = "none";
+        for (i = 0; i < (validOptions.length); i++) {
+            if (validOptions[i] != undefined) {
+                document.getElementById(validOptions[i]).style.display = "block";
+            }
         }
     }
-
-    /*if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
-        document.getElementById("alert").style.visibility = "visible";
-        document.getElementById("after_submit").style.visibility = "hidden";
-    } else {
-        document.getElementById("after_submit").style.visibility = "visible";
-        document.getElementById("option_result1").innerHTML = "1. Option " + (resultNum + 1);
-        document.getElementById("option_result2").innerHTML = "2. Option " + (resultNum + 1);
-        document.getElementById("option_result3").innerHTML = "3. Option " + (resultNum + 1);
-        document.getElementById("link").href = optionLinks[resultNum];
-        document.getElementById("alert").style.visibility = "hidden";
-    }*/
-
 }
