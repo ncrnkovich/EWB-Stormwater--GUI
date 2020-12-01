@@ -9,6 +9,7 @@ function check() {
     var question5 = document.quiz.question5.value;
 
     var numQuestions = 5; // number of questions
+	var i;
 
     // OPTION CALCULATOR
 	//for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
@@ -29,14 +30,17 @@ function check() {
 
 	if(isNaN(question1) || isNaN(question2) || isNaN(question3)){
       	document.getElementById("alert").style.visibility = "visible";
-        document.getElementById("after_submit").style.visibility = "hidden";
+        for(i=0; i<validOptions.length; i++){
+			document.getElementById("after_submit" + i.toString(10)).style.visibility = "hidden";
+		}
 	}
-	
+	var str = null;
 	for(i=0; i< (validOptions.length); i++){
+		document.getElementById("alert").style.visibility = "hidden";	
 		if(validOptions[i] != undefined){
-			document.getElementById("alert").style.visibility = "hidden";
+			str = "link" + i.toString(10);
 			document.getElementById(validOptions[i]).style.visibility = "visible";
-			document.getElementById("link" + i.toString(10)).href = optionLinks[i];
+			document.getElementById(str).href = optionLinks[i];
 		}
 	}
 
