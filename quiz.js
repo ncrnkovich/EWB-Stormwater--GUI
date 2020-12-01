@@ -8,9 +8,7 @@ function check() {
     var question4 = document.quiz.question4.value;
     var question5 = document.quiz.question5.value;
 
-    var numQuestions = 5; // number of questions
     var i;
-
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
     var validOptions = ["after_submit1", "after_submit2", "after_submit3"];
@@ -20,7 +18,7 @@ function check() {
         delete validOptions[0]; //this means that the first option is not valid & deletes it from the array
     } else {
         delete validOptions[1];
-    }
+    } 
 
     // DISPLAY results
     //each element of this array coordinates with each option
