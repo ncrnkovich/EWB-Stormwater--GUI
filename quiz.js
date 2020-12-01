@@ -25,17 +25,19 @@ function check() {
     // DISPLAY results
     //each element of this array coordinates with each option
 
+    for (i = 0; i < validOptions.length; i++) {
+        document.getElementById("after_submit" + i.toString(10)).style.display = "none";
+    }
+
     if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
         document.getElementById("alert").style.visibility = "visible";
-        for (i = 0; i < validOptions.length; i++) {
-            document.getElementById("after_submit" + i.toString(10)).style.visibility = "hidden";
-        }
     }
     var str = null;
     for (i = 0; i < (validOptions.length); i++) {
-        document.getElementById("alert").style.visibility = "hidden";
+        document.getElementById("alert").style.display = "none";
         if (validOptions[i] != undefined) {
-            document.getElementById(validOptions[i]).style.visibility = "visible";
+            document.getElementById(validOptions[i]).style.display = "block";
+            // document.getElementById(validOptions[i]).style.visibility = "visible";
         }
     }
 
