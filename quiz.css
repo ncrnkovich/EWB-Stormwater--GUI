@@ -39,7 +39,7 @@ input {
 }
 
 #alert {
-    display: none;
+    visibility: visible;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 400px;
@@ -55,6 +55,7 @@ input {
 
 #after_submit1 {
     display: none;
+    visibility: visible;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 400px;
@@ -67,6 +68,7 @@ input {
 
 #after_submit2 {
     display: none;
+    visibility: visible;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 400px;
@@ -78,7 +80,7 @@ input {
 }
 
 #after_submit3 {
-    display: none;
+    visibility: visible;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 400px;

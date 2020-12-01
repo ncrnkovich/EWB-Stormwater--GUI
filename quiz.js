@@ -26,7 +26,7 @@ function check() {
     //each element of this array coordinates with each option
 
     for (i = 0; i < validOptions.length; i++) {
-        document.getElementById("after_submit" + i.toString(10)).style.display = "none";
+        document.getElementById(validOptions[i]).style.visibility = "hidden";
     }
 
     if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
@@ -34,10 +34,10 @@ function check() {
     }
     var str = null;
     for (i = 0; i < (validOptions.length); i++) {
-        document.getElementById("alert").style.display = "none";
+        document.getElementById("alert").style.visibility = "hidden";
         if (validOptions[i] != undefined) {
+            document.getElementById(validOptions[i]).style.visibility = "visible";
             document.getElementById(validOptions[i]).style.display = "block";
-            // document.getElementById(validOptions[i]).style.visibility = "visible";
         }
     }
 
