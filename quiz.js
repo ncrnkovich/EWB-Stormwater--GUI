@@ -14,7 +14,7 @@ function check() {
     var validOptions = ["after_submit1", "after_submit2", "after_submit3"];
 
     // Series of NESTED if/else statements... if (condition) then delete an option from the array (it is not applicable for the user's property type)
-    if (question1 <= 100) {
+    if (question1 <= 10000) {
         delete validOptions[0]; //this means that the first option is not valid & deletes it from the array
     } else {
         delete validOptions[1];
@@ -22,19 +22,19 @@ function check() {
 
     // DISPLAY results
     //each element of this array coordinates with each option
+    // HI BRIDGET this is where we're trying to control everything. It doesn't seem to do anything though.
     for (i = 0; i < validOptions.length; i++) {
-        document.getElementById(validOptions[i]).style.display = "none";
+        document.getElementById(validOptions[i]).style.visibility = "hidden";
     }
 
     if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
+        // document.getElementById("alert").style.visibility = "visible";
         document.getElementById("alert").style.visibility = "visible";
-        document.getElementById("alert").style.display = "block";
-        document.getElementById("after_submit").style.display = "none";
     } else {
-        document.getElementById("alert").style.display = "none";
+        document.getElementById("alert").style.visibility = "hidden";
         for (i = 0; i < (validOptions.length); i++) {
             if (validOptions[i] != undefined) {
-                document.getElementById(validOptions[i]).style.display = "block";
+                document.getElementById(validOptions[i]).style.visibility = "visible";
             }
         }
     }

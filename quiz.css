@@ -39,8 +39,6 @@ input {
 }
 
 #alert {
-    display: none;
-    visibility: visible;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 400px;
@@ -55,7 +53,6 @@ input {
 /* copy and paste after_submit# options but change name based on option number */
 
 #after_submit1 {
-    display: none;
     visibility: visible;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
@@ -68,7 +65,6 @@ input {
 }
 
 #after_submit2 {
-    display: none;
     visibility: visible;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
