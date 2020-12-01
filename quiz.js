@@ -24,9 +24,6 @@ function check() {
 
     // DISPLAY results
     //each element of this array coordinates with each option
-	//more information about each option, just put in random links there for now
-	//keep links in order that correlates with validOptions order
-    var optionLinks = ["https://quizlet.com/", "https://nd.edu", "https://www.google.com/"];
 
 	if(isNaN(question1) || isNaN(question2) || isNaN(question3)){
       	document.getElementById("alert").style.visibility = "visible";
@@ -38,9 +35,7 @@ function check() {
 	for(i=0; i< (validOptions.length); i++){
 		document.getElementById("alert").style.visibility = "hidden";	
 		if(validOptions[i] != undefined){
-			str = "link" + i.toString(10);
 			document.getElementById(validOptions[i]).style.visibility = "visible";
-			document.getElementById(str).href = optionLinks[i];
 		}
 	}
 
