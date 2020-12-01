@@ -39,7 +39,11 @@ input {
 }
 
 #alert {
+<<<<<<< HEAD
     visibility: hidden;
+=======
+    display: none;
+>>>>>>> 51abdbb9e0e051950826a13f03d8d16fe2c8bd30
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 400px;
@@ -52,7 +56,11 @@ input {
 
 /* copy and paste after_submit# options but change name based on option number */
 #after_submit1 {
+<<<<<<< HEAD
     visibility: hidden;
+=======
+    display: none;
+>>>>>>> 51abdbb9e0e051950826a13f03d8d16fe2c8bd30
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 400px;
@@ -64,7 +72,11 @@ input {
 }
 
 #after_submit2 {
+<<<<<<< HEAD
 	visibility: hidden;
+=======
+    display: none;
+>>>>>>> 51abdbb9e0e051950826a13f03d8d16fe2c8bd30
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 400px;
@@ -76,7 +88,11 @@ input {
 }
 
 #after_submit3 {
+<<<<<<< HEAD
     visibility: hidden;
+=======
+    display: none;
+>>>>>>> 51abdbb9e0e051950826a13f03d8d16fe2c8bd30
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 400px;
