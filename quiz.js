@@ -15,11 +15,13 @@ function check() {
     var GSIoptions = ["after_submit1", "after_submit2", "after_submit3"];
     var GSIoptionsBool = [0, 0, 0];
 
-
     // // Series of NESTED if/else statements... if (condition) then delete an option from the array (it is not applicable for the user's property type)
     if (question1 >= 10000) {
         GSIoptionsBool[0] = 1;
     }
+
+    // DISPLAY results
+    //each element of this array coordinates with each option}
     if (question2 >= 5000) {
         GSIoptionsBool[1] = 1;
     }
