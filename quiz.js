@@ -12,8 +12,8 @@ function check() {
 
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
-    var GSIoptions = ["RainGardensSubmit", "TreeBoxesSubmit", "DryWellsSubmit"];
-    var GSIoptionsBool = [0, 0, 0];
+    var GSIoptions = ["RainGardensSubmit", "TreeBoxesSubmit", "DryWellsSubmit", "PorousPavementSubmit", "GrassPaversSubmit", "PermeableUnitPaversSubmit", "InfiltrationChamberSubmit", "SurfaceDetentionSubmit", "BioretentionSubmit", "InfiltrationBasinSubmit", "InfiltrationTrenchSubmit", "VegetativeSwaleSubmit", "VegetativeFilterStripSubmit", "GreenRoofSubmit", "UndergroundDetentionSubmit", "ConstructedWetlandSubmit", "WetPondSubmit", "RainBarrelsCisternsSubmit"];
+    var GSIoptionsBool = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
     // // Series of NESTED if/else statements... if (condition) then delete an option from the array (it is not applicable for the user's property type)
     if (question1 >= 10000) {
