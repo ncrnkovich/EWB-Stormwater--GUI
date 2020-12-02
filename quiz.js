@@ -5,8 +5,11 @@ function check() {
     var totalArea = parseInt(document.quiz.totalArea.value, 10); //area of total property
     var totalImpervious = parseInt(document.quiz.totalImpervious.value, 10); // area land
     var areaPermanent = parseInt(document.quiz.areaPermanent.value, 10); // roof area
-    var propType = document.quiz.propType.value;
+    var propType = document.quiz.propType.value;=
     var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
+	var question7 = document.quiz.question7.value; 
+	var question 8 = document.quiz.question8.value; 
 
     var i;
 
@@ -38,17 +41,19 @@ function check() {
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
     var GSIoptions = ["after_submit1", "after_submit2", "after_submit3"];
-    var GSIoptionsBool = [1, 1, 1];
+    var GSIoptionsBool = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
-    // // Series of NESTED if/else statements... if (condition) then delete an option from the array (it is not applicable for the user's property type)
-    if (totalArea <= 10000) {
+    // // Series of NESTED if/else statements... if (condition) then change the GSIoptionsBool to 0 for all of the  incompatible options (element # correlates with GSIoptions)
+    if (propType = "R") {
+		//RESIDENTIAL
         GSIoptionsBool[0] = 0;
-    }
-    if (totalImpervious <= 5000) {
-        GSIoptionsBool[1] = 0;
-    }
-
-
+    }else if(propType = "C"){
+		//COMMERCIAL
+		GSIoptionsBool[0] = 0;
+	}else if(propType = "I"){
+		//INDUSTRIAL
+		GSIoptionsBool[0] = 0;
+	} 
 
     // DISPLAY results
     //each element of this array coordinates with each option}
