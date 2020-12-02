@@ -22,6 +22,8 @@ function check() {
     if (question2 >= 5000) {
         GSIoptionsBool[1] = 1;
     }
+
+
     for (i = 0; i < GSIoptions.length - 1; i++) {
         document.getElementById(GSIoptions[i]).style.display = "none";
     }
