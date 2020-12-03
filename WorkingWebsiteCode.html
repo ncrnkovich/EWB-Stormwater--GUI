@@ -492,31 +492,61 @@
                                             <b>
 				    							<p class = "questions">Total Area of Property (in square feet):</p>
 											</b>
-                                            <input id="textbox" type="text" name="question1"> *Note: you must manually enter the value calculated from map section above.
+                                            <input id="textbox" type="text" name="totalArea"> *Note: you must manually enter the value calculated from map section above.
 
+											<br>
                                             <b>
 				   								<p class = "questions">Area of Impermable Land (in square feet):</p>
 											</b>
-                                            <input id="textbox" type="text" name="question2"> *Note: you must manually enter the value calculated from map section above.
+                                            <input id="textbox" type="text" name="totalImpervious"> *Note: you must manually enter the value calculated from map section above.
 
-                                            <b>
-				    							<p class = "questions">Area of Roof (in square feet):</p>
+                                            <br>
+											<b>
+				    							<p class = "questions"> Area of Roof or other permanent structures (in square feet):</p>
 											</b>
-                                            <input id="textbox" type="text" name="question3"> *Note: you must manually enter the value calculated from map section above.
+                                            <input id="textbox" type="text" name="areaPermanent"> *Note: you must manually enter the value calculated from map section above.
 
+											<br>
                                             <b>
 				    							<p class = "questions">Which best describes your property?</p>
 											</b>
-                                            <input type="radio" id="mc" name="question4" value="A" checked> Residential<br>
-                                            <input type="radio" id="mc" name="question4" value="B"> Commercial<br>
-                                            <input type="radio" id="mc" name="question4" value="C"> Industrial<br>
+                                            <input type="radio" id="mc" name="propType" value="R"> Residential<br>
+                                            <input type="radio" id="mc" name="propType" value="C" checked> Commercial<br>
+                                            <input type="radio" id="mc" name="propType" value="I"> Industrial<br>
 
-                                            <b>
-				    							<p class = "questions"> Do you have any bodies of water on your property?</p>
+                                         	<br>
+											<b>
+				    							<p class = "questions">Are you considering implementing an alternative pavement type?</p>
 											</b>
-                                            <input type="radio" id="mc" name="question5" value="A" checked> Yes<br>
-                                            <input type="radio" id="mc" name="question5" value="B"> No<br>
-                                            <input type="radio" id="mc" name="question5" value="C"> Not sure<br>
+                                            <input type="radio" id="mc" name="question5" value="Y" checked> Yes<br>
+                                            <input type="radio" id="mc" name="question5" value="N"> No<br> 
+                                            <input type="radio" id="mc" name="question5" value="NS"> Not sure<br> 
+
+											<br>
+											<b>
+				    							<p class = "questions">Would you consider a significant alteration to your landscape? (I.e. repaving or digging)</p>
+											</b>
+                                            <input type="radio" id="mc" name="question6" value="Y" checked> Yes<br>
+                                            <input type="radio" id="mc" name="question6" value="N"> No<br> 
+                                            <input type="radio" id="mc" name="question6" value="NS"> Not sure<br>	
+
+											<br>
+											<b>
+				    							<p class = "questions">Does your land have a significant slope?</p>
+											</b>
+                                            <input type="radio" id="mc" name="question7" value="Y" checked> Yes<br>
+                                            <input type="radio" id="mc" name="question7" value="N"> No<br> 
+                                            <input type="radio" id="mc" name="question7" value="NS"> Not sure<br>		
+
+											<br>
+											<b>
+				    							<p class = "questions">For Industrial Properties: What is the area type you a looking to improve?</p>
+											</b>
+                                            <input type="radio" id="mc" name="question8" value="A"> Underground<br>
+                                            <input type="radio" id="mc" name="question8" value="B"> Above ground (smaller area, impervious)<br> 
+                                            <input type="radio" id="mc" name="question8" value="C"> Above ground (smaller area- vegetative)<br> 
+										   	<input type="radio" id="mc" name="question8" value="D"> Above Ground (larger area)<br>
+											<input type="radio" id="mc" name="question8" value="E" checked> I do not have an Industrial property.<br>	
 
                                             <input id="button" type="button" value="Get Results!" onclick="check();">
 
