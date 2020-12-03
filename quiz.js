@@ -5,11 +5,11 @@ function check() {
     var totalArea = parseInt(document.quiz.totalArea.value, 10); //area of total property
     var totalImpervious = parseInt(document.quiz.totalImpervious.value, 10); // area land
     var areaPermanent = parseInt(document.quiz.areaPermanent.value, 10); // roof area
-    var propType = document.quiz.propType.value;=
+    var propType = document.quiz.propType.value;
     var question5 = document.quiz.question5.value;
-	var question6 = document.quiz.question6.value;
-	var question7 = document.quiz.question7.value; 
-	var question 8 = document.quiz.question8.value; 
+    var question6 = document.quiz.question6.value;
+    var question7 = document.quiz.question7.value;
+    var question8 = document.quiz.question8.value;
 
     var i;
 
@@ -24,7 +24,7 @@ function check() {
     var perviousArea = totalArea - totalImpervious;
     var Cimpermeable = 1;
     var Cpermeable = 0.45; // averaging runoff coeff for permeable land
-    var I10year = 4.31; // rainfall intensity for 10 year event, [in/hr]
+    var I5year = 2.76; // rainfall intensity for 5 year event, assuming 30 min drainage time [in/hr]
     // based on property type, set property fee
     if (propType = 1) {
         propRate = 2;
@@ -35,61 +35,61 @@ function check() {
     stormFee = (totalArea / ERU) * propRate * 12; // YEARLY fee (note the x12)
     totalYearlyFees = inLieuFee + stormFee;
 
-    stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I10year / 96.23; // gal/min
+    stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I5year / 96.23; // gal/min
 
 
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
-    var GSIoptions = 
-	["RainGardensSubmit", //ELEMENT NUMBER: 0
-	 "TreeBoxesSubmit", //1
-	 "DryWellsSubmit", //2
-	 "PorousPavementSubmit", //3
-	 "GrassPaversSubmit", //4
-	 "PermeableUnitPaversSubmit", //5
-	 "InfiltrationChamberSubmit", //6
-	 "SurfaceDetentionSubmit", //7
-	 "BioretentionSubmit", //8
-	 "InfiltrationBasinSubmit", //9
-	 "InfiltrationTrenchSubmit", //10
-	 "VegetativeSwaleSubmit", //11
-	 "VegetativeFilterStripSubmit", //12
-	 "GreenRoofSubmit", //13
-	 "UndergroundDetentionSubmit", //14
-	 "ConstructedWetlandSubmit", //15
-	 "WetPondSubmit", //16
-	 "RainBarrelsCisternsSubmit"]; //17
+    var GSIoptions = ["RainGardensSubmit", //ELEMENT NUMBER: 0
+        "TreeBoxesSubmit", //1
+        "DryWellsSubmit", //2
+        "PorousPavementSubmit", //3
+        "GrassPaversSubmit", //4
+        "PermeableUnitPaversSubmit", //5
+        "InfiltrationChamberSubmit", //6
+        "SurfaceDetentionSubmit", //7
+        "BioretentionSubmit", //8
+        "InfiltrationBasinSubmit", //9
+        "InfiltrationTrenchSubmit", //10
+        "VegetativeSwaleSubmit", //11
+        "VegetativeFilterStripSubmit", //12
+        "GreenRoofSubmit", //13
+        "UndergroundDetentionSubmit", //14
+        "ConstructedWetlandSubmit", //15
+        "WetPondSubmit", //16
+        "RainBarrelsCisternsSubmit"
+    ]; //17
 
-    var GSIoptionsBool = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+    var GSIoptionsBool = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
     // // Series of NESTED if/else statements... if (condition) then change the GSIoptionsBool to 0 for all of the  incompatible options (element # correlates with GSIoptions)
     if (propType = "R") {
 
-		//RESIDENTIAL -->rain gardens, dry wells, porous pavement, grass pavers, permeable unit pavers, vegetative swales, vegetative filter strip, constructed wetland, wet pond, rain barrels/cisterns
+        //RESIDENTIAL -->rain gardens, dry wells, porous pavement, grass pavers, permeable unit pavers, vegetative swales, vegetative filter strip, constructed wetland, wet pond, rain barrels/cisterns
         GSIoptionsBool[1] = 0;
-		GSIoptionsBool[6] = 0;
-		GSIoptionsBool[7] = 0;
-		GSIoptionsBool[8] = 0;	
-		GSIoptionsBool[9] = 0;
-		GSIoptionsBool[10] = 0;	
-		GSIoptionsBool[13]= 0;
-		GSIoptionsBool[14]= 0;
+        GSIoptionsBool[6] = 0;
+        GSIoptionsBool[7] = 0;
+        GSIoptionsBool[8] = 0;
+        GSIoptionsBool[9] = 0;
+        GSIoptionsBool[10] = 0;
+        GSIoptionsBool[13] = 0;
+        GSIoptionsBool[14] = 0;
 
-    }else if(propType = "C"){
+    } else if (propType = "C") {
 
-		//COMMERCIAL -->tree boxes, dry wells, porous pavement, grass pavers, permeable unit pavers, infiltration chamber, surface detention, bioretention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns										
-		GSIoptionsBool[0] = 0;
+        //COMMERCIAL -->tree boxes, dry wells, porous pavement, grass pavers, permeable unit pavers, infiltration chamber, surface detention, bioretention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns										
+        GSIoptionsBool[0] = 0;
 
-	}else if(propType = "I"){
+    } else if (propType = "I") {
 
-		//INDUSTRIAL--> tree boxes, dry wells, porous pavement, infiltration chamber, surface detention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns				
-		GSIoptionsBool[0] = 0;
-		GSIoptionsBool[4] = 0;
-		GSIoptionsBool[5] = 0;
-		GSIoptionsBool[8] = 0;	
-		GSIoptionsBool[8] = 0;	
-	
-	} 
+        //INDUSTRIAL--> tree boxes, dry wells, porous pavement, infiltration chamber, surface detention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns				
+        GSIoptionsBool[0] = 0;
+        GSIoptionsBool[4] = 0;
+        GSIoptionsBool[5] = 0;
+        GSIoptionsBool[8] = 0;
+        GSIoptionsBool[8] = 0;
+
+    }
 
     // DISPLAY results
     //each element of this array coordinates with each option}
