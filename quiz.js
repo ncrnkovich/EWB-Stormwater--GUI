@@ -15,7 +15,7 @@ function check() {
 
     // Calculations/math
 
-    var inLieuFee = totalImpervious * 0.61;
+    var inLieuFee = totalImpervious * 0.61; // $0.61 / sq ft of impervious land for disconnect fee
     var stormFee;
     var stormRunoff;
     var ERU = 2700; // 2700 sq ft in one Equivalent Residental Unit
@@ -26,7 +26,7 @@ function check() {
     var Cpermeable = 0.45; // averaging runoff coeff for permeable land
     var I5year = 2.76; // rainfall intensity for 5 year event, assuming 30 min drainage time [in/hr]
     // based on property type, set property fee
-    if (propType = 1) {
+    if (propType = "R") {
         propRate = 2;
     } else {
         propRate = 5;
@@ -35,7 +35,7 @@ function check() {
     stormFee = (totalArea / ERU) * propRate * 12; // YEARLY fee (note the x12)
     totalYearlyFees = inLieuFee + stormFee;
 
-    stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I5year / 96.23; // gal/min
+    stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I5year / 720; // ft^3/min
 
 
     // OPTION CALCULATOR
@@ -99,7 +99,7 @@ function check() {
         document.getElementById(GSIoptions[i]).style.display = "none";
     }
     // if any questions are not filled out, generates prompt to answer all questions
-    if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
+    if (isNaN(totalArea) || isNaN(totalImpervious) || isNaN(areaPermanent)) {
         document.getElementById("alert").style.display = "block";
     } else {
         document.getElementById("alert").style.display = "none";
