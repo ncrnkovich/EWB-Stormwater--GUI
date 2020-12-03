@@ -40,7 +40,7 @@ function check() {
 
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
-    var GSIoptions = ["after_submit1", "after_submit2", "after_submit3"];
+    var GSIoptions = ["RainGardensSubmit", "TreeBoxesSubmit", "DryWellsSubmit", "PorousPavementSubmit", "GrassPaversSubmit", "PermeableUnitPaversSubmit", "InfiltrationChamberSubmit", "SurfaceDetentionSubmit", "BioretentionSubmit", "InfiltrationBasinSubmit", "InfiltrationTrenchSubmit", "VegetativeSwaleSubmit", "VegetativeFilterStripSubmit", "GreenRoofSubmit", "UndergroundDetentionSubmit", "ConstructedWetlandSubmit", "WetPondSubmit", "RainBarrelsCisternsSubmit"];
     var GSIoptionsBool = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
     // // Series of NESTED if/else statements... if (condition) then change the GSIoptionsBool to 0 for all of the  incompatible options (element # correlates with GSIoptions)
