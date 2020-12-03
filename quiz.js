@@ -40,19 +40,55 @@ function check() {
 
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
-    var GSIoptions = ["RainGardensSubmit", "TreeBoxesSubmit", "DryWellsSubmit", "PorousPavementSubmit", "GrassPaversSubmit", "PermeableUnitPaversSubmit", "InfiltrationChamberSubmit", "SurfaceDetentionSubmit", "BioretentionSubmit", "InfiltrationBasinSubmit", "InfiltrationTrenchSubmit", "VegetativeSwaleSubmit", "VegetativeFilterStripSubmit", "GreenRoofSubmit", "UndergroundDetentionSubmit", "ConstructedWetlandSubmit", "WetPondSubmit", "RainBarrelsCisternsSubmit"];
+    var GSIoptions = 
+	["RainGardensSubmit", //ELEMENT NUMBER: 0
+	 "TreeBoxesSubmit", //1
+	 "DryWellsSubmit", //2
+	 "PorousPavementSubmit", //3
+	 "GrassPaversSubmit", //4
+	 "PermeableUnitPaversSubmit", //5
+	 "InfiltrationChamberSubmit", //6
+	 "SurfaceDetentionSubmit", //7
+	 "BioretentionSubmit", //8
+	 "InfiltrationBasinSubmit", //9
+	 "InfiltrationTrenchSubmit", //10
+	 "VegetativeSwaleSubmit", //11
+	 "VegetativeFilterStripSubmit", //12
+	 "GreenRoofSubmit", //13
+	 "UndergroundDetentionSubmit", //14
+	 "ConstructedWetlandSubmit", //15
+	 "WetPondSubmit", //16
+	 "RainBarrelsCisternsSubmit"]; //17
+
     var GSIoptionsBool = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
     // // Series of NESTED if/else statements... if (condition) then change the GSIoptionsBool to 0 for all of the  incompatible options (element # correlates with GSIoptions)
     if (propType = "R") {
-		//RESIDENTIAL
-        GSIoptionsBool[0] = 0;
+
+		//RESIDENTIAL -->rain gardens, dry wells, porous pavement, grass pavers, permeable unit pavers, vegetative swales, vegetative filter strip, constructed wetland, wet pond, rain barrels/cisterns
+        GSIoptionsBool[1] = 0;
+		GSIoptionsBool[6] = 0;
+		GSIoptionsBool[7] = 0;
+		GSIoptionsBool[8] = 0;	
+		GSIoptionsBool[9] = 0;
+		GSIoptionsBool[10] = 0;	
+		GSIoptionsBool[13]= 0;
+		GSIoptionsBool[14]= 0;
+
     }else if(propType = "C"){
-		//COMMERCIAL
+
+		//COMMERCIAL -->tree boxes, dry wells, porous pavement, grass pavers, permeable unit pavers, infiltration chamber, surface detention, bioretention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns										
 		GSIoptionsBool[0] = 0;
+
 	}else if(propType = "I"){
-		//INDUSTRIAL
+
+		//INDUSTRIAL--> tree boxes, dry wells, porous pavement, infiltration chamber, surface detention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns				
 		GSIoptionsBool[0] = 0;
+		GSIoptionsBool[4] = 0;
+		GSIoptionsBool[5] = 0;
+		GSIoptionsBool[8] = 0;	
+		GSIoptionsBool[8] = 0;	
+	
 	} 
 
     // DISPLAY results
