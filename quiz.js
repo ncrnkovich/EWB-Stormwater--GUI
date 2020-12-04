@@ -6,10 +6,10 @@ function check() {
     var totalImpervious = parseInt(document.quiz.totalImpervious.value, 10); // area land
     var areaPermanent = parseInt(document.quiz.areaPermanent.value, 10); // roof area
     var propType = document.quiz.propType.value;
-    var question5 = document.quiz.question5.value;
-    var question6 = document.quiz.question6.value;
-    var question7 = document.quiz.question7.value;
-    var question8 = document.quiz.question8.value;
+    var altPavement = document.quiz.altPavement.value;
+    var alteration = document.quiz.alteration.value;
+    var slope = document.quiz.slope.value;
+    var areaType = document.quiz.areaType.value;
 
     var i;
 
@@ -75,10 +75,42 @@ function check() {
         GSIoptionsBool[13] = 0;
         GSIoptionsBool[14] = 0;
 
+
     } else if (propType = "C") {
 
         //COMMERCIAL -->tree boxes, dry wells, porous pavement, grass pavers, permeable unit pavers, infiltration chamber, surface detention, bioretention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns										
         GSIoptionsBool[0] = 0;
+
+        if (slope = "Y") {
+            //significant slope --> tree boxes, dry wells, porous pavement, permeable unit pavers, grass pavers, infiltration chamber, surface detention, green roof, underground retention, wet pond
+            GSIoptionsBool[8] = 0;
+            GSIoptionsBool[9] = 0;
+            GSIoptionsBool[10] = 0;
+            GSIoptionsBool[11] = 0;
+            GSIoptionsBool[12] = 0;
+            GSIoptionsBool[15] = 0;
+            GSIoptionsBool[12] = 0;
+        }
+
+        if (alteration = "N" || totalImpervious < 6000) { //******* second condition refers to the question: Is your residential area on a small or large scale?  ******
+
+            //NO significant alteration --> NOT:	porous pavement, permeable unit pavers, infiltration chamber,surface detention, infiltration basin, infiltration trench, vegetable filter strip, wet pond, constricted wetland
+            GSIoptionsBool[3] = 0;
+            GSIoptionsBool[5] = 0;
+            GSIoptionsBool[6] = 0;
+            GSIoptionsBool[7] = 0;
+            GSIoptionsBool[9] = 0;
+            GSIoptionsBool[10] = 0;
+            GSIoptionsBool[12] = 0;
+            GSIoptionsBool[15] = 0;
+        }
+
+        if (altPavement = "N") {
+            //NOT Porous pavement, grass pavers, permeable unit pavers
+            GSIoptionsBool[3] = 0;
+            GSIoptionsBool[4] = 0;
+            GSIoptionsBool[5] = 0;
+        }
 
     } else if (propType = "I") {
 
@@ -87,8 +119,6 @@ function check() {
         GSIoptionsBool[4] = 0;
         GSIoptionsBool[5] = 0;
         GSIoptionsBool[8] = 0;
-        GSIoptionsBool[8] = 0;
-
     }
 
     // DISPLAY results
