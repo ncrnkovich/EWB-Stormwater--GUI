@@ -5,17 +5,17 @@ function check() {
     var totalArea = parseInt(document.quiz.totalArea.value, 10); //area of total property
     var totalImpervious = parseInt(document.quiz.totalImpervious.value, 10); // area land
     var areaPermanent = parseInt(document.quiz.areaPermanent.value, 10); // roof area
-    var propType = document.quiz.propType.value;=
+    var propType = document.quiz.propType.value;
     var question5 = document.quiz.question5.value;
-	var question6 = document.quiz.question6.value;
-	var question7 = document.quiz.question7.value; 
-	var question 8 = document.quiz.question8.value; 
+    var question6 = document.quiz.question6.value;
+    var question7 = document.quiz.question7.value;
+    var question8 = document.quiz.question8.value;
 
     var i;
 
     // Calculations/math
 
-    var inLieuFee = totalImpervious * 0.61;
+    var inLieuFee = totalImpervious * 0.61; // $0.61 / sq ft of impervious land for disconnect fee
     var stormFee;
     var stormRunoff;
     var ERU = 2700; // 2700 sq ft in one Equivalent Residental Unit
@@ -24,9 +24,9 @@ function check() {
     var perviousArea = totalArea - totalImpervious;
     var Cimpermeable = 1;
     var Cpermeable = 0.45; // averaging runoff coeff for permeable land
-    var I10year = 4.31; // rainfall intensity for 10 year event, [in/hr]
+    var I5year = 2.76; // rainfall intensity for 5 year event, assuming 30 min drainage time [in/hr]
     // based on property type, set property fee
-    if (propType = 1) {
+    if (propType = "R") {
         propRate = 2;
     } else {
         propRate = 5;
@@ -35,37 +35,37 @@ function check() {
     stormFee = (totalArea / ERU) * propRate * 12; // YEARLY fee (note the x12)
     totalYearlyFees = inLieuFee + stormFee;
 
-    stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I10year / 96.23; // gal/min
+    stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I5year / 720; // ft^3/min
 
 
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
-    var GSIoptions = 
-	["RainGardensSubmit", //ELEMENT NUMBER: 0
-	 "TreeBoxesSubmit", //1
-	 "DryWellsSubmit", //2
-	 "PorousPavementSubmit", //3
-	 "GrassPaversSubmit", //4
-	 "PermeableUnitPaversSubmit", //5
-	 "InfiltrationChamberSubmit", //6
-	 "SurfaceDetentionSubmit", //7
-	 "BioretentionSubmit", //8
-	 "InfiltrationBasinSubmit", //9
-	 "InfiltrationTrenchSubmit", //10
-	 "VegetativeSwaleSubmit", //11
-	 "VegetativeFilterStripSubmit", //12
-	 "GreenRoofSubmit", //13
-	 "UndergroundDetentionSubmit", //14
-	 "ConstructedWetlandSubmit", //15
-	 "WetPondSubmit", //16
-	 "RainBarrelsCisternsSubmit"]; //17
+    var GSIoptions = ["RainGardensSubmit", //ELEMENT NUMBER: 0
+        "TreeBoxesSubmit", //1
+        "DryWellsSubmit", //2
+        "PorousPavementSubmit", //3
+        "GrassPaversSubmit", //4
+        "PermeableUnitPaversSubmit", //5
+        "InfiltrationChamberSubmit", //6
+        "SurfaceDetentionSubmit", //7
+        "BioretentionSubmit", //8
+        "InfiltrationBasinSubmit", //9
+        "InfiltrationTrenchSubmit", //10
+        "VegetativeSwaleSubmit", //11
+        "VegetativeFilterStripSubmit", //12
+        "GreenRoofSubmit", //13
+        "UndergroundDetentionSubmit", //14
+        "ConstructedWetlandSubmit", //15
+        "WetPondSubmit", //16
+        "RainBarrelsCisternsSubmit"
+    ]; //17
 
-    var GSIoptionsBool = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+    var GSIoptionsBool = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
     // // Series of NESTED if/else statements... if (condition) then change the GSIoptionsBool to 0 for all of the  incompatible options (element # correlates with GSIoptions)
     if (propType = "R") {
 
-		//RESIDENTIAL -->rain gardens, dry wells, porous pavement, grass pavers, permeable unit pavers, vegetative swales, vegetative filter strip, constructed wetland, wet pond, rain barrels/cisterns
+        //RESIDENTIAL -->rain gardens, dry wells, porous pavement, grass pavers, permeable unit pavers, vegetative swales, vegetative filter strip, constructed wetland, wet pond, rain barrels/cisterns
         GSIoptionsBool[1] = 0;
 		GSIoptionsBool[6] = 0;
 		GSIoptionsBool[7] = 0;
@@ -87,7 +87,6 @@ function check() {
 		GSIoptionsBool[4] = 0;
 		GSIoptionsBool[5] = 0;
 		GSIoptionsBool[8] = 0;	
-		GSIoptionsBool[8] = 0;	
 	} 
 
     // DISPLAY results
@@ -98,7 +97,7 @@ function check() {
         document.getElementById(GSIoptions[i]).style.display = "none";
     }
     // if any questions are not filled out, generates prompt to answer all questions
-    if (isNaN(question1) || isNaN(question2) || isNaN(question3)) {
+    if (isNaN(totalArea) || isNaN(totalImpervious) || isNaN(areaPermanent)) {
         document.getElementById("alert").style.display = "block";
     } else {
         document.getElementById("alert").style.display = "none";
