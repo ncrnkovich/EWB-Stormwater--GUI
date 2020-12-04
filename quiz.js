@@ -88,7 +88,6 @@ function check() {
 		GSIoptionsBool[5] = 0;
 		GSIoptionsBool[8] = 0;	
 		GSIoptionsBool[8] = 0;	
-	
 	} 
 
     // DISPLAY results
