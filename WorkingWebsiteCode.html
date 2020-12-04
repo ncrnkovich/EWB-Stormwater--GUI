@@ -518,35 +518,35 @@
 											<b>
 				    							<p class = "questions">Are you considering implementing an alternative pavement type?</p>
 											</b>
-                                            <input type="radio" id="mc" name="question5" value="Y" checked> Yes<br>
-                                            <input type="radio" id="mc" name="question5" value="N"> No<br> 
-                                            <input type="radio" id="mc" name="question5" value="NS"> Not sure<br> 
+                                            <input type="radio" id="mc" name="altPavement" value="Y" checked> Yes<br>
+                                            <input type="radio" id="mc" name="altPavement" value="N"> No<br> 
+                                            <input type="radio" id="mc" name="altPavement" value="NS"> Not sure<br> 
 
 											<br>
 											<b>
 				    							<p class = "questions">Would you consider a significant alteration to your landscape? (I.e. repaving or digging)</p>
 											</b>
-                                            <input type="radio" id="mc" name="question6" value="Y" checked> Yes<br>
-                                            <input type="radio" id="mc" name="question6" value="N"> No<br> 
-                                            <input type="radio" id="mc" name="question6" value="NS"> Not sure<br>	
+                                            <input type="radio" id="mc" name="alteration" value="Y" checked> Yes<br>
+                                            <input type="radio" id="mc" name="alteration" value="N"> No<br> 
+                                            <input type="radio" id="mc" name="alteration" value="NS"> Not sure<br>	
 
 											<br>
 											<b>
 				    							<p class = "questions">Does your land have a significant slope?</p>
 											</b>
-                                            <input type="radio" id="mc" name="question7" value="Y" checked> Yes<br>
-                                            <input type="radio" id="mc" name="question7" value="N"> No<br> 
-                                            <input type="radio" id="mc" name="question7" value="NS"> Not sure<br>		
+                                            <input type="radio" id="mc" name="slope" value="Y" checked> Yes<br>
+                                            <input type="radio" id="mc" name="slope" value="N"> No<br> 
+                                            <input type="radio" id="mc" name="slope" value="NS"> Not sure<br>		
 
 											<br>
 											<b>
 				    							<p class = "questions">For Industrial Properties: What is the area type you a looking to improve?</p>
 											</b>
-                                            <input type="radio" id="mc" name="question8" value="A"> Underground<br>
-                                            <input type="radio" id="mc" name="question8" value="B"> Above ground (smaller area, impervious)<br> 
-                                            <input type="radio" id="mc" name="question8" value="C"> Above ground (smaller area- vegetative)<br> 
-										   	<input type="radio" id="mc" name="question8" value="D"> Above Ground (larger area)<br>
-											<input type="radio" id="mc" name="question8" value="E" checked> I do not have an Industrial property.<br>	
+                                            <input type="radio" id="mc" name="areaType" value="A"> Underground<br>
+                                            <input type="radio" id="mc" name="areaType" value="B"> Above ground (smaller area, impervious)<br> 
+                                            <input type="radio" id="mc" name="areaType" value="C"> Above ground (smaller area- vegetative)<br> 
+										   	<input type="radio" id="mc" name="areaType" value="D"> Above Ground (larger area)<br>
+											<input type="radio" id="mc" name="areaType" value="E" checked> I do not have an Industrial property.<br>	
 
                                             <input id="button" type="button" value="Get Results!" onclick="check();">
 
@@ -555,6 +555,11 @@
                                         <!-- SHOW OPTIONS
 										each should be in a between <div id="option#"> </div>
 										bold option name, you should add a paragraph about each option
+										
+
+										You guys should add an id in css called learn_more to change the format of the paragraph of info
+
+
 										-->
                                         <div id="alert">
                                             <b> Please answer all questions.</b>
