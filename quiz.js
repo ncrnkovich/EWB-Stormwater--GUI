@@ -22,7 +22,7 @@ function check() {
     var propRate; // $5 / ERU for commercial, $2 / ERU for residential properties per month for stormwater fee (tentative)
     var totalYearlyFees;
     var perviousArea = totalArea - totalImpervious;
-    var Cimpermeable = 1;
+    var Cimpermeable = 0.9;
     var Cpermeable = 0.45; // averaging runoff coeff for permeable land
     var I5year = 2.76; // rainfall intensity for 5 year event, assuming 30 min drainage time [in/hr]
     // based on property type, set property fee
@@ -57,8 +57,8 @@ function check() {
         "UndergroundDetentionSubmit", //14
         "ConstructedWetlandSubmit", //15
         "WetPondSubmit", //16
-        "RainBarrelsCisternsSubmit"
-    ]; //17
+        "RainBarrelsCisternsSubmit" //17
+    ];
 
     var GSIoptionsBool = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
