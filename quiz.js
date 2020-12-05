@@ -7,7 +7,6 @@ function check() {
     var areaPermanent = parseInt(document.quiz.areaPermanent.value, 10); // roof area
     var propType = document.quiz.propType.value;
     var downspoutDisconnect = document.quiz.downspoutDisconnect.value;
-    var alteration = document.quiz.alteration.value;
     var slope = document.quiz.slope.value;
     var areaType = document.quiz.areaType.value;
 
