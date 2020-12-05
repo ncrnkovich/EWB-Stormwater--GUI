@@ -51,7 +51,6 @@ function check() {
 
 
 
-
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
     var GSIoptions = ["RainGardensSubmit", //ELEMENT NUMBER: 0
@@ -89,7 +88,6 @@ function check() {
         GSIoptionsBool[13] = 0;
         GSIoptionsBool[14] = 0;
 
-
     } else if (propType == "C") {
 
         //COMMERCIAL -->tree boxes, dry wells, porous pavement, grass pavers, permeable unit pavers, infiltration chamber, surface detention, bioretention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns										
@@ -115,41 +113,41 @@ function check() {
              GSIoptionsBool[9] = 0;
              GSIoptionsBool[10] = 0;
              GSIoptionsBool[12] = 0;
-             GSIoptionsBool[15] = 0;
-         }*/
+             GSIoptionsBool[15] = 0; */
+    }
 
-        // if (altPavement == "N") {
-        //     //NOT Porous pavement, grass pavers, permeable unit pavers
-        //     GSIoptionsBool[3] = 0;
-        //     GSIoptionsBool[4] = 0;
-        //     GSIoptionsBool[5] = 0;
-        // }
+    // if (altPavement == "N") {
+    //     //NOT Porous pavement, grass pavers, permeable unit pavers
+    //     GSIoptionsBool[3] = 0;
+    //     GSIoptionsBool[4] = 0;
+    //     GSIoptionsBool[5] = 0;
+    // }
 
-        // } else if (propType = "I") {
+    // } else if (propType = "I") {
 
-        //     //INDUSTRIAL--> tree boxes, dry wells, porous pavement, infiltration chamber, surface detention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns				
-        //     GSIoptionsBool[0] = 0;
-        //     GSIoptionsBool[4] = 0;
-        //     GSIoptionsBool[5] = 0;
-        //     GSIoptionsBool[8] = 0;
-        // }
+    //     //INDUSTRIAL--> tree boxes, dry wells, porous pavement, infiltration chamber, surface detention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns				
+    //     GSIoptionsBool[0] = 0;
+    //     GSIoptionsBool[4] = 0;
+    //     GSIoptionsBool[5] = 0;
+    //     GSIoptionsBool[8] = 0;
+    // }
 
-        // DISPLAY results
-        //each element of this array coordinates with each option}
+    // DISPLAY results
+    //each element of this array coordinates with each option}
 
-        // Hides all options to reset if they enter new values
+    // Hides all options to reset if they enter new values
+    for (i = 0; i < GSIoptions.length; i++) {
+        document.getElementById(GSIoptions[i]).style.display = "none";
+
+    }
+    // if any questions are not filled out, generates prompt to answer all questions
+    if (isNaN(totalArea) || isNaN(totalImpervious) || isNaN(areaPermanent)) {
+        document.getElementById("alert").style.display = "block";
+    } else {
+        document.getElementById("alert").style.display = "none";
         for (i = 0; i < GSIoptions.length; i++) {
-            document.getElementById(GSIoptions[i]).style.display = "none";
-        }
-        // if any questions are not filled out, generates prompt to answer all questions
-        if (isNaN(totalArea) || isNaN(totalImpervious) || isNaN(areaPermanent)) {
-            document.getElementById("alert").style.display = "block";
-        } else {
-            document.getElementById("alert").style.display = "none";
-            for (i = 0; i < GSIoptions.length; i++) {
-                if (GSIoptionsBool[i]) {
-                    document.getElementById(GSIoptions[i]).style.display = "block";
-                }
+            if (GSIoptionsBool[i]) {
+                document.getElementById(GSIoptions[i]).style.display = "block";
             }
         }
     }

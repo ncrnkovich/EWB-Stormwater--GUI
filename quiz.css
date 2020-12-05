@@ -3,13 +3,12 @@
 }
 
 #quiz {
-    /* display: inline-block; */
+    display: inline-block;
     margin-left: 40px;
     background: #d2def2;
     padding: 10px 20px 10px 20px;
     width: 900px;
     border-radius: 20px;
-    float: left;
 }
 
 
