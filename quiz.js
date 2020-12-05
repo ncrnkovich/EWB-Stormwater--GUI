@@ -95,7 +95,7 @@ function check() {
         //COMMERCIAL -->tree boxes, dry wells, porous pavement, grass pavers, permeable unit pavers, infiltration chamber, surface detention, bioretention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns										
         GSIoptionsBool[0] = 0;
 
-        /* if (slope == "Y") {
+        if (slope == "Y") {
              //significant slope --> tree boxes, dry wells, porous pavement, permeable unit pavers, grass pavers, infiltration chamber, surface detention, green roof, underground retention, wet pond
              GSIoptionsBool[8] = 0;
              GSIoptionsBool[9] = 0;
@@ -116,7 +116,7 @@ function check() {
              GSIoptionsBool[10] = 0;
              GSIoptionsBool[12] = 0;
              GSIoptionsBool[15] = 0;
-         }*/
+         }
 
         // if (altPavement == "N") {
         //     //NOT Porous pavement, grass pavers, permeable unit pavers
@@ -132,7 +132,7 @@ function check() {
         //     GSIoptionsBool[4] = 0;
         //     GSIoptionsBool[5] = 0;
         //     GSIoptionsBool[8] = 0;
-        // }
+    }
 
         // DISPLAY results
         //each element of this array coordinates with each option}
