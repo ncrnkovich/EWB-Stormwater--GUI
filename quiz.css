@@ -1,4 +1,9 @@
+.new *{
+	all: revert;
+}
+
 #quiz {
+	display: inline-block;
     margin-left: 300px;
     background: #d2def2;
     padding: 10px 20px 10px 20px;
@@ -7,12 +12,13 @@
     float: left;
 }
 
-input {
+/*input {
     margin-bottom: 10px;
     display: block;
-}
+}*/
 
 #textbox {
+	display: inline;
     height: 25px;
     font-size: 16px;
     border-radius: 5px;

@@ -488,57 +488,59 @@
                                         <link rel="stylesheet" href="quiz.css">
                                         <script src="quiz.js"></script>
 
-                                        <form id="quiz" name="quiz">
+                                        <form id="quiz" name="quiz" class="new">
                                             <b>
-				    							<p class = "questions">Total Area of Property (in square feet):</p>
+				    							Total Area of Property (in square feet):
 											</b>
-                                            <input id="textbox" type="text" name="totalArea"> *Note: you must manually enter the value calculated from map section above.
+                                            <br>
+                                            <input id="textbox" type="text" name="totalArea">
+                                            <br> *Note: you must manually enter the value calculated from map section above.
+                                            <br>
 
                                             <br>
                                             <b>
-				   								<p class = "questions">Area of Impermable Land (in square feet):</p>
+				   								Area of Impermable Land (in square feet):
 											</b>
-                                            <input id="textbox" type="text" name="totalImpervious"> *Note: you must manually enter the value calculated from map section above.
+                                            <br>
+                                            <input id="textbox" type="text" name="totalImpervious">
+                                            <br> *Note: you must manually enter the value calculated from map section above.
+                                            <br>
 
                                             <br>
                                             <b>
-				    							<p class = "questions"> Area of Roof or other permanent structures (in square feet):</p>
+				    							Area of Roof or other permanent structures (in square feet):
 											</b>
-                                            <input id="textbox" type="text" name="areaPermanent"> *Note: you must manually enter the value calculated from map section above.
+                                            <br>
+                                            <input id="textbox" type="text" name="areaPermanent">
+                                            <br> *Note: you must manually enter the value calculated from map section above.
+                                            <br>
 
                                             <br>
                                             <b>
-				    							<p class = "questions">Which best describes your property?</p>
+				    							Which best describes your property?
 											</b>
+                                            <br>
                                             <input type="radio" id="mc" name="propType" value="R"> Residential<br>
                                             <input type="radio" id="mc" name="propType" value="C" checked> Commercial<br>
                                             <input type="radio" id="mc" name="propType" value="I"> Industrial<br>
 
                                             <br>
                                             <b>
-				    							<p class = "questions">Is your downspout disconnected, or do you plan to have it disconnected?</p>
+				    							Is your downspout disconnected, or do you plan to have it disconnected?
 											</b>
+                                            <br>
                                             <input type="radio" id="mc" name="downspoutDisconnect" value="Y" checked> Yes<br>
                                             <input type="radio" id="mc" name="downspoutDisconnect" value="N"> No<br>
 
-
                                             <br>
                                             <b>
-				    							<p class = "questions">Does your land have a significant slope?</p>
-											</b>
+				    							Does your land have a significant slope?
+                                            </b>
+                                            <br>
                                             <input type="radio" id="mc" name="slope" value="Y" checked> Yes<br>
                                             <input type="radio" id="mc" name="slope" value="N"> No<br>
                                             <input type="radio" id="mc" name="slope" value="NS"> Not sure<br>
 
-                                            <br>
-                                            <b>
-				    							<p class = "questions">For Industrial Properties: What is the area type you a looking to improve?</p>
-											</b>
-                                            <input type="radio" id="mc" name="areaType" value="A"> Underground<br>
-                                            <input type="radio" id="mc" name="areaType" value="B"> Above ground (smaller area, impervious)<br>
-                                            <input type="radio" id="mc" name="areaType" value="C"> Above ground (smaller area- vegetative)<br>
-                                            <input type="radio" id="mc" name="areaType" value="D"> Above Ground (larger area)<br>
-                                            <input type="radio" id="mc" name="areaType" value="E" checked> I do not have an Industrial property.<br>
 
                                             <input id="button" type="button" value="Get Results!" onclick="check();">
 

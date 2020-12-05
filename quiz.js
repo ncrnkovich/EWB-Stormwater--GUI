@@ -8,7 +8,6 @@ function check() {
     var propType = document.quiz.propType.value;
     var downspoutDisconnect = document.quiz.downspoutDisconnect.value;
     var slope = document.quiz.slope.value;
-    var areaType = document.quiz.areaType.value;
 
     var i;
 
