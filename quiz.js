@@ -6,7 +6,7 @@ function check() {
     var totalImpervious = parseInt(document.quiz.totalImpervious.value, 10); // area land
     var areaPermanent = parseInt(document.quiz.areaPermanent.value, 10); // roof area
     var propType = document.quiz.propType.value;
-    var altPavement = document.quiz.altPavement.value;
+    var downspoutDisconnect = document.quiz.downspoutDisconnect.value;
     var alteration = document.quiz.alteration.value;
     var slope = document.quiz.slope.value;
     var areaType = document.quiz.areaType.value;
@@ -22,7 +22,7 @@ function check() {
     var propRate; // $5 / ERU for commercial, $2 / ERU for residential properties per month for stormwater fee (tentative)
     var totalYearlyFees;
     var perviousArea = totalArea - totalImpervious;
-    var Cimpermeable = 0.9;
+    var Cimpermeable = 1;
     var Cpermeable = 0.45; // averaging runoff coeff for permeable land
     var I5year = 2.76; // rainfall intensity for 5 year event, assuming 30 min drainage time [in/hr]
     // based on property type, set property fee
