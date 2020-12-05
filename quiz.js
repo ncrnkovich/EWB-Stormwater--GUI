@@ -96,7 +96,7 @@ function check() {
         //COMMERCIAL -->tree boxes, dry wells, porous pavement, grass pavers, permeable unit pavers, infiltration chamber, surface detention, bioretention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns										
         GSIoptionsBool[0] = 0;
 
-       /* if (slope = "Y") {
+        if (slope == "Y") {
             //significant slope --> tree boxes, dry wells, porous pavement, permeable unit pavers, grass pavers, infiltration chamber, surface detention, green roof, underground retention, wet pond
             GSIoptionsBool[8] = 0;
             GSIoptionsBool[9] = 0;
