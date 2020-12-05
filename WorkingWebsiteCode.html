@@ -491,89 +491,56 @@
                                             <b>
 				    							Total Area of Property (in square feet): 
 											</b>
-											<br>
+                                            <br>
                                             <input id="textbox" type="text" name="totalArea">
-											<br>
-											*Note: you must manually enter the value calculated from map section above.
-											<br>
+                                            <br> *Note: you must manually enter the value calculated from map section above.
+                                            <br>
 
                                             <br>
                                             <b>
 				   								Area of Impermable Land (in square feet):     
 											</b>
-											<br>
-                                            <input id="textbox" type="text" name="totalImpervious"> 
-											<br>
-											*Note: you must manually enter the value calculated from map section above.
                                             <br>
+                                            <input id="textbox" type="text" name="totalImpervious">
+                                            <br> *Note: you must manually enter the value calculated from map section above.
+                                            <br>
+
 
 											<br>
 											<b>
 				    								Area of Roof or other permanent structures (in square feet):     
 											</b>
-											<br>
-                                            <input id="textbox" type="text" name="areaPermanent"> 
-											<br>
-											*Note: you must manually enter the value calculated from map section above.
-											<br>
+                                            <br>
+                                            <input id="textbox" type="text" name="areaPermanent">
+                                            <br> *Note: you must manually enter the value calculated from map section above.
+                                            <br>
 
                                             <br>
                                             <b>
 				    							Which best describes your property?
 											</b>
-											<br>
+                                            <br>
                                             <input type="radio" id="mc" name="propType" value="R"> Residential<br>
                                             <input type="radio" id="mc" name="propType" value="C" checked> Commercial<br>
                                             <input type="radio" id="mc" name="propType" value="I"> Industrial<br>
 
-											<!--
-											<br>
-											<b>
-				    							Are you considering implementing an alternative pavement type?
-											</b>
-											<br>
-                                            <input type="radio" id="mc" name="altPavement" value="Y" checked> Yes<br>
-                                            <input type="radio" id="mc" name="altPavement" value="N"> No<br> 
-                                            <input type="radio" id="mc" name="altPavement" value="NS"> Not sure<br> 
-											
-
-											<br>
-											<b>
-				    							Would you consider a significant alteration to your landscape? (I.e. repaving or digging)
-											</b>
-											<input type="radio" id="mc" name="alteration" value="Y" checked> Yes<br>
-                                            <input type="radio" id="mc" name="alteration" value="N"> No<br> 
-                                            <input type="radio" id="mc" name="alteration" value="NS"> Not sure<br>
-											-->
-
-											<br>
+                                            <br>
                                             <b>
 				    							Is your downspout disconnected, or do you plan to have it disconnected?
 											</b>
-											<br>
+                                            <br>
                                             <input type="radio" id="mc" name="downspoutDisconnect" value="Y" checked> Yes<br>
                                             <input type="radio" id="mc" name="downspoutDisconnect" value="N"> No<br>
 
-											<br>
-											<b>
-				    							Does your land have a significant slope?
-                                            </b>	
-											<br>
-                                            <input type="radio" id="mc" name="slope" value="Y" checked> Yes<br>
-                                            <input type="radio" id="mc" name="slope" value="N"> No<br> 
-                                            <input type="radio" id="mc" name="slope" value="NS"> Not sure<br>
-
                                             <br>
                                             <b>
-				    							For Industrial Properties: What is the area type you a looking to improve?
-											</b>
-											<br>
-                                            <input type="radio" id="mc" name="areaType" value="A"> Underground<br>
-                                            <input type="radio" id="mc" name="areaType" value="B"> Above ground (smaller area, impervious)<br> 
-                                            <input type="radio" id="mc" name="areaType" value="C"> Above ground (smaller area- vegetative)<br> 
-										   	<input type="radio" id="mc" name="areaType" value="D"> Above Ground (larger area)<br>
-											<input type="radio" id="mc" name="areaType" value="E" checked> I do not have an Industrial property.
-											<br>	 
+				    							Does your land have a significant slope?
+                                            </b>
+                                            <br>
+                                            <input type="radio" id="mc" name="slope" value="Y" checked> Yes<br>
+                                            <input type="radio" id="mc" name="slope" value="N"> No<br>
+                                            <input type="radio" id="mc" name="slope" value="NS"> Not sure<br>
+
 
                                             <input id="button" type="button" value="Get Results!" onclick="check();">
 
