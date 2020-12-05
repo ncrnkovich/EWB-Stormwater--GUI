@@ -52,7 +52,6 @@ function check() {
 
 
 
-
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
     var GSIoptions = ["RainGardensSubmit", //ELEMENT NUMBER: 0
@@ -78,7 +77,7 @@ function check() {
     var GSIoptionsBool = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
     // // Series of NESTED if/else statements... if (condition) then change the GSIoptionsBool to 0 for all of the  incompatible options (element # correlates with GSIoptions)
-    if (propType = "R") {
+    if (propType == "R") {
 
         //RESIDENTIAL -->rain gardens, dry wells, porous pavement, grass pavers, permeable unit pavers, vegetative swales, vegetative filter strip, constructed wetland, wet pond, rain barrels/cisterns
         GSIoptionsBool[1] = 0;
@@ -91,34 +90,33 @@ function check() {
         GSIoptionsBool[14] = 0;
 
 
-    } else if (propType = "C") {
+    } else if (propType == "C") {
 
         //COMMERCIAL -->tree boxes, dry wells, porous pavement, grass pavers, permeable unit pavers, infiltration chamber, surface detention, bioretention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns										
         GSIoptionsBool[0] = 0;
 
-        if (slope = "Y") {
-            //significant slope --> tree boxes, dry wells, porous pavement, permeable unit pavers, grass pavers, infiltration chamber, surface detention, green roof, underground retention, wet pond
-            GSIoptionsBool[8] = 0;
-            GSIoptionsBool[9] = 0;
-            GSIoptionsBool[10] = 0;
-            GSIoptionsBool[11] = 0;
-            GSIoptionsBool[12] = 0;
-            GSIoptionsBool[15] = 0;
-            GSIoptionsBool[12] = 0;
-        }
+        /* if (slope = "Y") {
+             //significant slope --> tree boxes, dry wells, porous pavement, permeable unit pavers, grass pavers, infiltration chamber, surface detention, green roof, underground retention, wet pond
+             GSIoptionsBool[8] = 0;
+             GSIoptionsBool[9] = 0;
+             GSIoptionsBool[10] = 0;
+             GSIoptionsBool[11] = 0;
+             GSIoptionsBool[12] = 0;
+             GSIoptionsBool[15] = 0; 
+         }
 
-        if (alteration = "N" || totalImpervious < 6000) { //******* second condition refers to the question: Is your residential area on a small or large scale?  ******
+         if (totalArea < 6000) { //******* condition refers to the question: Is your residential area on a small or large scale?  ******
 
-            //NO significant alteration --> NOT:	porous pavement, permeable unit pavers, infiltration chamber,surface detention, infiltration basin, infiltration trench, vegetable filter strip, wet pond, constricted wetland
-            GSIoptionsBool[3] = 0;
-            GSIoptionsBool[5] = 0;
-            GSIoptionsBool[6] = 0;
-            GSIoptionsBool[7] = 0;
-            GSIoptionsBool[9] = 0;
-            GSIoptionsBool[10] = 0;
-            GSIoptionsBool[12] = 0;
-            GSIoptionsBool[15] = 0;
-        }
+             //NO significant alteration --> NOT:	porous pavement, permeable unit pavers, infiltration chamber,surface detention, infiltration basin, infiltration trench, vegetable filter strip, wet pond, constricted wetland
+             GSIoptionsBool[3] = 0;
+             GSIoptionsBool[5] = 0;
+             GSIoptionsBool[6] = 0;
+             GSIoptionsBool[7] = 0;
+             GSIoptionsBool[9] = 0;
+             GSIoptionsBool[10] = 0;
+             GSIoptionsBool[12] = 0;
+             GSIoptionsBool[15] = 0;
+         }*/
 
         // if (altPavement = "N") {
         //     //NOT Porous pavement, grass pavers, permeable unit pavers
@@ -140,7 +138,7 @@ function check() {
         //each element of this array coordinates with each option}
 
         // Hides all options to reset if they enter new values
-        for (i = 0; i < GSIoptions.length - 1; i++) {
+        for (i = 0; i < GSIoptions.length; i++) {
             document.getElementById(GSIoptions[i]).style.display = "none";
         }
         // if any questions are not filled out, generates prompt to answer all questions
@@ -148,7 +146,7 @@ function check() {
             document.getElementById("alert").style.display = "block";
         } else {
             document.getElementById("alert").style.display = "none";
-            for (i = 0; i < GSIoptions.length - 1; i++) {
+            for (i = 0; i < GSIoptions.length; i++) {
                 if (GSIoptionsBool[i]) {
                     document.getElementById(GSIoptions[i]).style.display = "block";
                 }
