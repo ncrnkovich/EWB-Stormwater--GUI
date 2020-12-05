@@ -27,14 +27,14 @@ function check() {
     // Fee calculations
 
     // based on property type, set property fee
-    if (propType = "R") {
+    if (propType == "R") {
         propRate = 2;
     } else {
         propRate = 5;
     }
     stormFee = (totalArea / ERU) * propRate * 12; // YEARLY fee (note the x12)
 
-    if (downspoutDisconnect = "Y") {
+    if (downspoutDisconnect == "Y") {
         inLieuFee = 0; // if their downspout is disconnected, no in-lieu-of fee
     }
     totalYearlyFees = inLieuFee + stormFee;
@@ -120,38 +120,38 @@ function check() {
             GSIoptionsBool[15] = 0;
         }
 
-        if (altPavement = "N") {
-            //NOT Porous pavement, grass pavers, permeable unit pavers
-            GSIoptionsBool[3] = 0;
-            GSIoptionsBool[4] = 0;
-            GSIoptionsBool[5] = 0;
-        }
+        // if (altPavement = "N") {
+        //     //NOT Porous pavement, grass pavers, permeable unit pavers
+        //     GSIoptionsBool[3] = 0;
+        //     GSIoptionsBool[4] = 0;
+        //     GSIoptionsBool[5] = 0;
+        // }
 
-    } else if (propType = "I") {
+        // } else if (propType = "I") {
 
-        //INDUSTRIAL--> tree boxes, dry wells, porous pavement, infiltration chamber, surface detention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns				
-        GSIoptionsBool[0] = 0;
-        GSIoptionsBool[4] = 0;
-        GSIoptionsBool[5] = 0;
-        GSIoptionsBool[8] = 0;
-    }
+        //     //INDUSTRIAL--> tree boxes, dry wells, porous pavement, infiltration chamber, surface detention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns				
+        //     GSIoptionsBool[0] = 0;
+        //     GSIoptionsBool[4] = 0;
+        //     GSIoptionsBool[5] = 0;
+        //     GSIoptionsBool[8] = 0;
+        // }
 
-    // DISPLAY results
-    //each element of this array coordinates with each option}
+        // DISPLAY results
+        //each element of this array coordinates with each option}
 
-    // Hides all options to reset if they enter new values
-    for (i = 0; i < GSIoptions.length - 1; i++) {
-        document.getElementById(GSIoptions[i]).style.display = "none";
-    }
-    // if any questions are not filled out, generates prompt to answer all questions
-    if (isNaN(totalArea) || isNaN(totalImpervious) || isNaN(areaPermanent)) {
-        document.getElementById("alert").style.display = "block";
-    } else {
-        document.getElementById("alert").style.display = "none";
+        // Hides all options to reset if they enter new values
         for (i = 0; i < GSIoptions.length - 1; i++) {
-            if (GSIoptionsBool[i]) {
-                document.getElementById(GSIoptions[i]).style.display = "block";
+            document.getElementById(GSIoptions[i]).style.display = "none";
+        }
+        // if any questions are not filled out, generates prompt to answer all questions
+        if (isNaN(totalArea) || isNaN(totalImpervious) || isNaN(areaPermanent)) {
+            document.getElementById("alert").style.display = "block";
+        } else {
+            document.getElementById("alert").style.display = "none";
+            for (i = 0; i < GSIoptions.length - 1; i++) {
+                if (GSIoptionsBool[i]) {
+                    document.getElementById(GSIoptions[i]).style.display = "block";
+                }
             }
         }
     }
-}
