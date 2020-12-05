@@ -22,18 +22,35 @@ function check() {
     var perviousArea = totalArea - totalImpervious;
     var Cimpermeable = 1;
     var Cpermeable = 0.45; // averaging runoff coeff for permeable land
-    var I5year = 2.76; // rainfall intensity for 5 year event, assuming 30 min drainage time [in/hr]
+    var I10year;
+
+    // Fee calculations
+
     // based on property type, set property fee
     if (propType = "R") {
         propRate = 2;
     } else {
         propRate = 5;
     }
-
     stormFee = (totalArea / ERU) * propRate * 12; // YEARLY fee (note the x12)
+
+    if (downspoutDisconnect = "Y") {
+        inLieuFee = 0; // if their downspout is disconnected, no in-lieu-of fee
+    }
     totalYearlyFees = inLieuFee + stormFee;
 
-    stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I5year / 720; // ft^3/min
+    // Runoff calculations
+
+    if (totalArea > 10 * ERU) {
+        I10year = 3.14; // [in/hr] using 30min time of concentration for larger properties
+    } else {
+        I10year = 4.52; // [in/hr] using 15 min time of concentration for smaller properties
+    }
+    stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I10year / 720; // [ft^3/min]
+
+
+
+
 
 
     // OPTION CALCULATOR
