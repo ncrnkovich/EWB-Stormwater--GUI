@@ -1,9 +1,9 @@
-.new *{
-	all: revert;
+.new * {
+    all: revert;
 }
 
 #quiz {
-	display: inline-block;
+    /* display: inline-block; */
     margin-left: 40px;
     background: #d2def2;
     padding: 10px 20px 10px 20px;
@@ -12,24 +12,25 @@
     float: left;
 }
 
+
 /*input {
     margin-bottom: 10px;
     display: block;
 }*/
 
 #textbox {
-	display: inline;
+    display: inline;
     height: 25px;
     font-size: 16px;
     border-radius: 5px;
     border: none;
     padding-left: 5px;
-	width: 100%;
+    width: 100%;
 }
 
 #mc {
-	text-align: default;
-	margin-left:20px;
+    text-align: default;
+    margin-left: 20px;
 }
 
 #button {
@@ -41,7 +42,7 @@
     font-size: 16px;
     transition-duration: .5s;
     margin-top: 15px;
-	margin-left: 360px;
+    margin-left: 360px;
 }
 
 #button:hover {
@@ -64,14 +65,15 @@
 }
 
 #optiontitle {
-	font-size: 20px;
-	font-weight: bold;
-	text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
 
 #learn_more {
-	font-size: 18px;
+    font-size: 18px;
 }
+
 
 /* copy and paste after_submit# options but change name based on option number */
 
@@ -148,7 +150,7 @@
 }
 
 #InfiltrationChamberSubmit {
-	display: none;
+    display: none;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
@@ -156,7 +158,7 @@
     font-size: 30px;
     float: left;
     margin-left: 90px;
-    color: white; 
+    color: white;
 }
 
 #SurfaceDetentionSubmit {
@@ -290,7 +292,6 @@
     margin-left: 90px;
     color: white;
 }
-
 
 #link {
     color: white;
