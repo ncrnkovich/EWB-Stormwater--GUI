@@ -238,6 +238,7 @@
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js?ver=1.0.0'></script>
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha1.js?ver=1.0.0'></script>
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js?ver=1.0.0'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel='https://api.w.org/' href='https://southbendin.gov/wp-json/' />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://southbendin.gov/xmlrpc.php?rsd" />
     <link rel="alternate" type="application/json+oembed" href="https://southbendin.gov/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsouthbendin.gov%2Fboard%2Fspecial-event-committee%2F" />
@@ -485,8 +486,8 @@
 
                                         <link rel="stylesheet" href="quiz.css">
                                         <script src="quiz.js"></script>
-										
-										<br>
+
+                                        <br>
                                         <form id="quiz" name="quiz" class="new">
                                             <b>
 				    							Total Area of Property (in square feet): 
@@ -504,8 +505,8 @@
                                             <br>
 
 
-											<br>
-											<b>
+                                            <br>
+                                            <b>
 				    								Area of Roof or other permanent structures (in square feet):     
 											</b>
                                             <input id="textbox" type="text" name="areaPermanent">
@@ -557,145 +558,163 @@
                                         </div>
 
                                         <div id="RainGardensSubmit">
-                                            <p id= "optiontitle">Rain Gardens</p>
-                                            <p id="learn_more">
+                                            <p class="optiontitle">Rain Gardens</p>
+                                            <p class="learn_more">
                                                 A rain garden is a landscape bed that allows rain water to be absorbed into its multiple layers to reduce the amount of runoff that makes its way into the sewer system. They consist of beds of porous soil along with added vegetation designed to absorb
                                                 and store water before it is drained back into the groundwater system. Rain gardens are estimated to remove 90% of nutrients and chemicals and up to 80% of sediments from runoff. The cost of rain gardens
                                                 vary based on the selection of soil, plants, and decorative additions. Smaller plants are more cost effective, but require more time to grow to full size. It is recomended that native plants are used as
                                                 they meet the USDA hardiness zone.
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
                                         <div id="TreeBoxesSubmit">
-                                            <p id="optiontitle">Tree Boxes</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Tree Boxes</p>
+                                            <p class="learn_more">
+                                                Words about Tree Boxes
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
                                         <div id="DryWellsSubmit">
-                                            <p id= "optiontitle">Dry Wells</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Dry Wells</p>
+                                            <p class="learn_more">
+                                                Words about dry wells
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
                                         <div id="PorousPavementSubmit">
-                                            <p id="optiontitle">Porous Pavement</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Porous Pavement</p>
+                                            <p class="learn_more">
+                                                Words about porous pavement.
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
 
                                         <div id="GrassPaversSubmit">
-                                            <p id="optiontitle">Grass Pavers</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Grass Pavers</p>
+                                            <p class="learn_more">
+                                                Grace pavers
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
 
                                         <div id="PermeableUnitPaversSubmit">
-                                            <p id="optiontitle">Permeable Unit Pavers</p>
-											<p id="learn_more">
-                                                
+                                            <p class="optiontitle">Permeable Unit Pavers</p>
+                                            <p class="learn_more">
+                                                Permeable unit pavers
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
 
                                         <div id="InfiltrationChamberSubmit">
-                                            <p id="optiontitle">Infiltration Chamber</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Infiltration Chamber</p>
+                                            <p class="learn_more">
+                                                Infiltration chamber
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
 
                                         <div id="SurfaceDetentionSubmit">
-                                            <p id="optiontitle">Surface Detention</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Surface Detention</p>
+                                            <p class="learn_more">
+                                                Surface detention
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
 
                                         <div id="BioretentionSubmit">
-                                            <p id= "optiontitle">Bioretention</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Bioretention</p>
+                                            <p class="learn_more">
+                                                Bioretention
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
 
                                         <div id="InfiltrationBasinSubmit">
-                                            <p id="optiontitle">Infiltration Basin</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Infiltration Basin</p>
+                                            <p class="learn_more">
+                                                Infiltration Basin
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
 
                                         <div id="InfiltrationTrenchSubmit">
-                                            <p id="optiontitle">Infiltration Trench</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Infiltration Trench</p>
+                                            <p class="learn_more">
+                                                Infiltration trench
                                             </p>
-                                        </div>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button> </div>
 
 
                                         <div id="VegetativeSwaleSubmit">
-                                            <p id="optiontitle">Vegetative Swale</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Vegetative Swale</p>
+                                            <p class="learn_more">
+                                                Vegetative Swale
                                             </p>
-                                        </div>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button> </div>
 
 
                                         <div id="VegetativeFilterStripSubmit">
-                                            <p id="optiontitle">Vegetative Filter Strip</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Vegetative Filter Strip</p>
+                                            <p class="learn_more">
+                                                Vegetative filter strip
                                             </p>
-                                        </div>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button> </div>
 
 
                                         <div id="GreenRoofSubmit">
-                                            <p id="optiontitle">Green Roof</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Green Roof</p>
+                                            <p class="learn_more">
+                                                Green roof
                                             </p>
-                                        </div>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button> </div>
 
 
                                         <div id="UndergroundDetentionSubmit">
-                                            <p id="optiontitle">Underground Detention</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Underground Detention</p>
+                                            <p class="learn_more">
+                                                Underground
                                             </p>
-                                        </div>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button> </div>
 
                                         <div id="ConstructedWetlandSubmit">
-                                            <p id="optiontitle">Constructed Wetland</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Constructed Wetland</p>
+                                            <p class="learn_more">
+                                                Constructed wetland
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
                                         <div id="WetPondSubmit">
-                                            <p id="optiontitle">Wet Pond</p>
-                                            <p id="learn_more">
-                                                
+                                            <p class="optiontitle">Wet Pond</p>
+                                            <p class="learn_more">
+                                                Wetpond
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
                                         <div id="RainBarrelsCisternsSubmit">
-                                            <p id="optiontitle">Rain Barrels</p>
-                                            <p id="learn_more">
-                                               
+                                            <p class="optiontitle">Rain Barrels</p>
+                                            <p class="learn_more">
+                                                Rain barrels
                                             </p>
+                                            <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
-
+                                        <script>
+                                            $('button').click(function() {
+                                                var clickedIndex = $('.button').index(this);
+                                                showmoreless(clickedIndex)
+                                            });
+                                        </script>
                                     </body>
                                 </div>
                             </div>

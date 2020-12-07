@@ -63,18 +63,56 @@
     color: white;
 }
 
-#optiontitle {
+.optiontitle {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
 
-#learn_more {
+.learn_more {
     font-size: 18px;
+    display: none;
 }
 
 
 /* copy and paste after_submit# options but change name based on option number */
+
+.button {
+    background: wheat;
+    border: none;
+    color: tomato;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+    width: 50px;
+    padding: 10px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 15px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
 
 #RainGardensSubmit {
     display: none;
