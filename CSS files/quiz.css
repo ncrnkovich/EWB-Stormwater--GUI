@@ -1,0 +1,335 @@
+.new * {
+    all: revert;
+}
+
+#quiz {
+    display: inline-block;
+    margin-left: 40px;
+    background: #d2def2;
+    padding: 10px 20px 10px 20px;
+    width: 900px;
+    border-radius: 20px;
+}
+
+
+/*input {
+    margin-bottom: 10px;
+    display: block;
+}*/
+
+#textbox {
+    display: inline;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+    width: 100%;
+}
+
+#mc {
+    text-align: default;
+    margin-left: 20px;
+}
+
+#button {
+    background: #bd222e;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    transition-duration: .5s;
+    margin-top: 15px;
+    margin-left: 360px;
+}
+
+#button:hover {
+    background: white;
+    border: 1px solid #bd222e;
+    color: black;
+    cursor: pointer;
+}
+
+#alert {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 400px;
+    border-radius: 20px;
+    float: left;
+    margin-left: 300px;
+    font-size: 16px;
+    color: white;
+}
+
+.optiontitle {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.learn_more {
+    font-size: 18px;
+    display: none;
+}
+
+
+/* copy and paste after_submit# options but change name based on option number */
+
+.button {
+    background: wheat;
+    border: none;
+    color: tomato;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+    width: 50px;
+    padding: 10px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 15px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#RainGardensSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#TreeBoxesSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    float: left;
+    margin-left: 90px;
+    font-size: 30px;
+    color: white;
+}
+
+#DryWellsSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    float: left;
+    margin-left: 90px;
+    font-size: 30px;
+    color: white;
+}
+
+#PorousPavementSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#GrassPaversSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#PermeableUnitPaversSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#InfiltrationChamberSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#SurfaceDetentionSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#BioretentionSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#InfiltrationBasinSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#InfiltrationTrenchSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#VegetativeSwaleSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#VegetativeFilterStripSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#GreenRoofSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#UndergroundDetentionSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#ConstructedWetlandSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#WetPondSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#RainBarrelsCisternsSubmit {
+    display: none;
+    background: #bd222e;
+    padding: 10px 20px 10px 20px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 30px;
+    float: left;
+    margin-left: 90px;
+    color: white;
+}
+
+#link {
+    color: white;
+}
