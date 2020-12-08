@@ -57,12 +57,25 @@ input {
     display: none;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
-    width: 400px;
+    width: 800px;
     border-radius: 20px;
-    font-size: 30px;
     float: left;
     margin-left: 300px;
+}
+#RainGardensSubmit h1, #RainGardensSubmit h2 {
+    margin: 0;
+    font-weight: normal;
+}
+#RainGardensSubmit h1{
+    font-size: 30px;
+    font-family: "Lucida Console", monospace;
     color: white;
+}
+#RainGardensSubmit h2{
+    font-size: 15px;
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-style: normal;
 }
 
 #TreeBoxesSubmit {
