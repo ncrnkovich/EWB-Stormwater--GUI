@@ -22,7 +22,7 @@
     <script src="https://unpkg.com/esri-leaflet@2.5.1/dist/esri-leaflet.js" integrity="sha512-q7X96AASUF0hol5Ih7AeZpRF6smJS55lcvy+GLWzJfZN+31/BQ8cgNx2FGF+IQSA4z2jHwB20vml+drmooqzzQ==" crossorigin=""></script>
 
     <!-- Load Esri Leaflet Geocoder from CDN (Geocoding)-->
-    <link rel="stylesheet" href="searchControl.css">
+    <link rel="stylesheet" href="../CSS_files/searchControl.css">
     <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.js" integrity="sha512-HrFUyCEtIpxZloTgEKKMq4RFYhxjJkCiF5sDxuAokklOeZ68U2NPfh4MFtyIVWlsKtVbK5GD2/JzFyAfvT5ejA==" crossorigin=""></script>
 
     <!-- Leaflet Measure JavaScript file-->
@@ -474,9 +474,9 @@
                                         <div id="mapid" style="width: 1000px; height: 500px;"></div>
 
                                         <!-- Add Leaflet Measuring tool -->
-                                        <link rel="stylesheet" href="leaflet-measure.css">
-                                        <script src="leaflet-measure.js"></script>
-                                        <script src="mapscript.js"></script>
+                                        <link rel="stylesheet" href="../CSS_files/leaflet-measure.css">
+                                        <script src="../JavaScript_Files/leaflet-measure.js"></script>
+                                        <script src="../JavaScript_Files/mapscript.js"></script>
 
 
                                         <!-- QUIZ QUESTIONS
@@ -484,8 +484,8 @@
 										id= textbox is free response question
 										id= radio is a multiple choice question-->
 
-                                        <link rel="stylesheet" href="quiz.css">
-                                        <script src="quiz.js"></script>
+                                        <link rel="stylesheet" href="../CSS_files/quiz.css">
+                                        <script src="../JavaScript_Files/quiz.js"></script>
 
                                         <br>
                                         <form id="quiz" name="quiz" class="new">
@@ -547,12 +547,9 @@
                                         <!-- SHOW OPTIONS
 										each should be in a between <div id="option#"> </div>
 										bold option name, you should add a paragraph about each option
-										
-
-										You guys should add an id in css called learn_more to change the format of the paragraph of info
+                                        -->
 
 
-										-->
                                         <div id="alert">
                                             <b> Please answer all questions.</b>
                                         </div>
@@ -565,14 +562,30 @@
                                                 vary based on the selection of soil, plants, and decorative additions. Smaller plants are more cost effective, but require more time to grow to full size. It is recomended that native plants are used as
                                                 they meet the USDA hardiness zone.
                                             </p>
+                                            <img src="RainGardenTN.JPG" alt="Loacted at https://www.esf.edu/ere/endreny/GICalculator/RainGardenIntro.html" style="width: 80%">
+                                            <h1> For more information visit: </h1>
+                                            <h2 id="links1">
+                                                <a href="https://www.susdrain.org/delivering-suds/using-suds/suds-components/infiltration/rain-gardens.html">susdrain.org </a>
+                                                <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/raingarden.html">lakesuperiorstreams.org</a>
+                                            </h2>
                                             <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 
                                         <div id="TreeBoxesSubmit">
                                             <p class="optiontitle">Tree Boxes</p>
                                             <p class="learn_more">
-                                                Words about Tree Boxes
+                                                A tree box filter is a stormwater management system similar to a rain garden except for the fact that it consists of a poured concrete outer shell that is either free draining below or a closed unit that drains into an external source. Tree boxes are
+                                                usually seen in urban areas along curbs and sidewalks. They can be retrofitted into existing streetscapes, most often along the curbline of adjacent roadways. In general, tree boxes are very versatile --
+                                                they can fit a wide variety of sizes and streetscape styles. Additionally, they help to filter the water before discharging it. Tree boxes can be pre-cast for easy installation/maintenance. Tree boxes do
+                                                have a limited volume capacity. Additionally, they require regular maintenance to remove debris, keep the plants pruned, replace mulch, etc. The base should require minimal repair, but the plants inside
+                                                it will most likely need replacement every 5-10 years. The drainage rates and compaction of the tree box depend on the soil type selected. For reference, the average size of a tree box is 7’x7’.
                                             </p>
+                                            <img src="Double_BioPod.jpg" alt="Located at http://hstrial-rotondoenvironme.homestead.com/BioPod.html" style="width: 80%">
+                                            <h1> For more information visit: </h1>
+                                            <h2 id="links2">
+                                                <a href="https://njaes.rutgers.edu/fs1209/">njaes.rutgers.edu/</a>
+                                                <a href="https://iowastormwater.org/green-infrastructure/tree-boxes-trenches/">iowastormwater.org</a>
+                                            </h2>
                                             <button class="button"> <span class = "MoreLessText">More</span> </button>
                                         </div>
 

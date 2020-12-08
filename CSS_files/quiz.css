@@ -75,7 +75,7 @@
 }
 
 
-/* copy and paste after_submit# options but change name based on option number */
+/* For testing purposes, diplay state is changed to "block". In the final website code all display states will be "none". */
 
 .button {
     background: wheat;
@@ -115,27 +115,61 @@
 }
 
 #RainGardensSubmit {
-    display: none;
+    display: block;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
-    font-size: 30px;
     float: left;
-    margin-left: 90px;
+    margin-left: 300px;
+}
+
+#RainGardensSubmit h1,
+#RainGardensSubmit h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+#RainGardensSubmit h1 {
+    font-size: 30px;
+    font-family: "Lucida Console", monospace;
     color: white;
 }
 
+#RainGardensSubmit h2 {
+    font-size: 15px;
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-style: normal;
+}
+
 #TreeBoxesSubmit {
-    display: none;
+    display: block;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
     float: left;
-    margin-left: 90px;
+    margin-left: 300px;
+}
+
+#TreeBoxesSubmit h1,
+#TreeBoxesSubmit h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+#TreeBoxesSubmit h1 {
     font-size: 30px;
+    font-family: "Lucida Console", monospace;
     color: white;
+}
+
+#TreeBoxesSubmit h2 {
+    font-size: 15px;
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-style: normal;
 }
 
 #DryWellsSubmit {

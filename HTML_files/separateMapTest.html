@@ -11,14 +11,14 @@
     <script src="https://unpkg.com/esri-leaflet@2.5.1/dist/esri-leaflet.js" integrity="sha512-q7X96AASUF0hol5Ih7AeZpRF6smJS55lcvy+GLWzJfZN+31/BQ8cgNx2FGF+IQSA4z2jHwB20vml+drmooqzzQ==" crossorigin=""></script>
 
     <!-- Load Esri Leaflet Geocoder from CDN (Geocoding)-->
-    <link rel="stylesheet" href="searchControl.css">
+    <link rel="stylesheet" href="CSS_files/searchControl.css">
     <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.3/dist/esri-leaflet-geocoder.js" integrity="sha512-HrFUyCEtIpxZloTgEKKMq4RFYhxjJkCiF5sDxuAokklOeZ68U2NPfh4MFtyIVWlsKtVbK5GD2/JzFyAfvT5ejA==" crossorigin=""></script>
 
 
 
 
     <!-- Leaflet Measure JavaScript file-->
-    <link rel="stylesheet" href="leaflet-measure.css">
+    <link rel="stylesheet" href="CSS_files/leaflet-measure.css">
 
     <style>
         body {
@@ -85,7 +85,7 @@
 
 
     <!-- Add Leaflet Measuring tool -->
-    <script src="leaflet-measure.js"></script>
+    <script src="JavaScript_Files/leaflet-measure.js"></script>
     <script>
         // this is JavaScript now, embedded in the HTML file instead of being separate
 
@@ -145,36 +145,39 @@
     <div class=group>
         <p class="lastpoint heading">Last Point</p>
     </div>
-    <% if (model.pointCount > 1) { %>
-        <div class=group>
-            <p><span class=heading>Path distance</span> {{ model.lengthDisplay }}</p>
-        </div>
-        <% } %>
-            <% if (model.pointCount > 2) { %>
-                <div class=group>
-                    <p><span class=heading>Area</span> {{ model.areaDisplay }}</p>
-                </div>
-                <% } %> ' }, '
-                    <h3>Point location</h3>
-                    <p>{{ model.lastCoord.dms.y }} <span class=coorddivider>/</span> {{ model.lastCoord.dms.x }}</p>
-                    <p>{{ numberFormat(model.lastCoord.dd.y, 6) }} <span class=coorddivider>/</span> {{ numberFormat(model.lastCoord.dd.x, 6) }}</p>
-                    <ul class=tasks>
-                        <li><a href=# class="js-zoomto zoomto">Center on this location</a></li>
-                        <li><a href=# class="js-deletemarkup deletemarkup">Delete</a></li>
-                    </ul> ' }, '
-                    <h3>Linear measurement</h3>
-                    <p>{{ model.lengthDisplay }}</p>
-                    <ul class=tasks>
-                        <li><a href=# class="js-zoomto zoomto">Center on this line</a></li>
-                        <li><a href=# class="js-deletemarkup deletemarkup">Delete</a></li>
-                    </ul> ' }, '
-                    <h3>Area measurement</h3>
-                    <p>{{ model.areaDisplay }}</p>
-                    <p>{{ model.lengthDisplay }} Perimeter</p>
-                    <ul class=tasks>
-                        <li><a href=# class="js-zoomto zoomto">Center on this area</a></li>
-                        <li><a href=# class="js-deletemarkup deletemarkup">Delete</a></li>
-                    </ul> ' }
+    <div>
+        <% if (model.pointCount > 1) { %>
+            <div class=group>
+                <p><span class=heading>Path distance</span> {{ model.lengthDisplay }}</p>
+            </div>
+            <% } %>
+                <% if (model.pointCount > 2) { %>
+                    <div class=group>
+                        <p><span class=heading>Area</span> {{ model.areaDisplay }}</p>
+                    </div>
+                    <% } %> ' }, '
+                        <h3>Point location</h3>
+                        <p>{{ model.lastCoord.dms.y }} <span class=coorddivider>/</span> {{ model.lastCoord.dms.x }}</p>
+                        <p>{{ numberFormat(model.lastCoord.dd.y, 6) }} <span class=coorddivider>/</span> {{ numberFormat(model.lastCoord.dd.x, 6) }}</p>
+                        <ul class=tasks>
+                            <li><a href=# class="js-zoomto zoomto">Center on this location</a></li>
+                            <li><a href=# class="js-deletemarkup deletemarkup">Delete</a></li>
+                        </ul> ' }, '
+                        <h3>Linear measurement</h3>
+                        <p>{{ model.lengthDisplay }}</p>
+                        <ul class=tasks>
+                            <li><a href=# class="js-zoomto zoomto">Center on this line</a></li>
+                            <li><a href=# class="js-deletemarkup deletemarkup">Delete</a></li>
+                        </ul> ' }, '
+                        <h3>Area measurement</h3>
+                        <p>{{ model.areaDisplay }}</p>
+                        <p>{{ model.lengthDisplay }} Perimeter</p>
+                        <ul class=tasks>
+                            <li><a href=# class="js-zoomto zoomto">Center on this area</a></li>
+                            <li><a href=# class="js-deletemarkup deletemarkup">Delete</a></li>
+                        </ul> ' }
+    </div>
+
 
 
 
