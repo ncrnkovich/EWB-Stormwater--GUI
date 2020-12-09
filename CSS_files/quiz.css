@@ -2,17 +2,47 @@
     all: revert;
 }
 
+.toolInfo {
+    display: block;
+    float: left;
+    background-color: lightblue;
+    width: 49%;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.generalInfo {
+    display: block;
+    float: right;
+    background-color: lightblue;
+    width: 49%;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.infoText {
+    color: black;
+    font-size: 14;
+}
+
+.infoHeader {
+    color: black;
+    font-weight: bold;
+    font-size: 16;
+}
+
 #mapid {
     width: 65%;
-    height: 85%;
+    height: 600px;
     float: left;
     border-radius: 10px;
+    margin-top: 5px;
 }
 
 #quiz {
     display: block;
     float: right;
-    /* margin-left: 40px; */
+    margin-top: 5px;
     background: #d2def2;
     padding: 10px 20px 10px 20px;
     width: 32%;
@@ -147,6 +177,7 @@ b.questions {
 
 .GSItext {
     color: white;
+    font-size: 14;
 }
 
 .GSIlinks {
