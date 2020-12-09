@@ -471,7 +471,7 @@
                                     <body>
 
                                         <!-- places the map in the webpage-->
-                                        <div id="mapid" style="width: 1000px; height: 500px;"></div>
+                                        <div id="mapid"></div>
 
                                         <!-- Add Leaflet Measuring tool -->
                                         <link rel="stylesheet" href="../CSS_files/leaflet-measure.css">
@@ -487,59 +487,48 @@
                                         <link rel="stylesheet" href="../CSS_files/quiz.css">
                                         <script src="../JavaScript_Files/quiz.js"></script>
 
-                                        <br>
+
                                         <form id="quiz" name="quiz" class="new">
-                                            <b>
 
-				    							Total Area of Property from Map (in square feet): 
-											</b>
-                                            <input id="textbox" type="text" name="totalArea">
-
+                                            <b class="questions">Total area of property (sq. ft):</b>
+                                            <input id="textbox" type="text" name="totalArea" placeholder="e.g. 10000">
                                             <br>
 
+                                            <b class="questions"> 
+				   								Area of impervious surfaces (sq. ft):     
+                                            </b>
+                                            <input id="textbox" type="text" name="totalImpervious" placeholder="e.g. 10000">
                                             <br>
-                                            <b>
-
-				   								Area of Impermable Land from Map (in square feet):     
-											</b>
-                                            <input id="textbox" type="text" name="totalImpervious">
-
+                                            <b class="questions">
+				    						    Area of roof/roofs (sq. ft):
+                                            </b>
+                                            <input id="textbox" type="text" name="areaPermanent" placeholder="e.g. 10000">
                                             <br>
-
-
                                             <br>
-                                            <b>
-				    								Area of Roof or other permanent structures (in square feet):
-											</b>
-                                            <input id="textbox" type="text" name="areaPermanent">
-
-                                            <br>
-
-                                            <br>
-                                            <b>
+                                            <b class="questions">
 				    							Which best describes your property?
 											</b>
                                             <br>
-                                            <input type="radio" id="mc" name="propType" value="R" checked> Residential<br>
-                                            <input type="radio" id="mc" name="propType" value="C"> Commercial<br>
-                                            <input type="radio" id="mc" name="propType" value="I"> Industrial<br>
+                                            <input type="radio" id="mc" name="propType" value="R" checked class="mcanswers"> Residential<br>
+                                            <input type="radio" id="mc" name="propType" value="C" class="mcanswers"> Commercial<br>
+                                            <input type="radio" id="mc" name="propType" value="I" class="mcanswers"> Industrial<br>
 
                                             <br>
                                             <b>
-				    							Is your downspout disconnected, or do you plan to have it disconnected?
+				    							Is/will your downspout disconnected from the sewer system?
 											</b>
                                             <br>
-                                            <input type="radio" id="mc" name="downspoutDisconnect" value="Y" checked> Yes<br>
-                                            <input type="radio" id="mc" name="downspoutDisconnect" value="N"> No<br>
+                                            <input type="radio" id="mc" name="downspoutDisconnect" value="Y" checked class="mcanswers"> Yes<br>
+                                            <input type="radio" id="mc" name="downspoutDisconnect" value="N" class="mcanswers"> No<br>
 
                                             <br>
                                             <b>
 				    							Does your land have a significant slope?
                                             </b>
                                             <br>
-                                            <input type="radio" id="mc" name="slope" value="Y" checked> Yes<br>
-                                            <input type="radio" id="mc" name="slope" value="N"> No<br>
-                                            <input type="radio" id="mc" name="slope" value="NS"> Not sure<br>
+                                            <input type="radio" id="mc" name="slope" value="Y" checked class="mcanswers"> Yes<br>
+                                            <input type="radio" id="mc" name="slope" value="N" class="mcanswers"> No<br>
+                                            <input type="radio" id="mc" name="slope" value="NS" class="mcanswers"> Not sure<br>
 
                                             <input id="button" type="button" value="Get Results!" onclick="check();">
 
