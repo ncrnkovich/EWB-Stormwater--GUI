@@ -310,75 +310,177 @@
 }
 
 #VegetativeFilterStripSubmit {
-    display: none;
+    display: block;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
-    font-size: 30px;
     float: left;
-    margin-left: 90px;
+    margin-left: 300px;
+}
+
+#VegetativeFilterStripSubmit h1,
+#VegetativeFilterStripSubmit h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+#VegetativeFilterStripSubmit h1 {
+    font-size: 30px;
+    font-family: "Lucida Console", monospace;
     color: white;
+}
+
+#VegetativeFilterStripSubmit h2 {
+    font-size: 15px;
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-style: normal;
 }
 
 #GreenRoofSubmit {
-    display: none;
+    display: block;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
-    font-size: 30px;
     float: left;
-    margin-left: 90px;
+    margin-left: 300px;
+}
+
+#GreenRoofSubmit h1,
+#GreenRoofSubmit h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+#GreenRoofSubmit h1 {
+    font-size: 30px;
+    font-family: "Lucida Console", monospace;
     color: white;
+}
+
+#GreenRoofSubmit h2 {
+    font-size: 15px;
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-style: normal;
 }
 
 #UndergroundDetentionSubmit {
-    display: none;
+    display: block;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
-    font-size: 30px;
     float: left;
-    margin-left: 90px;
+    margin-left: 300px;
+}
+
+#UndergroundDetentionSubmit h1,
+#UndergroundDetentionSubmit h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+#UndergroundDetentionSubmit h1 {
+    font-size: 30px;
+    font-family: "Lucida Console", monospace;
     color: white;
+}
+
+#UndergroundDetentionSubmit h2 {
+    font-size: 15px;
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-style: normal;
 }
 
 #ConstructedWetlandSubmit {
-    display: none;
+    display: block;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
-    font-size: 30px;
     float: left;
-    margin-left: 90px;
+    margin-left: 300px;
+}
+
+#ConstructedWetlandSubmit h1,
+#ConstructedWetlandSubmit h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+#ConstructedWetlandSubmit h1 {
+    font-size: 30px;
+    font-family: "Lucida Console", monospace;
     color: white;
+}
+
+#ConstructedWetlandSubmit h2 {
+    font-size: 15px;
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-style: normal;
 }
 
 #WetPondSubmit {
-    display: none;
+    display: block;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
-    font-size: 30px;
     float: left;
-    margin-left: 90px;
+    margin-left: 300px;
+}
+
+#WetPondSubmit h1,
+#WetPondSubmit h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+#WetPondSubmit h1 {
+    font-size: 30px;
+    font-family: "Lucida Console", monospace;
     color: white;
 }
 
+#WetPondSubmit h2 {
+    font-size: 15px;
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-style: normal;
+}
+
 #RainBarrelsCisternsSubmit {
-    display: none;
+    display: block;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
-    font-size: 30px;
     float: left;
-    margin-left: 90px;
+    margin-left: 300px;
+}
+
+#RainBarrelsCisternsSubmit h1,
+#RainBarrelsCisternsSubmit h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+#RainBarrelsCisternsSubmit h1 {
+    font-size: 30px;
+    font-family: "Lucida Console", monospace;
     color: white;
+}
+
+#RainBarrelsCisternsSubmit h2 {
+    font-size: 15px;
+    font-family: "Lucida Console", monospace;
+    color: white;
+    font-style: normal;
 }
 
 #link {
