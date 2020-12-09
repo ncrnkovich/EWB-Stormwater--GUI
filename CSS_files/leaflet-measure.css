@@ -51,7 +51,7 @@
 .leaflet-control-measure .leaflet-control-measure-toggle,
 .leaflet-control-measure .leaflet-control-measure-toggle:hover {
     background-size: 14px 14px;
-    background-image: url(assets/rulers.png);
+    background-image: url(../assets/rulers.png);
     border: 0;
     border-radius: 4px;
     text-indent: 100%;
@@ -66,7 +66,7 @@
 
 .leaflet-retina .leaflet-control-measure .leaflet-control-measure-toggle,
 .leaflet-retina .leaflet-control-measure .leaflet-control-measure-toggle:hover {
-    background-image: url(assets/rulers_@2X.png)
+    background-image: url(../assets/rulers_@2X.png)
 }
 
 .leaflet-touch .leaflet-control-measure .leaflet-control-measure-toggle,
@@ -116,7 +116,7 @@
     line-height: 1em;
     border: 0;
     text-align: left;
-    background-image: url("assets/start.png");
+    background-image: url("../assets/start.png");
     background-repeat: no-repeat;
     background-position: 0 50%;
     background-size: 12px 12px;
@@ -130,7 +130,7 @@
 }
 
 .leaflet-retina .leaflet-control-measure a.start {
-    background-image: url("assets/start_@2X.png")
+    background-image: url("../assets/start_@2X.png")
 }
 
 .leaflet-control-measure a.start:hover {
@@ -147,7 +147,7 @@
     line-height: 1em;
     border: 0;
     text-align: left;
-    background-image: url("assets/cancel.png");
+    background-image: url("../assets/cancel.png");
     background-repeat: no-repeat;
     background-position: 0 50%;
     background-size: 12px 12px;
@@ -161,7 +161,7 @@
 }
 
 .leaflet-retina .leaflet-control-measure a.cancel {
-    background-image: url("assets/cancel_@2X.png")
+    background-image: url("../assets/cancel_@2X.png")
 }
 
 .leaflet-control-measure a.cancel:hover {
@@ -178,7 +178,7 @@
     line-height: 1em;
     border: 0;
     text-align: left;
-    background-image: url("assets/check.png");
+    background-image: url("../assets/check.png");
     background-repeat: no-repeat;
     background-position: 0 50%;
     background-size: 12px 12px;
@@ -192,7 +192,7 @@
 }
 
 .leaflet-retina .leaflet-control-measure a.finish {
-    background-image: url("assets/check_@2X.png")
+    background-image: url("../assets/check_@2X.png")
 }
 
 .leaflet-control-measure a.finish:hover {
@@ -209,7 +209,7 @@
     line-height: 1em;
     border: 0;
     text-align: left;
-    background-image: url("assets/focus.png");
+    background-image: url("../assets/focus.png");
     background-repeat: no-repeat;
     background-position: 0 50%;
     background-size: 12px 12px;
@@ -223,7 +223,7 @@
 }
 
 .leaflet-retina .leaflet-measure-resultpopup a.zoomto {
-    background-image: url("assets/focus_@2X.png")
+    background-image: url("../assets/focus_@2X.png")
 }
 
 .leaflet-measure-resultpopup a.zoomto:hover {
@@ -240,7 +240,7 @@
     line-height: 1em;
     border: 0;
     text-align: left;
-    background-image: url("assets/trash.png");
+    background-image: url("../assets/trash.png");
     background-repeat: no-repeat;
     background-position: 0 50%;
     background-size: 12px 12px;
@@ -254,7 +254,7 @@
 }
 
 .leaflet-retina .leaflet-measure-resultpopup a.deletemarkup {
-    background-image: url("assets/trash_@2X.png")
+    background-image: url("../assets/trash_@2X.png")
 }
 
 .leaflet-measure-resultpopup a.deletemarkup:hover {
