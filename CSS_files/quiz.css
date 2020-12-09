@@ -67,11 +67,13 @@
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    color: white;
 }
 
 .learn_more {
     font-size: 18px;
     display: none;
+    color: white;
 }
 
 
@@ -112,6 +114,21 @@
 .button:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+.GSIimage {
+    height: 150px;
+    width: 150px;
+    border-radius: 5%;
+    opacity: 80%;
+}
+
+.GSItext {
+    color: white;
+}
+
+.GSIlinks {
+    color: white;
 }
 
 #RainGardensSubmit {
