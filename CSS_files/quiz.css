@@ -310,7 +310,7 @@
 }
 
 #VegetativeFilterStripSubmit {
-    display: block;
+    display: none;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
@@ -319,7 +319,6 @@
     margin-left: 300px;
 }
 
-#VegetativeFilterStripSubmit h1,
 #VegetativeFilterStripSubmit h2 {
     margin: 0;
     font-weight: normal;
@@ -339,7 +338,7 @@
 }
 
 #GreenRoofSubmit {
-    display: block;
+    display: none;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
@@ -348,7 +347,6 @@
     margin-left: 300px;
 }
 
-#GreenRoofSubmit h1,
 #GreenRoofSubmit h2 {
     margin: 0;
     font-weight: normal;
@@ -368,7 +366,7 @@
 }
 
 #UndergroundDetentionSubmit {
-    display: block;
+    display: none;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
@@ -377,7 +375,6 @@
     margin-left: 300px;
 }
 
-#UndergroundDetentionSubmit h1,
 #UndergroundDetentionSubmit h2 {
     margin: 0;
     font-weight: normal;
@@ -397,7 +394,7 @@
 }
 
 #ConstructedWetlandSubmit {
-    display: block;
+    display: none;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
@@ -406,7 +403,6 @@
     margin-left: 300px;
 }
 
-#ConstructedWetlandSubmit h1,
 #ConstructedWetlandSubmit h2 {
     margin: 0;
     font-weight: normal;
@@ -426,7 +422,7 @@
 }
 
 #WetPondSubmit {
-    display: block;
+    display: none;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
@@ -435,7 +431,6 @@
     margin-left: 300px;
 }
 
-#WetPondSubmit h1,
 #WetPondSubmit h2 {
     margin: 0;
     font-weight: normal;
@@ -455,7 +450,7 @@
 }
 
 #RainBarrelsCisternsSubmit {
-    display: block;
+    display: none;
     background: #bd222e;
     padding: 10px 20px 10px 20px;
     width: 800px;
@@ -464,7 +459,6 @@
     margin-left: 300px;
 }
 
-#RainBarrelsCisternsSubmit h1,
 #RainBarrelsCisternsSubmit h2 {
     margin: 0;
     font-weight: normal;
