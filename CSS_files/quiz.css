@@ -108,15 +108,6 @@ b.questions {
     color: white;
 }
 
-.learn_more {
-    font-size: 16px;
-    display: block;
-    float: right;
-    color: white;
-    width: 70%;
-    line-height: 1.2;
-}
-
 
 /* For testing purposes, diplay state is changed to "block". In the final website code all display states will be "none". */
 
@@ -157,6 +148,28 @@ b.questions {
     right: 0;
 }
 
+.AboutTab {
+    background: #bd222e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    transition-duration: .5s;
+    margin-top: 15px;
+    margin-left: 5%;
+}
+
+.CostTab {
+    background: #bd222e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    transition-duration: .5s;
+    margin-top: 15px;
+    margin-left: 5%;
+}
+
 .GSIimage {
     height: 150px;
     width: 150px;
@@ -164,7 +177,18 @@ b.questions {
     opacity: 80%;
 }
 
-.GSItext {
+.AboutText {
+    font-size: 16px;
+    display: block;
+    float: right;
+    color: white;
+    width: 70%;
+    line-height: 1.2;
+}
+
+.CostInfoText {
+    display: none;
+    float: right;
     color: white;
     font-size: 14;
 }

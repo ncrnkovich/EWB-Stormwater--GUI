@@ -144,6 +144,39 @@ function check() {
     }
 }
 
+function changeview(clickedIndex, tabName) {
+    // Get the class vectors for each tab content
+    var AboutText = document.getElementsByClassName("AboutText");
+    var CostInfoText = document.getElementsByClassName("CostInfoText");
+    // Get class vectors for each tab type
+    var AboutTab = document.getElementsByClassName("AboutTab");
+    var CostTab = document.getElementsByClassName("CostTab");
+
+    // Change the display of each tab for the selected div to none
+    // console.log(AboutText)
+
+    AboutText[clickedIndex].style.display = "none";
+    CostInfoText[clickedIndex].style.display = "none";
+
+
+    // Get the class vector for all buttons and reset all of them to inactive
+    // for (i = 0; i < AboutTab.length; i++) {
+    //     AboutTab[i].className = AboutTab[i].className.
+    //     CostTab[i].className = CostTab[i].className.replace("active", "");
+    // }
+
+    // If the the button was the CostInfoText tab, make that div visible. have the summary visible by default
+    if (tabName == "CostTab") {
+        CostInfoText[clickedIndex].style.display = "block";
+        // console.log(tabName)
+    } else {
+        AboutText[clickedIndex].style.display = "block";
+        // console.log(tabName)
+    }
+    // Make the clicked button active
+    // event.currentTarget.className += "active";
+}
+
 function showmoreless(clickedIndex) {
 
     var LearnMore = document.getElementsByClassName("learn_more");
