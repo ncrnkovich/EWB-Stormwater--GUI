@@ -110,7 +110,7 @@ b.questions {
 
 .learn_more {
     font-size: 16px;
-    display: none;
+    display: block;
     float: right;
     color: white;
     width: 70%;
@@ -169,27 +169,21 @@ b.questions {
     font-size: 14;
 }
 
-a:link {
-    color: white;
-    font-size: 12pt;
-}
-
-a:visited {
-    color: black;
-}
-
 .GSIlink {
     color: white;
 }
 
-#RainGardensSubmit {
-    display: none;
-    background: #c07c82;
+.GSIoption {
+    border: none;
     padding: 10px 20px 10px 20px;
     width: 800px;
-    border-radius: 20px;
     float: left;
-    margin-left: 300px;
+    margin-left: 10%;
+    background: #c07c82;
+}
+
+#RainGardensSubmit {
+    display: none;
 }
 
 #RainGardensSubmit h1,
@@ -213,12 +207,6 @@ a:visited {
 
 #TreeBoxesSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    float: left;
-    margin-left: 300px;
 }
 
 #TreeBoxesSubmit h1,
@@ -242,132 +230,46 @@ a:visited {
 
 #DryWellsSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    float: left;
-    margin-left: 90px;
-    font-size: 30px;
-    color: white;
 }
 
 #PorousPavementSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    font-size: 30px;
-    float: left;
-    margin-left: 90px;
-    color: white;
 }
 
 #GrassPaversSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    font-size: 30px;
-    float: left;
-    margin-left: 90px;
-    color: white;
 }
 
 #PermeableUnitPaversSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    font-size: 30px;
-    float: left;
-    margin-left: 90px;
-    color: white;
 }
 
 #InfiltrationChamberSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    font-size: 30px;
-    float: left;
-    margin-left: 90px;
-    color: white;
 }
 
 #SurfaceDetentionSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    font-size: 30px;
-    float: left;
-    margin-left: 90px;
-    color: white;
 }
 
 #BioretentionSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    font-size: 30px;
-    float: left;
-    margin-left: 90px;
-    color: white;
 }
 
 #InfiltrationBasinSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    font-size: 30px;
-    float: left;
-    margin-left: 90px;
-    color: white;
 }
 
 #InfiltrationTrenchSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    font-size: 30px;
-    float: left;
-    margin-left: 90px;
-    color: white;
 }
 
 #VegetativeSwaleSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    font-size: 30px;
-    float: left;
-    margin-left: 90px;
-    color: white;
 }
 
 #VegetativeFilterStripSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    float: left;
-    margin-left: 300px;
 }
 
 #VegetativeFilterStripSubmit h2 {
@@ -390,12 +292,6 @@ a:visited {
 
 #GreenRoofSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    float: left;
-    margin-left: 300px;
 }
 
 #GreenRoofSubmit h2 {
@@ -418,12 +314,6 @@ a:visited {
 
 #UndergroundDetentionSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    float: left;
-    margin-left: 300px;
 }
 
 #UndergroundDetentionSubmit h2 {
@@ -446,12 +336,6 @@ a:visited {
 
 #ConstructedWetlandSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    float: left;
-    margin-left: 300px;
 }
 
 #ConstructedWetlandSubmit h2 {
@@ -474,12 +358,6 @@ a:visited {
 
 #WetPondSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    float: left;
-    margin-left: 300px;
 }
 
 #WetPondSubmit h2 {
@@ -502,12 +380,6 @@ a:visited {
 
 #RainBarrelsCisternsSubmit {
     display: none;
-    background: #c07c82;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    border-radius: 20px;
-    float: left;
-    margin-left: 300px;
 }
 
 #RainBarrelsCisternsSubmit h2 {
