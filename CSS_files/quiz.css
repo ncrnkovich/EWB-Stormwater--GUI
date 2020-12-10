@@ -33,10 +33,10 @@
 
 #mapid {
     width: 65%;
-    height: 600px;
+    height: 400px;
     float: left;
     border-radius: 10px;
-    margin-top: 5px;
+    margin-top: 7.5px;
 }
 
 #quiz {
