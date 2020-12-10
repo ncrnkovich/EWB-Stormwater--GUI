@@ -109,9 +109,12 @@ b.questions {
 }
 
 .learn_more {
-    font-size: 18px;
+    font-size: 16px;
     display: none;
+    float: right;
     color: white;
+    width: 70%;
+    line-height: 1.2;
 }
 
 
@@ -166,13 +169,22 @@ b.questions {
     font-size: 14;
 }
 
-.GSIlinks {
+a:link {
+    color: white;
+    font-size: 12pt;
+}
+
+a:visited {
+    color: black;
+}
+
+.GSIlink {
     color: white;
 }
 
 #RainGardensSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -201,7 +213,7 @@ b.questions {
 
 #TreeBoxesSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -230,7 +242,7 @@ b.questions {
 
 #DryWellsSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -242,7 +254,7 @@ b.questions {
 
 #PorousPavementSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -254,7 +266,7 @@ b.questions {
 
 #GrassPaversSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -266,7 +278,7 @@ b.questions {
 
 #PermeableUnitPaversSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -278,7 +290,7 @@ b.questions {
 
 #InfiltrationChamberSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -290,7 +302,7 @@ b.questions {
 
 #SurfaceDetentionSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -302,7 +314,7 @@ b.questions {
 
 #BioretentionSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -314,7 +326,7 @@ b.questions {
 
 #InfiltrationBasinSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -326,7 +338,7 @@ b.questions {
 
 #InfiltrationTrenchSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -338,7 +350,7 @@ b.questions {
 
 #VegetativeSwaleSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -350,7 +362,7 @@ b.questions {
 
 #VegetativeFilterStripSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -378,7 +390,7 @@ b.questions {
 
 #GreenRoofSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -406,7 +418,7 @@ b.questions {
 
 #UndergroundDetentionSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -434,7 +446,7 @@ b.questions {
 
 #ConstructedWetlandSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -462,7 +474,7 @@ b.questions {
 
 #WetPondSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;
@@ -490,7 +502,7 @@ b.questions {
 
 #RainBarrelsCisternsSubmit {
     display: none;
-    background: #bd222e;
+    background: #c07c82;
     padding: 10px 20px 10px 20px;
     width: 800px;
     border-radius: 20px;

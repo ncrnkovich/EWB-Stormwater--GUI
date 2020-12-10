@@ -7,7 +7,6 @@ function check() {
     var areaPermanent = parseInt(document.quiz.areaPermanent.value, 10); // roof area
     var propType = document.quiz.propType.value;
     var downspoutDisconnect = document.quiz.downspoutDisconnect.value;
-    var slope = document.quiz.slope.value;
 
     var i;
 
@@ -145,25 +144,19 @@ function check() {
     }
 }
 
-
-
 function showmoreless(clickedIndex) {
 
     var LearnMore = document.getElementsByClassName("learn_more");
     var morelessbtntext = document.getElementsByClassName("MoreLessText");
 
-
-    console.log(clickedIndex)
-
     if (LearnMore[clickedIndex].style.display === "block") {
         LearnMore[clickedIndex].style.display = "none";
         morelessbtntext[clickedIndex].innerHTML = "More";
-        console.log("Less")
+
 
     } else {
         LearnMore[clickedIndex].style.display = "block";
         morelessbtntext[clickedIndex].innerHTML = "Less";
-        console.log("More")
     }
 
 
