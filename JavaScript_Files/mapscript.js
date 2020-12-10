@@ -5,7 +5,7 @@
             center: [41.68, -86.25], // Coordinates of DT south bend
             //sets start/min/max zoom level for the layer. May need to change to work on individual properties
             zoom: 13,
-            minZoom: 10,
+            minZoom: 9,
             maxZoom: 25,
             doubleClickZoom: true, //useful UI settings
             boxZoom: true, // can zoom by holding shift and dragging box with cursor

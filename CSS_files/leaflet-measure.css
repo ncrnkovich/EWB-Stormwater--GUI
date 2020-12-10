@@ -48,7 +48,7 @@
 
 .leaflet-control-measure {
     /* CHANGE THE DIMENSIONS OF THE MEASURE TOOL */
-    max-width: 280px;
+    max-width: 250px;
     background: #fff
 }
 
