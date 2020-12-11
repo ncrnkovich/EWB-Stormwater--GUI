@@ -1,162 +1,184 @@
-.new * {
-    all: revert;
-}
-
-.toolInfo {
-    display: block;
-    float: left;
-    background-color: lightblue;
-    width: 49%;
-    border-radius: 10px;
-    padding: 2%;
-}
-
-.generalInfo {
-    display: block;
-    float: right;
-    background-color: lightblue;
-    width: 49%;
-    border-radius: 10px;
-    padding: 2%;
-}
-
-.infoText {
-    color: black;
-    font-size: 14;
-}
-
-.infoHeader {
-    color: black;
-    font-weight: bold;
-    font-size: 16;
-}
-
-#quiz {
-    display: block;
-    float: right;
+    .new * {
+        all: revert;
+    }
+    
+    .toolInfo {
+        display: block;
+        float: left;
+        background-color: lightblue;
+        width: 49%;
+        border-radius: 10px;
+        padding: 2%;
+    }
+    
+    .generalInfo {
+        display: block;
+        float: right;
+        background-color: lightblue;
+        width: 49%;
+        border-radius: 10px;
+        padding: 2%;
+    }
+    
+    .infoText {
+        color: black;
+        font-size: 14;
+    }
+    
+    .infoHeader {
+        color: black;
+        font-weight: bold;
+        font-size: 16;
+    }
+    
+    #quiz {
+        display: block;
+        float: right;
+        margin-top: 5px;
+        background: #d2def2;
+        padding: 10px 20px 10px 20px;
+        width: 32%;
+        border-radius: 10px;
+    }
+    
+    #textbox {
+        display: inline;
+        height: 20px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        padding-left: 5px;
+        width: 20%;
+    }
+    
+    b.questions {
+        line-height: 1.5;
+        ;
+    }
+    
+    .mcanswers {
+        line-height: 0.9;
+    }
+    
+     ::placeholder {
+        color: gray;
+        font-size: 12px;
+        opacity: 85%;
+    }
+    
+    #mc {
+        text-align: default;
+        margin-left: 20px;
+    }
+    
+    #button {
+        background: #bd222e;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        transition-duration: .5s;
+        margin-top: 15px;
+        margin-left: 5%;
+    }
+    
+    #button:hover {
+        background: white;
+        border: 1px solid #bd222e;
+        color: black;
+        cursor: pointer;
+    }
+    
+    #alert {
+        display: none;
+        background: #bd222e;
+        padding: 10px 20px 10px 20px;
+        width: 400px;
+        border-radius: 20px;
+        float: left;
+        margin-left: 300px;
+        font-size: 16px;
+        color: white;
+    }
+    
+    .optiontitle {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+    }
+    /* For testing purposes, diplay state is changed to "block". In the final website code all display states will be "none". */
+    
+    .button {
+        background: wheat;
+        border: none;
+        color: tomato;
+        text-align: center;
+        font-size: 14px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 2px;
+        width: 50px;
+        padding: 10px;
+    }
+    
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        transition: 0.5s;
+    }
+    
+    .button:hover span {
+        padding-right: 15px;
+    }
+    
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    
+    .ResultsTabs {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #bd222e;
+        max-width: 100%;
+    }
+    
+    .ResultsTabs button {
+        background-color: inherit;
+        float: left;
+        outline-style: solid;
+        cursor: pointer;
+        padding: 10px 12px;
+        transition: 0.3s;
+    }
+    
+    .ResultsTabs .button:hover {
+        background-color: white;
+    }
+    
+    .ResultsTabs .button.active {
+        background-color: tomato;
+    }
+    /* .AboutTab {
+    background: #bd222e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    transition-duration: .5s;
     margin-top: 5px;
-    background: #d2def2;
-    padding: 10px 20px 10px 20px;
-    width: 32%;
-    border-radius: 10px;
-}
-
-#textbox {
-    display: inline;
-    height: 20px;
-    font-size: 14px;
-    border-radius: 5px;
-    border: none;
-    padding-left: 5px;
-    width: 20%;
-}
-
-b.questions {
-    line-height: 1.5;
-    ;
-}
-
-.mcanswers {
-    line-height: 0.9;
-}
-
-::placeholder {
-    color: gray;
-    font-size: 12px;
-    opacity: 85%;
-}
-
-#mc {
-    text-align: default;
-    margin-left: 20px;
-}
-
-#button {
-    background: #bd222e;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    transition-duration: .5s;
-    margin-top: 15px;
-    margin-left: 5%;
-}
-
-#button:hover {
-    background: white;
-    border: 1px solid #bd222e;
-    color: black;
-    cursor: pointer;
-}
-
-#alert {
-    display: none;
-    background: #bd222e;
-    padding: 10px 20px 10px 20px;
-    width: 400px;
-    border-radius: 20px;
-    float: left;
-    margin-left: 300px;
-    font-size: 16px;
-    color: white;
-}
-
-.optiontitle {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-}
-
-
-/* For testing purposes, diplay state is changed to "block". In the final website code all display states will be "none". */
-
-.button {
-    background: wheat;
-    border: none;
-    color: tomato;
-    text-align: center;
-    font-size: 14px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 2px;
-    width: 50px;
-    padding: 10px;
-}
-
-.button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    transition: 0.5s;
-}
-
-.button:hover span {
-    padding-right: 15px;
-}
-
-.button:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-.AboutTab {
-    background: #bd222e;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    transition-duration: .5s;
-    margin-top: 15px;
-    margin-left: 5%;
+    margin-left: 10%;
+    margin-bottom: 10px;
 }
 
 .CostTab {
@@ -164,266 +186,267 @@ b.questions {
     border: none;
     border-radius: 5px;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     transition-duration: .5s;
-    margin-top: 15px;
-    margin-left: 5%;
-}
-
-.GSIimage {
-    height: 150px;
-    width: 150px;
-    border-radius: 5%;
-    opacity: 80%;
-}
-
-.AboutText {
-    font-size: 16px;
-    display: block;
-    float: right;
-    color: white;
-    width: 70%;
-    line-height: 1.2;
-}
-
-.CostInfoText {
-    display: none;
-    float: right;
-    color: white;
-    font-size: 14;
-}
-
-.GSIlink {
-    color: white;
-}
-
-.GSIoption {
-    border: none;
-    padding: 10px 20px 10px 20px;
-    width: 800px;
-    float: left;
-    margin-left: 10%;
-    background: #c07c82;
-}
-
-#RainGardensSubmit {
-    display: none;
-}
-
-#RainGardensSubmit h1,
-#RainGardensSubmit h2 {
-    margin: 0;
-    font-weight: normal;
-}
-
-#RainGardensSubmit h1 {
-    font-size: 30px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-}
-
-#RainGardensSubmit h2 {
-    font-size: 15px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-    font-style: normal;
-}
-
-#TreeBoxesSubmit {
-    display: none;
-}
-
-#TreeBoxesSubmit h1,
-#TreeBoxesSubmit h2 {
-    margin: 0;
-    font-weight: normal;
-}
-
-#TreeBoxesSubmit h1 {
-    font-size: 30px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-}
-
-#TreeBoxesSubmit h2 {
-    font-size: 15px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-    font-style: normal;
-}
-
-#DryWellsSubmit {
-    display: none;
-}
-
-#PorousPavementSubmit {
-    display: none;
-}
-
-#GrassPaversSubmit {
-    display: none;
-}
-
-#PermeableUnitPaversSubmit {
-    display: none;
-}
-
-#InfiltrationChamberSubmit {
-    display: none;
-}
-
-#SurfaceDetentionSubmit {
-    display: none;
-}
-
-#BioretentionSubmit {
-    display: none;
-}
-
-#InfiltrationBasinSubmit {
-    display: none;
-}
-
-#InfiltrationTrenchSubmit {
-    display: none;
-}
-
-#VegetativeSwaleSubmit {
-    display: none;
-}
-
-#VegetativeFilterStripSubmit {
-    display: none;
-}
-
-#VegetativeFilterStripSubmit h2 {
-    margin: 0;
-    font-weight: normal;
-}
-
-#VegetativeFilterStripSubmit h1 {
-    font-size: 30px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-}
-
-#VegetativeFilterStripSubmit h2 {
-    font-size: 15px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-    font-style: normal;
-}
-
-#GreenRoofSubmit {
-    display: none;
-}
-
-#GreenRoofSubmit h2 {
-    margin: 0;
-    font-weight: normal;
-}
-
-#GreenRoofSubmit h1 {
-    font-size: 30px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-}
-
-#GreenRoofSubmit h2 {
-    font-size: 15px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-    font-style: normal;
-}
-
-#UndergroundDetentionSubmit {
-    display: none;
-}
-
-#UndergroundDetentionSubmit h2 {
-    margin: 0;
-    font-weight: normal;
-}
-
-#UndergroundDetentionSubmit h1 {
-    font-size: 30px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-}
-
-#UndergroundDetentionSubmit h2 {
-    font-size: 15px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-    font-style: normal;
-}
-
-#ConstructedWetlandSubmit {
-    display: none;
-}
-
-#ConstructedWetlandSubmit h2 {
-    margin: 0;
-    font-weight: normal;
-}
-
-#ConstructedWetlandSubmit h1 {
-    font-size: 30px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-}
-
-#ConstructedWetlandSubmit h2 {
-    font-size: 15px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-    font-style: normal;
-}
-
-#WetPondSubmit {
-    display: none;
-}
-
-#WetPondSubmit h2 {
-    margin: 0;
-    font-weight: normal;
-}
-
-#WetPondSubmit h1 {
-    font-size: 30px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-}
-
-#WetPondSubmit h2 {
-    font-size: 15px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-    font-style: normal;
-}
-
-#RainBarrelsCisternsSubmit {
-    display: none;
-}
-
-#RainBarrelsCisternsSubmit h2 {
-    margin: 0;
-    font-weight: normal;
-}
-
-#RainBarrelsCisternsSubmit h1 {
-    font-size: 30px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-}
-
-#RainBarrelsCisternsSubmit h2 {
-    font-size: 15px;
-    font-family: "Lucida Console", monospace;
-    color: white;
-    font-style: normal;
-}
-
-#link {
-    color: white;
-}
+    margin-top: 5px;
+    margin-left: 0%;
+    margin-bottom: 10px;
+} */
+    
+    .GSIimage {
+        height: 150px;
+        width: 150px;
+        border-radius: 5%;
+        opacity: 80%;
+    }
+    
+    .AboutText {
+        font-size: 16px;
+        display: block;
+        float: right;
+        color: white;
+        width: 70%;
+        line-height: 1.2;
+    }
+    
+    .CostInfoText {
+        display: none;
+        float: right;
+        color: white;
+        font-size: 14;
+    }
+    
+    .GSIlink {
+        color: white;
+    }
+    
+    .GSIoption {
+        border: none;
+        padding: 10px 20px 10px 20px;
+        width: 800px;
+        float: left;
+        margin-left: 10%;
+        background: #c07c82;
+    }
+    
+    #RainGardensSubmit {
+        display: none;
+    }
+    
+    #RainGardensSubmit h1,
+    #RainGardensSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #RainGardensSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+    }
+    
+    #RainGardensSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+        font-style: normal;
+    }
+    
+    #TreeBoxesSubmit {
+        display: none;
+    }
+    
+    #TreeBoxesSubmit h1,
+    #TreeBoxesSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #TreeBoxesSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+    }
+    
+    #TreeBoxesSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+        font-style: normal;
+    }
+    
+    #DryWellsSubmit {
+        display: none;
+    }
+    
+    #PorousPavementSubmit {
+        display: none;
+    }
+    
+    #GrassPaversSubmit {
+        display: none;
+    }
+    
+    #PermeableUnitPaversSubmit {
+        display: none;
+    }
+    
+    #InfiltrationChamberSubmit {
+        display: none;
+    }
+    
+    #SurfaceDetentionSubmit {
+        display: none;
+    }
+    
+    #BioretentionSubmit {
+        display: none;
+    }
+    
+    #InfiltrationBasinSubmit {
+        display: none;
+    }
+    
+    #InfiltrationTrenchSubmit {
+        display: none;
+    }
+    
+    #VegetativeSwaleSubmit {
+        display: none;
+    }
+    
+    #VegetativeFilterStripSubmit {
+        display: none;
+    }
+    
+    #VegetativeFilterStripSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #VegetativeFilterStripSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+    }
+    
+    #VegetativeFilterStripSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+        font-style: normal;
+    }
+    
+    #GreenRoofSubmit {
+        display: none;
+    }
+    
+    #GreenRoofSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #GreenRoofSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+    }
+    
+    #GreenRoofSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+        font-style: normal;
+    }
+    
+    #UndergroundDetentionSubmit {
+        display: none;
+    }
+    
+    #UndergroundDetentionSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #UndergroundDetentionSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+    }
+    
+    #UndergroundDetentionSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+        font-style: normal;
+    }
+    
+    #ConstructedWetlandSubmit {
+        display: none;
+    }
+    
+    #ConstructedWetlandSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #ConstructedWetlandSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+    }
+    
+    #ConstructedWetlandSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+        font-style: normal;
+    }
+    
+    #WetPondSubmit {
+        display: none;
+    }
+    
+    #WetPondSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #WetPondSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+    }
+    
+    #WetPondSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+        font-style: normal;
+    }
+    
+    #RainBarrelsCisternsSubmit {
+        display: none;
+    }
+    
+    #RainBarrelsCisternsSubmit h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+    
+    #RainBarrelsCisternsSubmit h1 {
+        font-size: 30px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+    }
+    
+    #RainBarrelsCisternsSubmit h2 {
+        font-size: 15px;
+        font-family: "Lucida Console", monospace;
+        color: white;
+        font-style: normal;
+    }
+    
+    #link {
+        color: white;
+    }
