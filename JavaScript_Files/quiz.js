@@ -124,7 +124,11 @@ function check() {
         GSIoptionsBool[8] = 0;
     }
 
-
+    //Set about tab to be active by default
+    var AboutTab = document.getElementsByClassName("AboutTab");
+    for (i = 0; i < AboutTab.length; i++) {
+        AboutTab[i].className = AboutTab[i].className + " active";
+    }
 
     // Hides all options to reset if they enter new values
     for (i = 0; i < GSIoptions.length; i++) {
@@ -153,29 +157,25 @@ function changeview(clickedIndex, tabName) {
     var CostTab = document.getElementsByClassName("CostTab");
 
     // Change the display of each tab for the selected div to none
-    // console.log(AboutText)
 
     AboutText[clickedIndex].style.display = "none";
     CostInfoText[clickedIndex].style.display = "none";
 
-
-    // Get the class vector for all buttons and reset all of them to inactive
-    // for (i = 0; i < AboutTab.length; i++) {
-    //     AboutTab[i].className = AboutTab[i].className.
-    //     CostTab[i].className = CostTab[i].className.replace("active", "");
-    // }
-
     // If the the button was the CostInfoText tab, make that div visible. have the summary visible by default
     if (tabName == "CostTab") {
         CostInfoText[clickedIndex].style.display = "block";
-        // console.log(tabName)
+        CostTab[clickedIndex].className = CostTab[clickedIndex].className + " active"; //Make button active
+        AboutTab[clickedIndex].className = AboutTab[clickedIndex].className.replace(" active", "");
+
     } else {
         AboutText[clickedIndex].style.display = "block";
-        // console.log(tabName)
+        AboutTab[clickedIndex].className = AboutTab[clickedIndex].className + " active";
+        CostTab[clickedIndex].className = CostTab[clickedIndex].className.replace(" active", "");
+
     }
-    // Make the clicked button active
-    // event.currentTarget.className += "active";
+
 }
+
 
 function showmoreless(clickedIndex) {
 

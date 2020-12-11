@@ -162,36 +162,21 @@
         transition: 0.3s;
     }
     
-    .ResultsTabs .button:hover {
+    .ResultsTabs .AboutTab:hover {
         background-color: white;
     }
     
-    .ResultsTabs .button.active {
+    .ResultsTabs .AboutTab.active {
         background-color: tomato;
     }
-    /* .AboutTab {
-    background: #bd222e;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-    transition-duration: .5s;
-    margin-top: 5px;
-    margin-left: 10%;
-    margin-bottom: 10px;
-}
-
-.CostTab {
-    background: #bd222e;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-    transition-duration: .5s;
-    margin-top: 5px;
-    margin-left: 0%;
-    margin-bottom: 10px;
-} */
+    
+    .ResultsTabs .CostTab:hover {
+        background-color: white;
+    }
+    
+    .ResultsTabs .CostTab.active {
+        background-color: tomato;
+    }
     
     .GSIimage {
         height: 150px;
