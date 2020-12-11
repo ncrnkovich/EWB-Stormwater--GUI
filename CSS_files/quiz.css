@@ -5,17 +5,17 @@
     .toolInfo {
         display: block;
         float: left;
-        background-color: rgb(230,236,249);
+        background-color: rgb(230, 236, 249);
         width: 43%;
         border-radius: 10px;
         padding: 2%;
-		margin-bottom: 20px;
+        margin-bottom: 20px;
     }
     
     .generalInfo {
         display: block;
         float: right;
-        background-color: rgb(230,236,249);
+        background-color: rgb(230, 236, 249);
         width: 55%;
         border-radius: 10px;
         padding: 2%;
@@ -24,15 +24,15 @@
     .infoText {
         color: black;
         font-size: 15;
-		text-align: center;
+        text-align: center;
     }
     
     .infoHeader {
-        color: rgb(28,29,86);
+        color: rgb(28, 29, 86);
         font-weight: normal;
         font-size: 22;
-		font-family: arial black;
-		text-align: center;
+        font-family: arial black;
+        text-align: center;
     }
     
     #quiz {
@@ -43,7 +43,7 @@
         padding: 30px 20px 35px 20px;
         width: 33%;
         border-radius: 10px;
-		font-size: 16px;
+        font-size: 16px;
     }
     
     #textbox {
@@ -95,16 +95,16 @@
     
     #alert {
         display: none;
-		float: right;
+        float: right;
         background: #bd222e;
         padding: 10px 20px 10px 20px;
         width: 32%;
- 		border-radius: 10px;
+        border-radius: 10px;
         font-size: 16px;
         color: white;
-		margin-left: 70%;
-		text-align: center;
-		font-weight: bold;
+        margin-left: 70%;
+        text-align: center;
+        font-weight: bold;
     }
     
     .optiontitle {
@@ -112,7 +112,7 @@
         font-weight: bold;
         text-align: center;
         color: white;
-		font-family: arial black;
+        font-family: arial black;
     }
     /* For testing purposes, diplay state is changed to "block". In the final website code all display states will be "none". */
     
@@ -157,7 +157,8 @@
         overflow: hidden;
         border: 1px solid #ccc;
         background-color: #bd222e;
-        border-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         max-width: 100%;
     }
     
@@ -165,16 +166,16 @@
         background-color: inherit;
         float: left;
         outline-style: solid;
+        outline-color: white;
         cursor: pointer;
         padding: 10px 12px;
         transition: 0.3s;
-        opacity: 50%;
+        opacity: 100%;
     }
     
     .ResultsTabs .AboutTab:hover {
         background-color: rgb(136, 231, 136);
-    	border-radius:5px;
-	}
+    }
     
     .ResultsTabs .AboutTab.active {
         background-color: tomato;
@@ -183,8 +184,6 @@
     
     .ResultsTabs .CostTab:hover {
         background-color: rgb(136, 231, 136);
-		border-radius:5px;
-
     }
     
     .ResultsTabs .CostTab.active {
@@ -193,7 +192,7 @@
     }
     
     .GSIimage {
-		margin: 20px 5px 30px 5px;
+        margin: 20px 5px 30px 5px;
         height: 150px;
         width: 150px;
         border-radius: 5%;
@@ -207,7 +206,7 @@
         color: white;
         width: 70%;
         line-height: 1.2;
-		text-align: center;
+        text-align: center;
     }
     
     .CostInfoText {
