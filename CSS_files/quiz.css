@@ -150,6 +150,7 @@
         overflow: hidden;
         border: 1px solid #ccc;
         background-color: #bd222e;
+        border-radius: 5px;
         max-width: 100%;
     }
     
@@ -159,23 +160,27 @@
         outline-style: solid;
         cursor: pointer;
         padding: 10px 12px;
+        border-radius: 5px;
         transition: 0.3s;
+        opacity: 50%;
     }
     
     .ResultsTabs .AboutTab:hover {
-        background-color: white;
+        background-color: rgb(136, 231, 136);
     }
     
     .ResultsTabs .AboutTab.active {
         background-color: tomato;
+        opacity: 100%;
     }
     
     .ResultsTabs .CostTab:hover {
-        background-color: white;
+        background-color: rgb(136, 231, 136);
     }
     
     .ResultsTabs .CostTab.active {
         background-color: tomato;
+        opacity: 100%;
     }
     
     .GSIimage {
