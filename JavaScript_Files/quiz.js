@@ -53,13 +53,13 @@ function check() {
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
 
-    var GSIoptions = ["VegetativeInfiltration", // 0
-        "DryWells", // 1
-        "PermeablePavement", // 2
-        "NonvegetativeInfiltration", // 3
-        "RainbarrelsCisterns", // 4
-        "GreenRoofs", // 5
-        "InfiltrationChamber" // 6
+    var GSIoptions = ["VegetativeInfiltrationID", // 0
+        "DryWellsID", // 1
+        "PermeablePavementID", // 2
+        "NonvegetativeInfiltrationID", // 3
+        "RainbarrelsCisternsID", // 4
+        "GreenRoofsID", // 5
+        "InfiltrationChamberID" // 6
     ];
     var GSIoptionsBool = [0, 0, 0, 0, 0, 0, 0];
 
@@ -86,6 +86,7 @@ function check() {
 
     // Hides all options to reset if they enter new values
     for (i = 0; i < GSIoptions.length; i++) {
+        console.log(GSIoptions[i])
         document.getElementById(GSIoptions[i]).style.display = "none";
 
     }
@@ -102,7 +103,7 @@ function check() {
     }
 }
 
-function changeview(clickedIndex, tabName) {
+function changeview(clickedIndex, tabName, optionsOrder) {
     // Get the class vectors for each tab content
     var AboutText = document.getElementsByClassName("AboutText");
     var CostInfoText = document.getElementsByClassName("CostInfoText");
@@ -129,11 +130,11 @@ function changeview(clickedIndex, tabName) {
     // Change the display of each tab for the selected div to none
     CostInfoText[clickedIndex].style.display = "none";
     switch (selectedOption) {
-        case "VegetativeInfiltration":
+        case "VegetativeInfiltrationID":
             for (i = 0; i < VegInfilt.length; i++) {
                 VegInfilt[i].style.display = "none";
             }
-        case "PermeablePavement":
+        case "DryWellsID":
             for (i = 0; i < PermeablePavement.length; i++) {
                 PermeablePavement[i].style.display = "none";
             }
@@ -150,12 +151,12 @@ function changeview(clickedIndex, tabName) {
     } else {
 
         switch (selectedOption) {
-            case "VegetativeInfiltration":
+            case "VegetativeInfiltrationID":
                 for (i = 0; i < VegInfilt.length; i++) {
                     VegInfilt[i].style.display = "block";
                 };
                 break;
-            case "DryWells":
+            case "DryWellsID":
                 for (i = 0; i < DryWells.length; i++) {
                     DryWells[i].style.display = "block";
                 };

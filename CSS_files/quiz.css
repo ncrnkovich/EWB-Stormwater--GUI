@@ -207,6 +207,7 @@
         width: 70%;
         line-height: 1.2;
         text-align: left;
+        font-weight: none;
     }
     
     .CostInfoText {
@@ -227,6 +228,34 @@
         float: left;
         margin-left: 10%;
         background: #c07c82;
+    }
+    
+    #VegetativeInfiltrationID {
+        display: none;
+    }
+    
+    #DryWellsID {
+        display: none;
+    }
+    
+    #PermeablePavementID {
+        display: none;
+    }
+    
+    #NonvegetativeInfiltrationID {
+        display: none;
+    }
+    
+    #RainbarrelsCisternsID {
+        display: none;
+    }
+    
+    #GreenRoofsID {
+        display: none;
+    }
+    
+    #InfiltrationChamberID {
+        display: none;
     }
     
     #RainGardensSubmit {
