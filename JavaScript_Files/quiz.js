@@ -52,76 +52,30 @@ function check() {
 
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
-    var GSIoptions = ["RainGardensSubmit", //ELEMENT NUMBER: 0
-        "TreeBoxesSubmit", //1
-        "DryWellsSubmit", //2
-        "PorousPavementSubmit", //3
-        "GrassPaversSubmit", //4
-        "PermeableUnitPaversSubmit", //5
-        "InfiltrationChamberSubmit", //6
-        "SurfaceDetentionSubmit", //7
-        "BioretentionSubmit", //8
-        "InfiltrationBasinSubmit", //9
-        "InfiltrationTrenchSubmit", //10
-        "VegetativeSwaleSubmit", //11
-        "VegetativeFilterStripSubmit", //12
-        "GreenRoofSubmit", //13
-        "UndergroundDetentionSubmit", //14
-        "ConstructedWetlandSubmit", //15
-        "WetPondSubmit", //16
-        "RainBarrelsCisternsSubmit" //17
-    ];
 
-    var GSIoptionsBool = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    var GSIoptions = ["VegetativeInfiltration", // 0
+        "DryWells", // 1
+        "PermeablePavement", // 2
+        "NonvegetativeInfiltration", // 3
+        "RainbarrelsCisterns", // 4
+        "GreenRoofs", // 5
+        "InfiltrationChamber" // 6
+    ];
+    var GSIoptionsBool = [0, 0, 0, 0, 0, 0, 0];
 
     // // Series of NESTED if/else statements... if (condition) then change the GSIoptionsBool to 0 for all of the  incompatible options (element # correlates with GSIoptions)
     if (propType == "R") {
 
-        //RESIDENTIAL -->rain gardens, dry wells, porous pavement, grass pavers, permeable unit pavers, vegetative swales, vegetative filter strip, constructed wetland, wet pond, rain barrels/cisterns
-        GSIoptionsBool[1] = 0;
-        GSIoptionsBool[6] = 0;
-        GSIoptionsBool[7] = 0;
-        GSIoptionsBool[8] = 0;
-        GSIoptionsBool[9] = 0;
-        GSIoptionsBool[10] = 0;
-        GSIoptionsBool[13] = 0;
-        GSIoptionsBool[14] = 0;
+        // Residential: Vegetative Infiltration, Dry wells, porous pavement, rain barrels
+        GSIoptionsBool[0] = 1;
+        GSIoptionsBool[1] = 1;
+        GSIoptionsBool[2] = 1;
+        GSIoptionsBool[4] = 1;
 
     } else if (propType == "C") {
 
-        //COMMERCIAL -->tree boxes, dry wells, porous pavement, grass pavers, permeable unit pavers, infiltration chamber, surface detention, bioretention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns										
-        GSIoptionsBool[0] = 0;
+        // Commercial: vegetative infiltration, 
 
-        if (slope == "Y") {
-            //significant slope --> tree boxes, dry wells, porous pavement, permeable unit pavers, grass pavers, infiltration chamber, surface detention, green roof, underground retention, wet pond
-            GSIoptionsBool[8] = 0;
-            GSIoptionsBool[9] = 0;
-            GSIoptionsBool[10] = 0;
-            GSIoptionsBool[11] = 0;
-            GSIoptionsBool[12] = 0;
-            GSIoptionsBool[15] = 0;
-        }
-
-        if (totalArea < 6000) { //******* condition refers to the question: Is your residential area on a small or large scale?  ******
-
-            //NO significant alteration --> NOT:	porous pavement, permeable unit pavers, infiltration chamber,surface detention, infiltration basin, infiltration trench, vegetable filter strip, wet pond, constricted wetland
-            GSIoptionsBool[3] = 0;
-            GSIoptionsBool[5] = 0;
-            GSIoptionsBool[6] = 0;
-            GSIoptionsBool[7] = 0;
-            GSIoptionsBool[9] = 0;
-            GSIoptionsBool[10] = 0;
-            GSIoptionsBool[12] = 0;
-            GSIoptionsBool[15] = 0;
-        }
-
-    } else if (propType = "I") {
-
-        //INDUSTRIAL--> tree boxes, dry wells, porous pavement, infiltration chamber, surface detention, infiltration basin, infiltration trench, vegetative swales, vegetative filter strip, green roof, underground detention, constructed wetland, wet pond, rain barrels/cisterns				
-        GSIoptionsBool[0] = 0;
-        GSIoptionsBool[4] = 0;
-        GSIoptionsBool[5] = 0;
-        GSIoptionsBool[8] = 0;
     }
 
     //Set about tab to be active by default
@@ -156,25 +110,65 @@ function changeview(clickedIndex, tabName) {
     var AboutTab = document.getElementsByClassName("AboutTab");
     var CostTab = document.getElementsByClassName("CostTab");
 
-    // Change the display of each tab for the selected div to none
+    // Get class vectors for each div content. 
+    var VegInfilt = document.getElementsByClassName("VegInfilt");
+    var DryWells = document.getElementsByClassName("DryWells");
+    var PermeablePavement = document.getElementsByClassName("PermeablePavement");
+    var NonVegInfilt = document.getElementsByClassName("NonVegInfilt");
+    var Rainbarrel = document.getElementsByClassName("Rainbarrel");
+    var InfiltChamber = document.getElementsByClassName("InfiltChamber");
+    // **For new type of GSI, add class here**
 
-    AboutText[clickedIndex].style.display = "none";
+    // This returns the ID of which GSI was activated
+    var selectedOption = optionsOrder[clickedIndex];
+
+    // This resets any active tab to being inactive so the active class doesn't accumulate
+    AboutTab[clickedIndex].className = AboutTab[clickedIndex].className.replace(" active", "");
+    CostTab[clickedIndex].className = CostTab[clickedIndex].className.replace(" active", "");
+
+    // Change the display of each tab for the selected div to none
     CostInfoText[clickedIndex].style.display = "none";
+    switch (selectedOption) {
+        case "VegetativeInfiltration":
+            for (i = 0; i < VegInfilt.length; i++) {
+                VegInfilt[i].style.display = "none";
+            }
+        case "PermeablePavement":
+            for (i = 0; i < PermeablePavement.length; i++) {
+                PermeablePavement[i].style.display = "none";
+            }
+            // Add a case for the ID of every GSI div
+
+    };
 
     // If the the button was the CostInfoText tab, make that div visible. have the summary visible by default
-    if (tabName == "CostTab") {
+    if (tabName == "CostTab" || tabName == "CostTab active") {
         CostInfoText[clickedIndex].style.display = "block";
         CostTab[clickedIndex].className = CostTab[clickedIndex].className + " active"; //Make button active
         AboutTab[clickedIndex].className = AboutTab[clickedIndex].className.replace(" active", "");
 
     } else {
-        AboutText[clickedIndex].style.display = "block";
+
+        switch (selectedOption) {
+            case "VegetativeInfiltration":
+                for (i = 0; i < VegInfilt.length; i++) {
+                    VegInfilt[i].style.display = "block";
+                };
+                break;
+            case "DryWells":
+                for (i = 0; i < DryWells.length; i++) {
+                    DryWells[i].style.display = "block";
+                };
+                break;
+                // add case for IDs of all offered options
+        };
+
         AboutTab[clickedIndex].className = AboutTab[clickedIndex].className + " active";
         CostTab[clickedIndex].className = CostTab[clickedIndex].className.replace(" active", "");
 
     }
 
-}
+};
 
 
 function showmoreless(clickedIndex) {
@@ -191,7 +185,5 @@ function showmoreless(clickedIndex) {
         LearnMore[clickedIndex].style.display = "block";
         morelessbtntext[clickedIndex].innerHTML = "Less";
     }
-
-
 
 }
