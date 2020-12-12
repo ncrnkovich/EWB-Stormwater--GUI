@@ -6,7 +6,7 @@
         display: block;
         float: left;
         background-color: rgb(230, 236, 249);
-        width: 43%;
+        width: 39%;
         border-radius: 10px;
         padding: 2%;
         margin-bottom: 20px;
@@ -16,9 +16,10 @@
         display: block;
         float: right;
         background-color: rgb(230, 236, 249);
-        width: 55%;
+        width: 59%;
         border-radius: 10px;
         padding: 2%;
+		margin-bottom: 20px;
     }
     
     .infoText {
@@ -28,9 +29,9 @@
     }
     
     .infoHeader {
-        color: rgb(28, 29, 86);
+        color: rgb(28, 29, 86); 
         font-weight: normal;
-        font-size: 22;
+        font-size: 24;
         font-family: arial black;
         text-align: center;
     }
@@ -39,8 +40,8 @@
         display: block;
         float: right;
         margin-top: 5px;
-        background: #d2def2;
-        padding: 30px 20px 35px 20px;
+        background: #d8e1f3;
+        padding: 15px 20px 28px 20px;
         width: 33%;
         border-radius: 10px;
         font-size: 16px;
@@ -114,6 +115,16 @@
         color: white;
         font-family: arial black;
     }
+
+	.directions {
+		all: revert;
+		text-align: center;
+		font-size: 13px;
+	    color: rgb(28, 29, 86);
+		font-family: arial black;
+		/*font-style: italic;*/
+	}
+
     /* For testing purposes, diplay state is changed to "block". In the final website code all display states will be "none". */
     
     .button {
@@ -229,7 +240,10 @@
         width: 800px;
         float: left;
         margin-left: 10%;
+		margin-top: 2px;
+		margin-bottom: 2px;
         background: #c07c82;
+		border-radius: 20px;
     }
     
     #VegetativeInfiltrationID {
