@@ -12,6 +12,11 @@
         margin-bottom: 20px;
     }
     
+    .importantText {
+        color: rgb(28, 29, 86);
+        font-weight: 1000;
+    }
+    
     .generalInfo {
         display: block;
         float: right;
