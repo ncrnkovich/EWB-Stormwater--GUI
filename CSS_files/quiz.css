@@ -217,7 +217,9 @@
     
     .CostInfoText {
         display: none;
-        float: right;
+		float: right;
+		width: 70%;
+		text-align: left;
         color: white;
         font-size: 14;
     }
