@@ -79,10 +79,12 @@ function check() {
 
     } else if (propType == "C") {
 
-        // Commercial: 
+        // Commercial: vegetative infiltration, 
+		for(i=0; i<7; i++){
+			GSIoptionsBool[i] = 1;
+		}
+	}
 
-
-    }
 
     //Set about tab to be active by default
     var AboutTab = document.getElementsByClassName("AboutTab");
