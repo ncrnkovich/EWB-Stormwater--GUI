@@ -80,10 +80,10 @@ function check() {
     } else if (propType == "C") {
 
         // Commercial: vegetative infiltration, 
-		for(i=0; i<7; i++){
-			GSIoptionsBool[i] = 1;
-		}
-	}
+        for (i = 0; i < 7; i++) {
+            GSIoptionsBool[i] = 1;
+        }
+    }
 
 
     //Set about tab to be active by default
@@ -122,10 +122,11 @@ function changeview(clickedIndex, tabName, optionsOrder) {
     // Get class vectors for each div content. 
     var VegInfilt = document.getElementsByClassName("VegInfilt");
     var DryWells = document.getElementsByClassName("DryWells");
-    var PermeablePavement = document.getElementsByClassName("PermeablePavement");
-    var NonVegInfilt = document.getElementsByClassName("NonVegInfilt");
+    var PermPavement = document.getElementsByClassName("PermPavement");
+    var NonvegInfilt = document.getElementsByClassName("NonvegInfilt");
     var Rainbarrel = document.getElementsByClassName("Rainbarrel");
     var InfiltChamber = document.getElementsByClassName("InfiltChamber");
+    var GreenRoofs = document.getElementsByClassName("GreenRoofs");
     // **For new type of GSI, add class here**
 
     // This returns the ID of which GSI was activated
@@ -141,11 +142,39 @@ function changeview(clickedIndex, tabName, optionsOrder) {
         case "VegetativeInfiltrationID":
             for (i = 0; i < VegInfilt.length; i++) {
                 VegInfilt[i].style.display = "none";
-            }
+            };
+            break;
         case "DryWellsID":
-            for (i = 0; i < PermeablePavement.length; i++) {
-                PermeablePavement[i].style.display = "none";
-            }
+            for (i = 0; i < DryWells.length; i++) {
+                DryWells[i].style.display = "none";
+            };
+            break;
+        case "PermeablePavementID":
+            for (i = 0; i < PermPavement.length; i++) {
+                PermPavement[i].style.display = "none";
+            };
+            break;
+        case "NonvegetativeInfiltrationID":
+            for (i = 0; i < NonvegInfilt.length; i++) {
+                NonvegInfilt[i].style.display = "none";
+            };
+            break;
+        case "RainbarrelsCisternsID":
+            for (i = 0; i < Rainbarrel.length; i++) {
+                Rainbarrel[i].style.display = "none";
+            };
+            break;
+        case "GreenRoofsID":
+            for (i = 0; i < GreenRoofs.length; i++) {
+                GreenRoofs[i].style.display = "none";
+            };
+            break;
+        case "InfiltrationChamberID":
+            for (i = 0; i < InfiltChamber.length; i++) {
+                InfiltChamber[i].style.display = "none";
+            };
+            break;
+
             // Add a case for the ID of every GSI div
 
     };
@@ -169,6 +198,30 @@ function changeview(clickedIndex, tabName, optionsOrder) {
                     DryWells[i].style.display = "block";
                 };
                 break;
+            case "PermeablePavementID":
+                for (i = 0; i < PermPavement.length; i++) {
+                    PermPavement[i].style.display = "block";
+                };
+                break;
+            case "NonvegetativeInfiltrationID":
+                for (i = 0; i < NonvegInfilt.length; i++) {
+                    NonvegInfilt[i].style.display = "block";
+                };
+                break;
+            case "RainbarrelsCisternsID":
+                for (i = 0; i < Rainbarrel.length; i++) {
+                    Rainbarrel[i].style.display = "block";
+                };
+                break;
+            case "GreenRoofsID":
+                for (i = 0; i < GreenRoofs.length; i++) {
+                    GreenRoofs[i].style.display = "block";
+                };
+                break;
+            case "InfiltrationChamberID":
+                for (i = 0; i < InfiltChamber.length; i++) {
+                    InfiltChamber[i].style.display = "none";
+                }
                 // add case for IDs of all offered options
         };
 
