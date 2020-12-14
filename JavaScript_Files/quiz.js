@@ -79,11 +79,18 @@ function check() {
 
     } else if (propType == "C") {
 
-        // Commercial: vegetative infiltration, 
+        // Commercial: all
         for (i = 0; i < 7; i++) {
             GSIoptionsBool[i] = 1;
         }
-    }
+    }else if (propType == "I"){
+		// Industrial: everything except green pavers, permable unit pavers, bioretention, rain gardens
+		GSIoptionsBool[1] = 1;
+		GSIoptionsBool[3] = 1;
+		GSIoptionsBool[4] = 1;
+		GSIoptionsBool[5] = 1;
+		GSIoptionsBool[6] = 1;
+	}
 
 
     //Set about tab to be active by default
