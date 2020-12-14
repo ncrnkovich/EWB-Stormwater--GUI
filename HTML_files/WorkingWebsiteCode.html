@@ -486,298 +486,309 @@
                                             <br> Learn more about green infrastructure
                                             <a href="https://www.epa.gov/green-infrastructure/what-green-infrastructure">here</a>, the environmental benefits <a href="https://www.epa.gov/green-infrastructure/benefits-green-infrastructure">here</a>, and
                                             about combined sewer overflows <a href="https://www3.epa.gov/region1/eco/uep/cso.html">here</a>.
+                                        </p>
+                                    </div>
+                                    <!-- QUIZ -->
+                                    <div class="so-panel widget widget_text"> </div>
 
-                                            <!-- QUIZ -->
-                                            <div class="so-panel widget widget_text"> </div>
 
-                                            <div class="toolInfo">
-                                                <p class="infoHeader"> ABOUT THIS TOOL</p>
-                                                <p class="infoText">
-                                                    To help address problems with flooding and combined sewage overflows (CSO), South Bend is mandating that all <span class="importantText">downspouts be disconnected</span> from the sewer system by April
-                                                    2021. <br> Additionally, a stormwater tax will be enacted. This tax will be $2 per Equivalent Residential Unit (ERU) per month for residential properties, and $5 per ERU per month for commerical properties.
-                                                    However, if a property incorporates green infrastructure, a portion of this tax will be negated. This tool is designed for property owners to calculate what they will face per year in taxes, and offer
-                                                    green infrastructure solutions with this in mind. <br> <span class="importantText">Simply find your property on the map, draw a perimeter around
-                                        the specified area, answer the questions, and review your options! </span>
-                                                </p>
-                                            </div>
-                                            <div class="generalInfo">
-                                                <p class="infoHeader"> WHAT IS GREEN INFRASTRUCTURE?</p>
-                                                <p class="infoText">
-                                                    <span class="importantText"> Green infrastructure</span> is a general term for measures that use plants, soil systems, and permeable substrates to help reduce the amount of runoff that flows into sewer
-                                                    systems. When land is increasingly replaced with parking lots and new housing developments, the area able to absorb rainfall is greatly reduced, and the sewer system is forced to handle the excess runoff.
-                                                    South Bend, like many older US cities, has a <span>combined sewer system,</span> so stormwater and raw sewage are contained in the same pipes. During rain events, this often leads to overflows, and the
-                                                    treatment facilities are forced to release raw sewage into the St. Joseph River, even as the system backs up and neighborhoods flood. By greatly reducing the amount of runoff into the system, green infrastructure
-                                                    <span class="importantText">reduces these raw sewage overflows, mitigates localized flooding, and provides many other environmental benefits. </span>
-                                                    <br> Learn more about green infrastructure
-                                                    <a href="https://www.epa.gov/green-infrastructure/what-green-infrastructure">here</a>, the environmental benefits <a href="https://www.epa.gov/green-infrastructure/benefits-green-infrastructure">here</a>,
-                                                    and about combined sewer overflows <a href="https://www3.epa.gov/region1/eco/uep/cso.html">here</a>.
 
-                                                </p>
-                                            </div>
+                                </div>
 
-                                            <body>
+                                <body>
 
-                                                <!-- places the map in the webpage-->
-                                                <div id="mapid" style="width: 65%;
+                                    <!-- places the map in the webpage-->
+                                    <div id="mapid" style="width: 65%;
                                         height: 555px;
                                         float: left;
                                         border-radius: 10px;
                                         margin-top: 7.5px;"></div>
 
-                                                <!-- Add Leaflet Measuring tool -->
-                                                <link rel="stylesheet" href="../CSS_files/leaflet-measure.css">
-                                                <script src="../JavaScript_Files/leaflet-measure.js"></script>
-                                                <script src="../JavaScript_Files/mapscript.js"></script>
+                                    <!-- Add Leaflet Measuring tool -->
+                                    <link rel="stylesheet" href="../CSS_files/leaflet-measure.css">
+                                    <script src="../JavaScript_Files/leaflet-measure.js"></script>
+                                    <script src="../JavaScript_Files/mapscript.js"></script>
 
 
-                                                <!-- QUIZ QUESTIONS
+                                    <!-- QUIZ QUESTIONS
 										make questions bold, under class= questions
 										id= textbox is free response question
 										id= radio is a multiple choice question-->
 
-                                                <link rel="stylesheet" href="../CSS_files/quiz.css">
-                                                <script src="../JavaScript_Files/quiz.js"></script>
+                                    <link rel="stylesheet" href="../CSS_files/quiz.css">
+                                    <script src="../JavaScript_Files/quiz.js"></script>
 
-                                                <form id="quiz" name="quiz" class="new">
-                                                    <div class="infoHeader">CALCULATE YOUR FEES:</div>
-                                                    <div class="directions">Simply find your property on the map, draw a perimeter around the specified area, answer the questions, and review your options!</div>
-                                                    <br>
-                                                    <b class="questions">Total area of property (sq. ft):</b>
-                                                    <input id="textbox" type="text" name="totalArea" placeholder="e.g. 10000">
-                                                    <br>
+                                    <form id="quiz" name="quiz" class="new">
+                                        <div class="infoHeader">CALCULATE YOUR FEES:</div>
+                                        <div class="directions">Simply find your property on the map, draw a perimeter around the specified area, answer the questions, and review your options!</div>
+                                        <br>
+                                        <b class="questions">Total area of property (sq. ft):</b>
+                                        <input id="textbox" type="text" name="totalArea" placeholder="e.g. 10000">
+                                        <br>
 
-                                                    <b class="questions">
+                                        <b class="questions">
 				   								Area of impervious surfaces (sq. ft):
                                             </b>
-                                                    <input id="textbox" type="text" name="totalImpervious" placeholder="e.g. 10000">
-                                                    <br>
-                                                    <b class="questions">
+                                        <input id="textbox" type="text" name="totalImpervious" placeholder="e.g. 10000">
+                                        <br>
+                                        <b class="questions">
 				    						    Area of roof/roofs (sq. ft):
                                             </b>
-                                                    <input id="textbox" type="text" name="areaPermanent" placeholder="e.g. 10000">
-                                                    <br>
-                                                    <br>
-                                                    <b class="questions">
+                                        <input id="textbox" type="text" name="areaPermanent" placeholder="e.g. 10000">
+                                        <br>
+                                        <br>
+                                        <b class="questions">
 				    							Which best describes your property?
 											</b>
-                                                    <br>
-                                                    <input type="radio" id="mc" name="propType" value="R" checked class="mcanswers"> Residential<br>
-                                                    <input type="radio" id="mc" name="propType" value="C" class="mcanswers"> Commercial<br>
-                                                    <input type="radio" id="mc" name="propType" value="I" class="mcanswers"> Industrial<br>
+                                        <br>
+                                        <input type="radio" id="mc" name="propType" value="R" checked class="mcanswers"> Residential<br>
+                                        <input type="radio" id="mc" name="propType" value="C" class="mcanswers"> Commercial<br>
+                                        <input type="radio" id="mc" name="propType" value="I" class="mcanswers"> Industrial<br>
 
-                                                    <br>
-                                                    <b>
+                                        <br>
+                                        <b>
 				    							Is your downspout disconnected from the sewer system, or will it soon be?
 											</b>
-                                                    <br>
-                                                    <input type="radio" id="mc" name="downspoutDisconnect" value="Y" checked class="mcanswers"> Yes<br>
-                                                    <input type="radio" id="mc" name="downspoutDisconnect" value="N" class="mcanswers"> No<br>
+                                        <br>
+                                        <input type="radio" id="mc" name="downspoutDisconnect" value="Y" checked class="mcanswers"> Yes<br>
+                                        <input type="radio" id="mc" name="downspoutDisconnect" value="N" class="mcanswers"> No<br>
 
 
-                                                    <input id="button" type="button" value="Get Results!" onclick="check();">
+                                        <input id="button" type="button" value="Get Results!" onclick="check();">
 
-                                                </form>
+                                    </form>
 
 
-                                                <!-- SHOW OPTIONS
+                                    <!-- SHOW OPTIONS
 										each should be in a between <div id="option#"> </div>
 										bold option name, you should add a paragraph about each option
                                         -->
 
+                                    <br>
+                                    <div id="alert" class="new">
+                                        <b> Please answer all questions.</b>
+                                    </div>
+
+                                    <!-- This is a test -->
+
+                                    <div class="GSIoption" id="VegetativeInfiltrationID">
+                                        <div class="optiontitle">VEGETATIVE INFILTRATION</div>
+                                        <div>
+                                            <div class="ResultsTabs">
+                                                <button class="AboutTab">About</button>
+                                                <button class="CostTab">More Info</button>
+                                            </div>
+                                            <img src="../Images/RainGardenTN.JPG" alt="Loacted at https://www.esf.edu/ere/endreny/GICalculator/RainGardenIntro.html" class="GSIimage">
+                                            <!-- About Information -->
+                                            <p class="AboutText VegInfilt" id="VegInfiltGeneral">
+                                                This type of green infrastructure involves creating a landscape bed in a small depression. This depression is densely filled with the owner's preference of native plants. Water pools in the depression, and the plants help capture and infiltrate it, or
+                                                absorb it into the soil. The most common type of vegetative infiltration is a rain garden, but other types include bioretention areas, vegetative swales, and vegetative filter strips. These solutions typically
+                                                do not require significant maintenance efforts or costs; normal yard maintenance will suffice, and the depression will occasionally need to be checked for sediment buildup.
+
+                                            </p>
+                                            <!-- Cost/ Links to more info -->
+                                            <p class="CostInfoText"> For more information visit:
+                                                <a href="https://www.susdrain.org/delivering-suds/using-suds/suds-components/infiltration/rain-gardens.html" class="GSIlink">susdrain.org </a>
+                                                <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/raingarden.html">lakesuperiorstreams.org</a>
+                                            </p>
+                                            <br>
+                                            <!-- VARIATIONS -->
+                                            <div class="Variations">
+                                                <div class="AboutText VegInfilt" id="RainGarden">
+                                                    Specifics about a rain garden.
+                                                </div>
                                                 <br>
-                                                <div id="alert" class="new">
-                                                    <b> Please answer all questions.</b>
+                                                <div class="AboutText VegInfilt" id="VegetativeSwale">
+                                                    This is what makes a vegetative swale different.
                                                 </div>
-
-                                                <!-- This is a test -->
-
-                                                <div class="GSIoption" id="VegetativeInfiltrationID">
-                                                    <div class="optiontitle">VEGETATIVE INFILTRATION</div>
-                                                    <div>
-                                                        <div class="ResultsTabs">
-                                                            <button class="AboutTab">About</button>
-                                                            <button class="CostTab">More Info</button>
-                                                        </div>
-                                                        <img src="../Images/RainGardenTN.JPG" alt="Loacted at https://www.esf.edu/ere/endreny/GICalculator/RainGardenIntro.html" class="GSIimage">
-                                                        <!-- About Information -->
-                                                        <p class="AboutText VegInfilt" id="VegInfiltGeneral">
-                                                            This type of green infrastructure involves creating a landscape bed in a small depression. This depression is densely filled with the owner's preference of native plants. Water pools in the depression, and the plants help capture and infiltrate it, or
-                                                            absorb it into the soil. The most common type of vegetative infiltration is a rain garden, but other types include bioretention areas, vegetative swales, and vegetative filter strips. These solutions
-                                                            typically do not require significant maintenance efforts or costs; normal yard maintenance will suffice, and the depression will occasionally need to be checked for sediment buildup.
-
-                                                        </p>
-                                                        <!-- Cost/ Links to more info -->
-                                                        <p class="CostInfoText"> For more information visit:
-                                                            <a href="https://www.susdrain.org/delivering-suds/using-suds/suds-components/infiltration/rain-gardens.html" class="GSIlink">susdrain.org </a>
-                                                            <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/raingarden.html">lakesuperiorstreams.org</a>
-                                                        </p>
-                                                        <br>
-                                                        <!-- VARIATIONS -->
-                                                        <div class="Variations">
-                                                            <div class="AboutText VegInfilt" id="RainGarden">
-                                                                Specifics about a rain garden.
-                                                            </div>
-                                                            <br>
-                                                            <div class="AboutText VegInfilt" id="VegetativeSwale">
-                                                                This is what makes a vegetative swale different.
-                                                            </div>
-                                                            <br>
-                                                            <div class="AboutText VegInfilt" id="Bioretention">
-                                                                This is what makes biorention different.
-                                                            </div>
-                                                            <br>
-                                                            <div class="AboutText VegInfilt" id="VegetativeFilterStrip">
-                                                                This is what a vegetative filter strip is.
-                                                            </div>
-                                                        </div>
-
-
-                                                    </div>
-
+                                                <br>
+                                                <div class="AboutText VegInfilt" id="Bioretention">
+                                                    This is what makes biorention different.
                                                 </div>
-
-                                                <div class="GSIoption" id="DryWellsID">
-                                                    <div class="optiontitle">DRY WELLS</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">More Info</button>
-                                                    </div>
-                                                    <p class="AboutText DryWells" id="DryWellsGeneral">
-                                                        Dry wells are open drainage structures that allow stormwater to infiltrate directly back into the soil. These porous-walled chambers allow for stormwater collected in roof gutters to slowly drain back into the ground. Traditional dry wells are constructed
-                                                        as pits filled with free-draining gravel. More complex dry wells are often made of concrete and connected to larger systems such as storm drains. Dry wells can be used in conjunction with sediment
-                                                        collection units or in areas where there is not heavy debris. Sediment can build up in dry wells, so additional filtration may be necessary. Dry wells can be used on small sites or can be used to
-                                                        increase capacity in larger areas. These wells provide an opportunity for urban areas to store and slowly release excess runoff without putting it directly into the sewer system. Dry wells only filter
-                                                        water; they offer no additional treatment. If the well is placed too close to the ground surface, freezing water may cause damage to the well. However, dry wells should not be installed too deep
-                                                        into the ground in order to avoid the water table. Annual cleaning and inspection will be required. The overall cost of the dry well will depend on the size, depth, and number of units/valves. Additional
-                                                        piping could increase the cost, depending on the location of the well.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/DryWells.jpg" alt="Located at https://www.ndspro.com/products/drainage/dry-wells.html">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
-                                                        <br>
-                                                        <a href="https://drive.google.com/file/d/10hjWYYrhTepssoSbBf6FMBCvhadcwsPN/view">Dry Wells Flyer</a>
-                                                        <br>
-                                                        <a href="https://www.americangeosciences.org/geoscience-currents/dry-wells-stormwater-management">AGI Dry Wells</a>
-                                                        <br>
-                                                        <a href="https://www.casqa.org/sites/default/files/downloads/dry_wells.pdf">Dry Wells Fact Sheet</a>
-                                                    </p>
-                                                    <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
+                                                <br>
+                                                <div class="AboutText VegInfilt" id="VegetativeFilterStrip">
+                                                    This is what a vegetative filter strip is.
                                                 </div>
-
-                                                <div class="GSIoption" id="PermeablePavementID">
-                                                    <div class="optiontitle">PERMEABLE PAVEMENT</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText PermPavement">
-                                                        Porous pavement offers the structural stability of pavement while allowing rainwater to drain into the soil. Porous pavement surfaces take different forms, including permeable paver stones, porous asphalt, porous concrete, and synthetic turf. This option
-                                                        is not recommended for areas in which heavy pollutants or sediments could be exposed to the soil, such as industrial sites. Permeable pavement is susceptible to shifting and cracking if the slope
-                                                        is too steep or the surface is exposed to high vehicular traffic. Porous pavement is successful in areas such as playgrounds, athletic complexes, parking lots, bike trails, and driveways.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/PorousPavement.jpg" alt="Located at https://potomac.org/blog/2017/1/25/porous-permeable-pavement-potomac-river-chesapeake-bay">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
-                                                        <br>
-                                                        <a href="https://www.cleanwaterservices.org/media/2171/porous-pavement.pdf">Porous Pavement</a>
-                                                    </p>
-                                                    <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
-                                                </div>
+                                            </div>
 
 
-                                                <div class="GSIoption" id="NonvegetativeInfiltrationID">
-                                                    <div class="optiontitle">GRASS PAVERS</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Grass pavers create porous, lawn-like spaces that can also support vehicular traffic. These pavers are a visually appealing form of permeable pavement. Grass pavers are typically seen in driveways and overflow parking facilities, but can be used in nearly
-                                                        any setting that does not regularly see high amounts of traffic. The open structure of the paver is designed to capture stormwater runoff while the turf/grass works to slowly absorb the water back
-                                                        into the ground. Grass pavers filter pollutants from runoff water and improve water quality. Maintenance includes removal of sediment, mowing/watering/weeding the grass, and repairing cracks.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/GrassPavers.jpg" alt="Located at https://www.pinterest.com/pin/17873729743811187/">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
+                                        </div>
 
-                                                    </p>
-                                                    <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
-                                                </div>
+                                    </div>
 
+                                    <div class="GSIoption" id="DryWellsID">
+                                        <div class="optiontitle">DRY WELLS</div>
+                                        <div class="ResultsTabs">
+                                            <button class="AboutTab">About</button>
+                                            <button class="CostTab">More Info</button>
+                                        </div>
+                                        <p class="AboutText DryWells" id="DryWellsGeneral">
+                                            Dry wells are open, subsurface drainage structures that allow stormwater to infiltrate directly back into the soil. These porous-walled chambers allow for stormwater collected in roof gutters to slowly drain back into the ground. Traditional dry wells
+                                            are constructed as pits filled with free-draining gravel. More complex dry wells are often made of concrete and connected to larger systems such as storm drains. Dry wells can be used in conjunction with sediment
+                                            collection units or in areas where there is not heavy debris. Sediment can build up in dry wells, so additional filtration may be necessary. Dry wells can be used on small sites or can be used to increase capacity
+                                            in larger areas. These wells provide an opportunity for urban areas to store and slowly release excess runoff without putting it directly into the sewer system. Dry wells only filter water; they offer no additional
+                                            treatment. If the well is placed too close to the ground surface, freezing water may cause damage to the well. However, dry wells should not be installed too deep into the ground in order to avoid the water
+                                            table. Annual cleaning and inspection will be required. The overall cost of the dry well will depend on the size, depth, and number of units/valves. Additional piping could increase the cost, depending on the
+                                            location of the well.
+                                        </p>
+                                        <img class="GSIimage" src="../Images/DryWells.jpg" alt="Located at https://www.ndspro.com/products/drainage/dry-wells.html">
+                                        <p class="CostInfoText"> For more information visit:
+                                            <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
+                                            <br>
+                                            <a href="https://drive.google.com/file/d/10hjWYYrhTepssoSbBf6FMBCvhadcwsPN/view">Dry Wells Flyer</a>
+                                            <br>
+                                            <a href="https://www.americangeosciences.org/geoscience-currents/dry-wells-stormwater-management">AGI Dry Wells</a>
+                                            <br>
+                                            <a href="https://www.casqa.org/sites/default/files/downloads/dry_wells.pdf">Dry Wells Fact Sheet</a>
+                                        </p>
+                                    </div>
 
-                                                <div class="GSIoption" id="RainbarrelsCisternsID">
-                                                    <div class="optiontitle">PERMABLE UNIT PAVERS</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Permeable unit pavers are a form of porous concrete designed to allow stormwater to filter through the layer and back into the ground. Permeable unit pavers provide great options for stormwater detention, particularly in urban areas. Each paver can be
-                                                        designed to incorporate patterns and different color combinations. Sections of parking or public areas, such as bike trails and plazas, can be easily converted into permeable unit pavers. A wide
-                                                        variety of materials can be used to construct unique and site specific pavers. Permeable unit pavers can be scaled to fit a multitude of locations and can also be used to support some weight. These
-                                                        pavers are best used for walkways, plazas, service drives, parking areas, and loading docks. Permeable unit pavers are similar to porous pavement but cannot hold as much weight. Permeable unit pavers
-                                                        do, however, offer more design flexibility in comparison to porous pavement. Permeable unit pavers do not efficiently filter runoff water when placed on poor draining soils. Because each unit is
-                                                        designed differently, the required cleaning and durability vary for each unit. Permeable unit pavers can clog easily if not cleaned regularly causing the pores in the pavement to not filter water
-                                                        as effectively. Vacuum cleaning is recommended 2-4 times per year. Additional costs may be required to occasionally repair/replace pieces of concrete.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/PermeableUnitPavers.jpg" alt="Located at https://www.hanoverpavers.com/products/permeable-paving-units">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
-                                                        <br>
-                                                        <a href="https://www.hanoverpavers.com/products/permeable-paving-units">Permeable Pavers</a>
-                                                    </p>
-                                                    <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
-                                                </div>
+                                    <div class="GSIoption" id="PermeablePavementID">
+                                        <div class="optiontitle">PERMEABLE PAVEMENT</div>
+                                        <div class="ResultsTabs">
+                                            <button class="AboutTab">About</button>
+                                            <button class="CostTab">View Cost</button>
+                                        </div>
+                                        <img class="GSIimage" src="../Images/PorousPavement.jpg" alt="Located at https://potomac.org/blog/2017/1/25/porous-permeable-pavement-potomac-river-chesapeake-bay">
+                                        <p class="AboutText PermPavement">
+                                            Permeable pavement is an alternative to traditional concrete or asphault, which is highly impervious and contributes significantly to runoff on a property. Various options include pervious concrete, porous asphault, permeable interlocking unit pavers,
+                                            or grass pavers. Each have slight technical differences, and are best suited for slightly different applications, though all are capable of bearing loads from vehicles. These alternatives can be highly effective,
+                                            and even replacing just a portion of a driveway or parking lot can greatly reduce runoff.
 
+                                        </p>
+                                        <!-- More Info tab -->
+                                        <p class="CostInfoText"> For more information visit:
+                                            <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
+                                            <br>
+                                            <a href="https://www.cleanwaterservices.org/media/2171/porous-pavement.pdf">Porous Pavement</a>
+                                        </p>
+                                        <br>
+                                        <!-- VARIATIONS -->
+                                        <div class="Variations">
+                                            <div class="AboutText PermPavement" id="PorousPavement">
+                                                What is special about porous pavement
+                                            </div>
+                                            <br>
+                                            <div class="AboutText PermPavement" id="GrassPavers">
+                                                What is special about grass pavers
+                                            </div>
+                                            <br>
+                                            <div class="AboutText PermPavement" id="UnitPavers">
+                                                What is special about PICP.
+                                            </div>
 
-                                                <div class="GSIoption" id="GreenRoofsID">
-                                                    <div class="optiontitle">INFILTRATION CHAMBER</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Infiltration chambers are buried stormwater detention structures with permeable bottoms designed to hold runoff until it can slowly enter back into the ground. These structures can be placed under lawns or pavement, allowing for usable above-ground space
-                                                        compared to other water detention structures. These chambers are typically made of concrete or HDPE (High Density Polyethylene) materials that will provide a strong and rigid structure. These chambers
-                                                        can be incorporated into new developments and placed under pavement/parking lots. They also provide open space and opportunity for natural vegetation. Infiltration chambers are most often large enough
-                                                        to contain flood water as well as improve stormwater quality. Large systems require more area and depth, and, therefore, require a site with more utilities as well as other factors. Maintenance will
-                                                        be required, and a lack of proper maintenance can create a breeding ground for mosquitoes. Infiltration chambers may have an ecological impact on existing wetlands and habitats. Each chamber structure
-                                                        should be designed to hold 120% of the water quality volume to account for sedimentation and should not be installed within 24’’ of a high water table.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/InfiltrationChamber.jpg" alt="Located at https://www.ads-pipe.com/products/stormwater-detention-infiltration/stormtech-chambers">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
-                                                    </p>
-                                                    <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
-                                                </div>
+                                        </div>
 
-
-                                                <div class="GSIoption" id="InfiltrationChamberID">
-                                                    <div class="optiontitle">SURFACE DETENTION</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Surface detention systems store stormwater runoff above ground while providing a chance for sediments and pollutants to settle out. A portion of the stored water slowly filters back into the soil, while other designed outlets collect the water to drain
-                                                        it into adjacent systems, minimizing the flow of discharge following each rain event. The flow of water captured depends on the size of the basin. The flow infiltrated depends on the permeability
-                                                        of the soil. Surface detention systems are designed to be site specific. Systems can be incorporated into new developments and provide open space for natural vegetation. These systems remove many
-                                                        types of pollutants before they can enter the sewage system. Surface detention systems are most often large enough to contain flood water as well. Larger systems require more area and depth, and
-                                                        therefore, require a site with more utilities as well as other factors. Maintenance will be required, and a lack of proper maintenance can create a breeding ground for mosquitoes. Occasional maintenance
-                                                        may include erosion checks, debris removal, revegetation, and removal of sediment buildup. Infiltration chambers may have an ecological impact on existing wetlands and habitats. Each system should
-                                                        be designed to hold 120% of the water quality volume to account for sedimentation with vegetation used to slow water flow.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/SurfaceDetention.jpg" alt="Located at https://seneddresearch.blog/2016/02/08/dealing-with-surface-water-the-new-standards-for-sustainable-drainage-systems-suds/">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
-                                                        <br>
-                                                        <a href="https://www.waterworld.com/environmental/article/16205459/stormwater-detention-and-retention-systems">Surface Detention Pond</a>
-                                                    </p>
-                                                    <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
-                                                </div>
+                                    </div>
 
 
-                                                <!-- <div class="GSIoption" id="BioretentionSubmit">
+                                    <div class="GSIoption" id="NonvegetativeInfiltrationID">
+                                        <div class="optiontitle">NONVEGETATIVE INFILTRATION</div>
+                                        <div class="ResultsTabs">
+                                            <button class="AboutTab">About</button>
+                                            <button class="CostTab">View Cost</button>
+                                        </div>
+                                        <!-- IMAGE -->
+                                        <img class="GSIimage" src="../Images/InfiltrationBasin.jpg" alt="Located athttps://www.stormwaterpartners.com/facilities-infiltration-basin">
+                                        <!-- ABOUT TEXT -->
+                                        <p class="AboutText NonvegInfilt">
+                                            Similar to vegetative infiltration, nonvegetative infiltration invovles a depression at a drain outlet where runoff can pool while it infiltrates into the soil. However, unlike vegetative infiltration, these are typically just covered in grass and can
+                                            be used as a normal lawn when dry. They can range greatly in size, from small scale infiltration basins to large surface detention areas based on available space and the expected runoff.
+                                        </p>
+                                        <!-- MORE INFO TAB -->
+                                        <p class="CostInfoText"> For more information visit: LINKS AND MORE INFO
+                                        </p>
+                                        <!-- VARIATIONS -->
+                                        <div class="Variations">
+                                            <div class="AboutText NonvegInfilt" id="InfiltrationBasin">
+                                                What is special about porous pavement
+                                            </div>
+                                            <br>
+                                            <div class="AboutText NonvegInfilt" id="SurfaceDetention">
+                                                What is special about grass pavers
+                                            </div>
+                                            <br>
+                                            <div class="AboutText NonvegInfilt" id="InfiltrationTrench">
+                                                What is special about PICP.
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="GSIoption" id="RainbarrelsCisternsID">
+                                        <div class="optiontitle">PERMABLE UNIT PAVERS</div>
+                                        <div class="ResultsTabs">
+                                            <button class="AboutTab">About</button>
+                                            <button class="CostTab">View Cost</button>
+                                        </div>
+                                        <p class="AboutText">
+                                            Permeable unit pavers are a form of porous concrete designed to allow stormwater to filter through the layer and back into the ground. Permeable unit pavers provide great options for stormwater detention, particularly in urban areas. Each paver can be
+                                            designed to incorporate patterns and different color combinations. Sections of parking or public areas, such as bike trails and plazas, can be easily converted into permeable unit pavers. A wide variety of materials
+                                            can be used to construct unique and site specific pavers. Permeable unit pavers can be scaled to fit a multitude of locations and can also be used to support some weight. These pavers are best used for walkways,
+                                            plazas, service drives, parking areas, and loading docks. Permeable unit pavers are similar to porous pavement but cannot hold as much weight. Permeable unit pavers do, however, offer more design flexibility
+                                            in comparison to porous pavement. Permeable unit pavers do not efficiently filter runoff water when placed on poor draining soils. Because each unit is designed differently, the required cleaning and durability
+                                            vary for each unit. Permeable unit pavers can clog easily if not cleaned regularly causing the pores in the pavement to not filter water as effectively. Vacuum cleaning is recommended 2-4 times per year. Additional
+                                            costs may be required to occasionally repair/replace pieces of concrete.
+                                        </p>
+                                        <img class="GSIimage" src="../Images/PermeableUnitPavers.jpg" alt="Located at https://www.hanoverpavers.com/products/permeable-paving-units">
+                                        <p class="CostInfoText"> For more information visit:
+                                            <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
+                                            <br>
+                                            <a href="https://www.hanoverpavers.com/products/permeable-paving-units">Permeable Pavers</a>
+                                        </p>
+                                        <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
+                                    </div>
+
+
+                                    <div class="GSIoption" id="GreenRoofsID">
+                                        <div class="optiontitle">INFILTRATION CHAMBER</div>
+                                        <div class="ResultsTabs">
+                                            <button class="AboutTab">About</button>
+                                            <button class="CostTab">View Cost</button>
+                                        </div>
+                                        <p class="AboutText">
+                                            Infiltration chambers are buried stormwater detention structures with permeable bottoms designed to hold runoff until it can slowly enter back into the ground. These structures can be placed under lawns or pavement, allowing for usable above-ground space
+                                            compared to other water detention structures. These chambers are typically made of concrete or HDPE (High Density Polyethylene) materials that will provide a strong and rigid structure. These chambers can be
+                                            incorporated into new developments and placed under pavement/parking lots. They also provide open space and opportunity for natural vegetation. Infiltration chambers are most often large enough to contain flood
+                                            water as well as improve stormwater quality. Large systems require more area and depth, and, therefore, require a site with more utilities as well as other factors. Maintenance will be required, and a lack of
+                                            proper maintenance can create a breeding ground for mosquitoes. Infiltration chambers may have an ecological impact on existing wetlands and habitats. Each chamber structure should be designed to hold 120% of
+                                            the water quality volume to account for sedimentation and should not be installed within 24’’ of a high water table.
+                                        </p>
+                                        <img class="GSIimage" src="../Images/InfiltrationChamber.jpg" alt="Located at https://www.ads-pipe.com/products/stormwater-detention-infiltration/stormtech-chambers">
+                                        <p class="CostInfoText"> For more information visit:
+                                            <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
+                                        </p>
+                                        <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
+                                    </div>
+
+
+                                    <div class="GSIoption" id="InfiltrationChamberID">
+                                        <div class="optiontitle">SURFACE DETENTION</div>
+                                        <div class="ResultsTabs">
+                                            <button class="AboutTab">About</button>
+                                            <button class="CostTab">View Cost</button>
+                                        </div>
+                                        <p class="AboutText">
+                                            Surface detention systems store stormwater runoff above ground while providing a chance for sediments and pollutants to settle out. A portion of the stored water slowly filters back into the soil, while other designed outlets collect the water to drain
+                                            it into adjacent systems, minimizing the flow of discharge following each rain event. The flow of water captured depends on the size of the basin. The flow infiltrated depends on the permeability of the soil.
+                                            Surface detention systems are designed to be site specific. Systems can be incorporated into new developments and provide open space for natural vegetation. These systems remove many types of pollutants before
+                                            they can enter the sewage system. Surface detention systems are most often large enough to contain flood water as well. Larger systems require more area and depth, and therefore, require a site with more utilities
+                                            as well as other factors. Maintenance will be required, and a lack of proper maintenance can create a breeding ground for mosquitoes. Occasional maintenance may include erosion checks, debris removal, revegetation,
+                                            and removal of sediment buildup. Infiltration chambers may have an ecological impact on existing wetlands and habitats. Each system should be designed to hold 120% of the water quality volume to account for
+                                            sedimentation with vegetation used to slow water flow.
+                                        </p>
+                                        <img class="GSIimage" src="../Images/SurfaceDetention.jpg" alt="Located at https://seneddresearch.blog/2016/02/08/dealing-with-surface-water-the-new-standards-for-sustainable-drainage-systems-suds/">
+                                        <p class="CostInfoText"> For more information visit:
+                                            <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view">South Bend Green Infrastructure Plan</a>
+                                            <br>
+                                            <a href="https://www.waterworld.com/environmental/article/16205459/stormwater-detention-and-retention-systems">Surface Detention Pond</a>
+                                        </p>
+                                        <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
+                                    </div>
+
+
+                                    <!-- <div class="GSIoption" id="BioretentionSubmit">
                                                     <div class="optiontitle">BIORETENTION</div>
                                                     <div class="ResultsTabs">
                                                         <button class="AboutTab">About</button>
@@ -801,11 +812,11 @@
                                                         <br>
                                                         <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/bioretention.html">Bioretention Basins</a>
                                                     </p> -->
-                                                <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
+                                    <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
 
 
 
-                                                <!-- <div class="GSIoption" id="InfiltrationBasinSubmit">
+                                    <!-- <div class="GSIoption" id="InfiltrationBasinSubmit">
                                                     <div class="optiontitle">INFILTRATION BASIN</div>
                                                     <div class="ResultsTabs">
                                                         <button class="AboutTab">About</button>
@@ -1013,32 +1024,32 @@
                                                         <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/rainbarrels.html">Rain Barrels</a>
                                                     </p>
                                                 </div> -->
-                                                <script>
-                                                    // The next few lines use Jquery to determine which button/tab was clicked and for which div
-                                                    $('button').click(function() {
-                                                        var tabName = event.target.className;
-                                                        var clickedIndex;
-                                                        if (tabName == 'CostTab' || tabName == "CostTab active") {
-                                                            clickedIndex = $('.CostTab').index(this);
-                                                        } else {
-                                                            clickedIndex = $('.AboutTab').index(this);
-                                                        }
-                                                        // This gets the vector of the ids of GSIoption, AKA what order the divs are in
-                                                        var optionsOrder = $('.GSIoption').map(function(i) {
-                                                            return this.id;
+                                    <script>
+                                        // The next few lines use Jquery to determine which button/tab was clicked and for which div
+                                        $('button').click(function() {
+                                            var tabName = event.target.className;
+                                            var clickedIndex;
+                                            if (tabName == 'CostTab' || tabName == "CostTab active") {
+                                                clickedIndex = $('.CostTab').index(this);
+                                            } else {
+                                                clickedIndex = $('.AboutTab').index(this);
+                                            }
+                                            // This gets the vector of the ids of GSIoption, AKA what order the divs are in
+                                            var optionsOrder = $('.GSIoption').map(function(i) {
+                                                return this.id;
 
-                                                        });
-                                                        changeview(clickedIndex, tabName, optionsOrder)
-                                                    });
-                                                </script>
-                                            </body>
-                                    </div>
-                                </div>
+                                            });
+                                            changeview(clickedIndex, tabName, optionsOrder)
+                                        });
+                                    </script>
+                                </body>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
 
 
@@ -1049,105 +1060,105 @@
 
 
 
-            <!--FOOTER -->
-            <div class="footer-widgets">
-                <div class="wrap">
-                    <div class="widget-area footer-widgets-1 footer-widget-area">
-                        <section id="sow-social-media-buttons-2" class="widget widget_sow-social-media-buttons">
-                            <div class="widget-wrap">
-                                <div class="so-widget-sow-social-media-buttons so-widget-sow-social-media-buttons-flat-abd4f44905dc">
-                                    <h4 class="widget-title widgettitle">Connect</h4>
+    <!--FOOTER -->
+    <div class="footer-widgets">
+        <div class="wrap">
+            <div class="widget-area footer-widgets-1 footer-widget-area">
+                <section id="sow-social-media-buttons-2" class="widget widget_sow-social-media-buttons">
+                    <div class="widget-wrap">
+                        <div class="so-widget-sow-social-media-buttons so-widget-sow-social-media-buttons-flat-abd4f44905dc">
+                            <h4 class="widget-title widgettitle">Connect</h4>
 
-                                    <div class="social-media-button-container">
+                            <div class="social-media-button-container">
 
-                                        <a class="sow-social-media-button-twitter-0 sow-social-media-button" title="South Bend, Indiana on Twitter" aria-label="South Bend, Indiana on Twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/cityofsouthbend">
-                                            <span>
+                                <a class="sow-social-media-button-twitter-0 sow-social-media-button" title="South Bend, Indiana on Twitter" aria-label="South Bend, Indiana on Twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/cityofsouthbend">
+                                    <span>
 								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span> </span>
-                                            <span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a>
+                                    <span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a>
 
-                                        <a class="sow-social-media-button-instagram-0 sow-social-media-button" title="South Bend, Indiana on Instagram" aria-label="South Bend, Indiana on Instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/cityofsouthbend/">
-                                            <span>
+                                <a class="sow-social-media-button-instagram-0 sow-social-media-button" title="South Bend, Indiana on Instagram" aria-label="South Bend, Indiana on Instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/cityofsouthbend/">
+                                    <span>
 								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span> </span>
-                                            <span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a>
+                                    <span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a>
 
-                                        <a class="sow-social-media-button-facebook-0 sow-social-media-button" title="South Bend, Indiana on Facebook" aria-label="South Bend, Indiana on Facebook" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/CityofSouthBend/">
-                                            <span>
+                                <a class="sow-social-media-button-facebook-0 sow-social-media-button" title="South Bend, Indiana on Facebook" aria-label="South Bend, Indiana on Facebook" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/CityofSouthBend/">
+                                    <span>
 								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span> </span>
-                                            <span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a>
+                                    <span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a>
 
-                                        <a class="sow-social-media-button-youtube-0 sow-social-media-button" title="South Bend, Indiana on Youtube" aria-label="South Bend, Indiana on Youtube" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/user/cityofsouthbend">
-                                            <span>
+                                <a class="sow-social-media-button-youtube-0 sow-social-media-button" title="South Bend, Indiana on Youtube" aria-label="South Bend, Indiana on Youtube" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/user/cityofsouthbend">
+                                    <span>
 								<span class="sow-icon-fontawesome sow-fab" data-sow-icon=""></span> </span>
-                                            <span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a>
-                                    </div>
-                                </div>
+                                    <span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a>
                             </div>
-                        </section>
-                        <section id="text-3" class="widget widget_text">
-                            <div class="widget-wrap">
-                                <div class="textwidget">
-                                    <p>County-City Building<br> 227 West Jefferson Blvd.<br> South Bend, Indiana 46601<br>
-                                        <a href="https://www.google.com/maps/dir/''/County-City+Building,+227+W+Jefferson+Blvd,+South+Bend,+IN+46601/data=!4m5!4m4!1m0!1m2!1m1!1s0x8816cd347196f881:0x45a9c6b2fbe02ee?sa=X&amp;ved=0ahUKEwi3zp--qezaAhXDy4MKHY9GCbIQwwUIKjAA" target="_blank" rel="noopener noreferrer">Get Directions<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></p>
-                                    <p>Dial 311<br> Phone: 574-233-0311<br> TTY: 574-235-5567</p>
-                                </div>
-                            </div>
-                        </section>
+                        </div>
                     </div>
-                    <div class="widget-area footer-widgets-2 footer-widget-area">
-                        <section id="nav_menu-2" class="widget widget_nav_menu">
-                            <div class="widget-wrap">
-                                <h4 class="widget-title widgettitle">My Government</h4>
-                                <nav class="nav-header" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
-                                    <ul id="menu-footer-menu-my-government" class="menu genesis-nav-menu">
-                                        <li id="menu-item-587" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-587"><a href="https://311.southbendin.gov/" itemprop="url"><span itemprop="name">311 City Services</span><span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li id="menu-item-140169" class="menu-item menu-item-type-post_type_archive menu-item-object-department menu-item-140169"><a href="https://southbendin.gov/department/" itemprop="url"><span itemprop="name">Contact a Department</span></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </section>
+                </section>
+                <section id="text-3" class="widget widget_text">
+                    <div class="widget-wrap">
+                        <div class="textwidget">
+                            <p>County-City Building<br> 227 West Jefferson Blvd.<br> South Bend, Indiana 46601<br>
+                                <a href="https://www.google.com/maps/dir/''/County-City+Building,+227+W+Jefferson+Blvd,+South+Bend,+IN+46601/data=!4m5!4m4!1m0!1m2!1m1!1s0x8816cd347196f881:0x45a9c6b2fbe02ee?sa=X&amp;ved=0ahUKEwi3zp--qezaAhXDy4MKHY9GCbIQwwUIKjAA" target="_blank" rel="noopener noreferrer">Get Directions<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></p>
+                            <p>Dial 311<br> Phone: 574-233-0311<br> TTY: 574-235-5567</p>
+                        </div>
                     </div>
-                    <div class="widget-area footer-widgets-3 footer-widget-area">
-                        <section id="text-5" class="widget widget_text">
-                            <div class="widget-wrap">
-                                <h4 class="widget-title widgettitle">Take Action</h4>
-                                <div class="textwidget">
-                                    <ul>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;18d95ec0-e42d-e811-a953-000d3a30db97" itemprop="url">Apply<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;c28792da-e42d-e811-a953-000d3a30db97" itemprop="url">Learn<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;9b9824b7-e42d-e811-a953-000d3a30db97" itemprop="url">Pay<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;954de6d3-e42d-e811-a953-000d3a30db97" itemprop="url">Report<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;2f0b65c6-e42d-e811-a953-000d3a30db97" itemprop="url">Request<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
+                </section>
+            </div>
+            <div class="widget-area footer-widgets-2 footer-widget-area">
+                <section id="nav_menu-2" class="widget widget_nav_menu">
+                    <div class="widget-wrap">
+                        <h4 class="widget-title widgettitle">My Government</h4>
+                        <nav class="nav-header" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                            <ul id="menu-footer-menu-my-government" class="menu genesis-nav-menu">
+                                <li id="menu-item-587" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-587"><a href="https://311.southbendin.gov/" itemprop="url"><span itemprop="name">311 City Services</span><span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li id="menu-item-140169" class="menu-item menu-item-type-post_type_archive menu-item-object-department menu-item-140169"><a href="https://southbendin.gov/department/" itemprop="url"><span itemprop="name">Contact a Department</span></a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="widget-area footer-widgets-4 footer-widget-area">
-                        <section id="text-4" class="widget widget_text">
-                            <div class="widget-wrap">
-                                <h4 class="widget-title widgettitle">Services</h4>
-                                <div class="textwidget">
-                                    <ul>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;249fb710-132e-e811-a954-000d3a308373" itemprop="url">Animals<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;016e5faa-122e-e811-a954-000d3a308373" itemprop="url">Business<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;635dbde9-122e-e811-a954-000d3a308373" itemprop="url">Elected Officials &amp; City Administration<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;7b85b500-132e-e811-a954-000d3a308373" itemprop="url">Events &amp; Recreation<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;aaf74cd1-122e-e811-a954-000d3a308373" itemprop="url">Housing, Property, &amp; Building<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;0a70f7bc-122e-e811-a954-000d3a308373" itemprop="url">Parks &amp; Trees<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;1f9fb710-132e-e811-a954-000d3a308373" itemprop="url">Public Safety<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;658747dc-122e-e811-a954-000d3a308373" itemprop="url">Streets, Sidewalks, &amp; Transportation<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                        <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;c7ffc8c5-122e-e811-a954-000d3a308373" itemprop="url">Utilities &amp; Trash<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
+                </section>
+            </div>
+            <div class="widget-area footer-widgets-3 footer-widget-area">
+                <section id="text-5" class="widget widget_text">
+                    <div class="widget-wrap">
+                        <h4 class="widget-title widgettitle">Take Action</h4>
+                        <div class="textwidget">
+                            <ul>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;18d95ec0-e42d-e811-a953-000d3a30db97" itemprop="url">Apply<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;c28792da-e42d-e811-a953-000d3a30db97" itemprop="url">Learn<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;9b9824b7-e42d-e811-a953-000d3a30db97" itemprop="url">Pay<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;954de6d3-e42d-e811-a953-000d3a30db97" itemprop="url">Report<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;2f0b65c6-e42d-e811-a953-000d3a30db97" itemprop="url">Request<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="widget-area footer-widgets-4 footer-widget-area">
+                <section id="text-4" class="widget widget_text">
+                    <div class="widget-wrap">
+                        <h4 class="widget-title widgettitle">Services</h4>
+                        <div class="textwidget">
+                            <ul>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;249fb710-132e-e811-a954-000d3a308373" itemprop="url">Animals<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;016e5faa-122e-e811-a954-000d3a308373" itemprop="url">Business<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;635dbde9-122e-e811-a954-000d3a308373" itemprop="url">Elected Officials &amp; City Administration<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;7b85b500-132e-e811-a954-000d3a308373" itemprop="url">Events &amp; Recreation<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;aaf74cd1-122e-e811-a954-000d3a308373" itemprop="url">Housing, Property, &amp; Building<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;0a70f7bc-122e-e811-a954-000d3a308373" itemprop="url">Parks &amp; Trees<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;1f9fb710-132e-e811-a954-000d3a308373" itemprop="url">Public Safety<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;658747dc-122e-e811-a954-000d3a308373" itemprop="url">Streets, Sidewalks, &amp; Transportation<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                                <li class="menu-item"><a href="https://311.southbendin.gov/knowledgecenter/?category=&amp;c7ffc8c5-122e-e811-a954-000d3a308373" itemprop="url">Utilities &amp; Trash<span class="sow-fas sow-icon-fontawesome externalicon" data-sow-icon=""></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-                        <li class="sow-slider-image cycle-slide cycle-slide-active" style="background-color: rgb(255, 255, 255); height: 0px; position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible;">
+                <li class="sow-slider-image cycle-slide cycle-slide-active" style="background-color: rgb(255, 255, 255); height: 0px; position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: visible;">
 
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
     </div>
     </li>

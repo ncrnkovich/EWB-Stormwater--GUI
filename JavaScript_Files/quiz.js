@@ -48,8 +48,6 @@ function check() {
     stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I10year / 720; // [ft^3/min]
 
 
-
-
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
 
@@ -71,10 +69,18 @@ function check() {
         GSIoptionsBool[1] = 1;
         GSIoptionsBool[2] = 1;
         GSIoptionsBool[4] = 1;
+        // Hide bioretention and filter strips for residential
+        document.getElementById("Bioretention").style.display = "none";
+        document.getElementById("VegetativeFilterStrip").style.display = "none";
+        // hide infiltration trench 
+        document.getElementById("InfiltrationTrench").style.display = "none";
+
+
 
     } else if (propType == "C") {
 
-        // Commercial: vegetative infiltration, 
+        // Commercial: 
+
 
     }
 
