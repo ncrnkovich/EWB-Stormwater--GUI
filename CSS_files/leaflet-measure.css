@@ -1,5 +1,7 @@
-.new * {
-    all: revert;
+.mapNew * { 
+	font-family: arial;
+	font-color: white;
+	text-decoration: none;
 }
 
 .leaflet-control-measure h3,
