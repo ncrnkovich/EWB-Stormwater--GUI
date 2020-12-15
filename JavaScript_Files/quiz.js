@@ -38,15 +38,13 @@ function check() {
     }
     totalYearlyFees = inLieuFee + stormFee;
 
-    // Runoff calculations
+    // Stormwater calculator
+    var runoff = runoffCalc(propType, totalImpervious, areaPermanent);
+    var totalRunoff = runoff[0];
+    var maxRunoff = runoff[1];
 
-    if (totalArea > 10 * ERU) {
-        I10year = 3.14; // [in/hr] using 30min time of concentration for larger properties
-    } else {
-        I10year = 4.52; // [in/hr] using 15 min time of concentration for smaller properties
-    }
-    stormRunoff = (Cimpermeable * totalImpervious + Cpermeable * perviousArea) * I10year / 720; // [ft^3/min]
-
+    totalRunoff = totalRunoff * 35.315; // [m^3 to ft^3]
+    maxRunoff = maxRunoff * 35.315; // [m^3/s to ft^3/s]
 
     // OPTION CALCULATOR
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
@@ -98,7 +96,6 @@ function check() {
 		document.getElementById("RainGarden").style.display = "none";
 	}
 
-
     //Set about tab to be active by default
     var AboutTab = document.getElementsByClassName("AboutTab");
     for (i = 0; i < AboutTab.length; i++) {
@@ -107,7 +104,6 @@ function check() {
 
     // Hides all options to reset if they enter new values
     for (i = 0; i < GSIoptions.length; i++) {
-        console.log(GSIoptions[i])
         document.getElementById(GSIoptions[i]).style.display = "none";
 
     }
@@ -261,4 +257,69 @@ function showmoreless(clickedIndex) {
         morelessbtntext[clickedIndex].innerHTML = "Less";
     }
 
-}
+};
+
+function runoffCalc(propType, totalImpervious, areaPermanent) {
+
+    // Runoff calculations
+    var areaRoofDriveway;
+    var parkingLotAreasqM = (totalImpervious - areaPermanent) / 10.764; // conversion from sq ft to sq meters
+    TstarRoof = 120; // [s] time constant for driveways and roofs.
+
+    if (parkingLotAreasqM < 1000) {
+        TstarLot = 3.5 * 60; // if lot area is less than 1000 sq meters, Tstar is 3.5 min
+    } else if (parkingLotAreasqM < 10000) {
+        TstarLot = 8 * 60; // if between 1000 and 10000 sq meters, Tstar is 6 min
+    } else {
+        TstarLot = 12 * 60; // if greater than 1 Hectare, Tstar is 12 min for lot
+    };
+
+    // just input a new precip pattern and new Ptotal to change the storm
+    var Ptotal = 3.55 * 25.4; // [mm] from NOAA, precipitation total for 10 year, 12 hour storm
+    // I want to change this model to reflect CSO's, but can't until EmNet gets back to us
+    var precipPattern = [0, 2, 5, 10, 15, 15, 10, 6, 5, 5, 5, 8, 12, 18, 22, 45, 60, 32, 33, 24, 22, 10, 15, 17, 18, 19, 22, 38, 50, 45, 45, 40, 42, 12, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var precipVector = new Array();
+
+    var deltaT = 60; // [s]
+    var QinRoof = new Array();
+    var QinLot = new Array();
+    var QoutRoof = new Array();
+    var QoutLot = new Array();
+    var Qout = new Array();
+    var Qmax;
+    var Vtotal = 0;
+    var Volume = new Array();
+    Volume[0] = 0; // initial condition
+
+    var patternTotal = 0;
+    for (i = 0; i < precipPattern.length; i++) {
+        patternTotal = patternTotal + precipPattern[i];
+    }; // i can't believe there isn't a sum function
+
+    if (propType == "R") {
+        areaRoofDriveway = totalImpervious / 10.764; // [sq m] for residences, treat all impervious area as room/driveway
+        parkingLotAreasqM = 0; // no parking lot for residential properties
+    } else {
+        areaRoofDriveway = areaPermanent / 10.764; //[sq m]
+    };
+
+    // generate precipitation vector
+    for (i = 0; i < precipPattern.length; i++) {
+        precipVector[i] = Ptotal * precipPattern[i] / patternTotal;
+        QinRoof[i] = precipVector[i] / 1000 * areaRoofDriveway / deltaT;
+        QinLot[i] = precipVector[i] / 1000 * parkingLotAreasqM / deltaT;
+        QoutRoof[i] = Volume[i] / TstarRoof;
+        if (QinLot[i] != 0) {
+            QoutLot[i] = Volume[i] / TstarLot;
+        } else {
+            QoutLot[i] = 0;
+        }
+        Qout[i] = QoutRoof[i] + QoutLot[i];
+        Volume[i + 1] = Volume[i] + (QinRoof[i] + QinLot[i] - Qout[i]) * deltaT;
+        Vtotal = Vtotal + Volume[i];
+
+    };
+
+    Qmax = Math.max(...Qout);
+    return [Vtotal, Qmax];
+};
