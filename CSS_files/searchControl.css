@@ -44,7 +44,7 @@
 }
 
 .geocoder-control-input.geocoder-control-loading {
-    background-image: url("../assets/loadingIcon.png");
+    background-image: url(../assets/loadingIcon.png);
     background-size: 26px
 }
 

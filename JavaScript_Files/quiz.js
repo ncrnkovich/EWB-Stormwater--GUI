@@ -81,23 +81,26 @@ function check() {
         for (i = 0; i < 7; i++) {
             GSIoptionsBool[i] = 1;
         }
-    }else if (propType == "I"){
-		// Industrial: everything except green pavers, permable unit pavers, bioretention, rain gardens
-		GSIoptionsBool[0] = 1;	
-		GSIoptionsBool[1] = 1;
-		GSIoptionsBool[2] = 1;		
-		GSIoptionsBool[3] = 1;
-		GSIoptionsBool[4] = 1;
-		GSIoptionsBool[5] = 1;
-		GSIoptionsBool[6] = 1;
-		document.getElementById("Bioretention").style.display = "none";
-		document.getElementById("GrassPavers").style.display = "none";
-		document.getElementById("UnitPavers").style.display = "none";
-		document.getElementById("RainGarden").style.display = "none";
-	}
+    } else if (propType == "I") {
+        // Industrial: everything except green pavers, permable unit pavers, bioretention, rain gardens
+        GSIoptionsBool[0] = 1;
+        GSIoptionsBool[1] = 1;
+        GSIoptionsBool[2] = 1;
+        GSIoptionsBool[3] = 1;
+        GSIoptionsBool[4] = 1;
+        GSIoptionsBool[5] = 1;
+        GSIoptionsBool[6] = 1;
+        document.getElementById("Bioretention").style.display = "none";
+        document.getElementById("GrassPavers").style.display = "none";
+        document.getElementById("UnitPavers").style.display = "none";
+        document.getElementById("RainGarden").style.display = "none";
+    }
 
     //Set about tab to be active by default
+    //Set about tab to be active by default
     var AboutTab = document.getElementsByClassName("AboutTab");
+    var variationsHeader = document.getElementsByClassName("variationsHeader");
+
     for (i = 0; i < AboutTab.length; i++) {
         AboutTab[i].className = AboutTab[i].className + " active";
     }
@@ -105,8 +108,8 @@ function check() {
     // Hides all options to reset if they enter new values
     for (i = 0; i < GSIoptions.length; i++) {
         document.getElementById(GSIoptions[i]).style.display = "none";
-
     }
+
     // if any questions are not filled out, generates prompt to answer all questions
     if (isNaN(totalArea) || isNaN(totalImpervious) || isNaN(areaPermanent)) {
         document.getElementById("alert").style.display = "block";
@@ -127,6 +130,7 @@ function changeview(clickedIndex, tabName, optionsOrder) {
     // Get class vectors for each tab type
     var AboutTab = document.getElementsByClassName("AboutTab");
     var CostTab = document.getElementsByClassName("CostTab");
+    var varitationsHeader = document.getElementsByClassName("variationsHeader");
 
     // Get class vectors for each div content. 
     var VegInfilt = document.getElementsByClassName("VegInfilt");
@@ -191,6 +195,7 @@ function changeview(clickedIndex, tabName, optionsOrder) {
     // If the the button was the CostInfoText tab, make that div visible. have the summary visible by default
     if (tabName == "CostTab" || tabName == "CostTab active") {
         CostInfoText[clickedIndex].style.display = "block";
+        varitationsHeader[clickedIndex].style.display = "none";
         CostTab[clickedIndex].className = CostTab[clickedIndex].className + " active"; //Make button active
         AboutTab[clickedIndex].className = AboutTab[clickedIndex].className.replace(" active", "");
 
@@ -201,6 +206,7 @@ function changeview(clickedIndex, tabName, optionsOrder) {
                 for (i = 0; i < VegInfilt.length; i++) {
                     VegInfilt[i].style.display = "block";
                 };
+                varitationsHeader[0].style.display = "block";
                 break;
             case "DryWellsID":
                 for (i = 0; i < DryWells.length; i++) {
@@ -211,11 +217,13 @@ function changeview(clickedIndex, tabName, optionsOrder) {
                 for (i = 0; i < PermPavement.length; i++) {
                     PermPavement[i].style.display = "block";
                 };
+                varitationsHeader[2].style.display = "block";
                 break;
             case "NonvegetativeInfiltrationID":
                 for (i = 0; i < NonvegInfilt.length; i++) {
                     NonvegInfilt[i].style.display = "block";
                 };
+                varitationsHeader[3].style.display = "block";
                 break;
             case "RainbarrelsCisternsID":
                 for (i = 0; i < Rainbarrel.length; i++) {
@@ -229,13 +237,16 @@ function changeview(clickedIndex, tabName, optionsOrder) {
                 break;
             case "InfiltrationChamberID":
                 for (i = 0; i < InfiltChamber.length; i++) {
-                    InfiltChamber[i].style.display = "none";
+                    InfiltChamber[i].style.display = "block";
+
                 }
+
                 // add case for IDs of all offered options
         };
 
         AboutTab[clickedIndex].className = AboutTab[clickedIndex].className + " active";
         CostTab[clickedIndex].className = CostTab[clickedIndex].className.replace(" active", "");
+
 
     }
 

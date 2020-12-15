@@ -24,7 +24,7 @@
         width: 59%;
         border-radius: 10px;
         padding: 2%;
-		margin-bottom: 20px;
+        margin-bottom: 20px;
     }
     
     .infoText {
@@ -34,7 +34,7 @@
     }
     
     .infoHeader {
-        color: rgb(28, 29, 86); 
+        color: rgb(28, 29, 86);
         font-weight: normal;
         font-size: 24;
         font-family: arial black;
@@ -113,38 +113,46 @@
         font-weight: bold;
     }
     
-    .optiontitle {	
+    .optiontitle {
         font-size: 20px;
         font-weight: bold;
         text-align: center;
         color: white;
         font-family: arial black;
     }
-
-	.similarOptions{
-		font-size: 19px;
-		font-weight: bold;
-		text-align: center;
-		color: white;
-		font-family: arial black;
-	}
-
-	.Variations {
-		all: revert;
-		float: right;
-		text-align: left;
-		color: white;	
-		line-height: normal;	
-	}
-
-	.directions {
-		all: revert;
-		text-align: center;
-		font-size: 13px;
-	    color: rgb(28, 29, 86);
-		font-family: arial black;	
-	}
-
+    
+    .variationsHeader {
+        display: none;
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        font-family: arial black;
+    }
+    
+    .novariations {
+        display: none;
+    }
+    
+    .hasvariations {
+        display: block;
+    }
+    
+    .Variations {
+        all: revert;
+        float: right;
+        text-align: left;
+        color: white;
+        line-height: normal;
+    }
+    
+    .directions {
+        all: revert;
+        text-align: center;
+        font-size: 13px;
+        color: rgb(28, 29, 86);
+        font-family: arial black;
+    }
     /* For testing purposes, diplay state is changed to "block". In the final website code all display states will be "none". */
     
     .button {
@@ -243,9 +251,9 @@
     
     .CostInfoText {
         display: none;
-		float: right;
-		width: 70%;
-		text-align: left;
+        float: right;
+        width: 70%;
+        text-align: left;
         color: white;
         font-size: 14;
     }
@@ -260,10 +268,10 @@
         width: 800px;
         float: left;
         margin-left: 10%;
-		margin-top: 2px;
-		margin-bottom: 2px;
+        margin-top: 2px;
+        margin-bottom: 2px;
         background: #c07c82;
-		border-radius: 20px;
+        border-radius: 20px;
     }
     
     #VegetativeInfiltrationID {
