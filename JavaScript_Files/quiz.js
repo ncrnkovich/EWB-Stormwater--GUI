@@ -85,11 +85,17 @@ function check() {
         }
     }else if (propType == "I"){
 		// Industrial: everything except green pavers, permable unit pavers, bioretention, rain gardens
+		GSIoptionsBool[0] = 1;	
 		GSIoptionsBool[1] = 1;
+		GSIoptionsBool[2] = 1;		
 		GSIoptionsBool[3] = 1;
 		GSIoptionsBool[4] = 1;
 		GSIoptionsBool[5] = 1;
 		GSIoptionsBool[6] = 1;
+		document.getElementById("Bioretention").style.display = "none";
+		document.getElementById("GrassPavers").style.display = "none";
+		document.getElementById("UnitPavers").style.display = "none";
+		document.getElementById("RainGarden").style.display = "none";
 	}
 
 
