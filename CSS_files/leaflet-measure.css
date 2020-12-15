@@ -1,7 +1,3 @@
-.new * {
-    all: revert;
-}
-
 .leaflet-control-measure h3,
 .leaflet-measure-resultpopup h3 {
     margin: 0 0 12px;

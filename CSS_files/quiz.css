@@ -121,13 +121,28 @@
         font-family: arial black;
     }
 
+	.similarOptions{
+		font-size: 19px;
+		font-weight: bold;
+		text-align: center;
+		color: white;
+		font-family: arial black;
+	}
+
+	.Variations {
+		all: revert;
+		float: right;
+		text-align: left;
+		color: white;	
+		line-height: normal;	
+	}
+
 	.directions {
 		all: revert;
 		text-align: center;
 		font-size: 13px;
 	    color: rgb(28, 29, 86);
-		font-family: arial black;
-		/*font-style: italic;*/
+		font-family: arial black;	
 	}
 
     /* For testing purposes, diplay state is changed to "block". In the final website code all display states will be "none". */
