@@ -10,7 +10,7 @@
     background-color: white;
     background-repeat: no-repeat;
     /* Need to get a magnifying glass image in the folder to have the icon show up*/
-    background-image: url("img/search.png");
+    background-image: url("../assets/searchIcon.png");
     background-size: 26px;
     border: none;
     padding: 0;
@@ -48,7 +48,7 @@
 }
 
 .geocoder-control-input.geocoder-control-loading {
-    background-image: url("img/loading.gif");
+    background-image: url("../assets/loadingIcon.png");
     background-size: 26px
 }
 
