@@ -113,12 +113,43 @@
         font-weight: bold;
     }
     
-    .resultsTitle {
+    .resultsSummaryTitle {
         font-size: 20px;
         font-weight: bold;
         text-align: center;
-        color: black;
+        color: white;
         font-family: arial black;
+    }
+    
+    #resultsID {
+        display: none;
+    }
+    
+    .ResultsSummaryInfo {
+        border: none;
+        padding: 10px 20px 10px 10px;
+        padding-right: 10px;
+        width: 28%;
+        float: left;
+        margin-top: 8px;
+        margin-bottom: 2px;
+        margin-right: 1%;
+        background-color: #c07c82;
+        border-radius: 20px;
+    }
+    
+    .sticky {
+        top: 0;
+        position: fixed;
+    }
+    
+    .resultsSummaryText {
+        font-size: 16px;
+        float: left;
+        color: white;
+        line-height: 1.2;
+        text-align: left;
+        font-weight: none;
     }
     
     .optiontitle {
@@ -238,18 +269,6 @@
         opacity: 100%;
     }
     
-    .ResultsInfo {
-        border: none;
-        padding: 10px 20px 10px 20px;
-        width: 800px;
-        float: left;
-        margin-left: 10%;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        background: transparent;
-        border-radius: 20px;
-    }
-    
     .GSIimage {
         margin: 20px 5px 30px 5px;
         height: 180px;
@@ -263,6 +282,7 @@
         display: block;
         float: right;
         color: white;
+        padding-top: 10px;
         width: 70%;
         line-height: 1.2;
         text-align: left;
@@ -285,17 +305,13 @@
     .GSIoption {
         border: none;
         padding: 10px 20px 10px 20px;
-        width: 800px;
-        float: left;
-        margin-left: 10%;
+        width: 66%;
+        float: right;
         margin-top: 2px;
         margin-bottom: 2px;
+        margin-right: 2%;
         background: #c07c82;
         border-radius: 20px;
-    }
-    
-    #resultsID {
-        display: none;
     }
     
     #VegetativeInfiltrationID {

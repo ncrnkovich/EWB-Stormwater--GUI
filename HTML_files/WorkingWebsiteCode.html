@@ -569,15 +569,23 @@
                 </div>
 
                 <!--Results div-->
-                <div class="ResultsInfo" id="resultsID">
-                    <div class="resultsTitle">RESULTS</div>
+                <div class="ResultsSummaryInfo" id="resultsID">
+                    <div class="resultsSummaryTitle">RESULTS SUMMARY</div>
                     <div>
-                        <p>
-                            The total area of your property is <b><span id="totalAreaResult"></span> square feet</b>.<br> The total impervious area of your property is <b><span id="totalImperviousAreaResult"></span> square feet</b>.<br> The total yearly
-                            fees for your property is <b>$<span id="totalYearlyFees"></span></b>.
+                        <p class="resultsSummaryText">
+                            Reported area of property: <b><span class = "resultsSummaryData" id="totalAreaResult"></span></b> sq. ft.<br> Reported impervious area: <b><span class = "resultsSummaryData" id="totalImperviousAreaResult"></span></b> sq. ft.<br>                            Estimated runoff for design storm: <b><span class = "resultsSummaryData" id="totalRunoff"></span></b> cu ft. <br> Estimated yearly stormwater fee: <b>$<span class = "resultsSummaryData" id="totalYearlyFees"></span></b>
                         </p>
                     </div>
                 </div>
+                <script>
+                    var resultsID = document.getElementById("resultsID");
+                    while (resultsID.style.display == "block") {
+                        var ResultsScroll = document.querySelector('.ResultsSummaryInfo');
+                        var initialPos = ResultsScroll.getBoundingClientRect().top;
+                        console.log(initialPos)
+                        window.addEventListener('scroll', adaptiveScroll(initialPos));
+                    }
+                </script>
                 <!-- This is a test -->
 
                 <div class="GSIoption" id="VegetativeInfiltrationID">
@@ -797,267 +805,6 @@
                     <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
                 </div>
 
-
-                <!-- <div class="GSIoption" id="BioretentionSubmit">
-                                                    <div class="optiontitle">BIORETENTION</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Bioretention systems remove sediment and other contaminants from stormwater runoff through the use of vegetation with soil acting as a natural filtration system. These systems are able to remove large amounts of heavy metals, phosphorus, and fine sediments
-                                                        from runoff. Bioretention systems store a portion of runoff from each rain event to be used by the vegetation within the system, thus reducing the amount of runoff that enters into impervious areas.
-                                                        This stored water is either filtered through the soil or evaporated back into the air. These systems require minimal engineering expertise compared to other GSI options. Maintenance activities should
-                                                        be performed monthly to remove debris and sediment (to prevent clogging), as well as to prune and weed vegetation. Additionally, the soil will need to be replaced every 3 to 5 years. Additional work
-                                                        may need to be done on the soil if it drains slowly — this could indicate a clog or the need for an underdrain. This affects the water flow captured by the system because the flow rate depends on
-                                                        the permeability of the soil and the type and quantity of vegetation used. Bioretention systems enhance the overall aesthetic with additional vegetation that provides shade and wind/noise buffering.
-                                                        Bioretention systems require larger implementation areas, roughly 25' width or greater. These systems cannot be implemented on steep or unstable slopes where the water table is within 6' of the surface.
-                                                        Installation costs depend on the number of trees, shrubs, perennials, and soil depth proposed.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/Bioretention.jpg" alt="Located at https://megamanual.geosyntec.com/npsmanual/bioretentionareasandraingardens.aspx">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view"class="GSIlink">South Bend Green Infrastructure Plan</a>
-                                                        <br>
-                                                        <a href="https://megamanual.geosyntec.com/npsmanual/bioretentionareasandraingardens.aspx"class="GSIlink">Bioretention Areas</a>
-                                                        <br>
-                                                        <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/bioretention.html"class="GSIlink">Bioretention Basins</a>
-                                                    </p> -->
-                <!-- <button class="button"> <span class = "MoreLessText">More</span> </button> -->
-
-
-
-                <!-- <div class="GSIoption" id="InfiltrationBasinSubmit">
-                                                    <div class="optiontitle">INFILTRATION BASIN</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Infiltration basins are specific surface ponds used to capture and treat runoff on drainage sites between roughly 5 to 50 acres. Infiltration basins are typically dry except for immediately following larger rain events. These basins are heavily vegetated
-                                                        to mitigate toxins and pollutants. The flow of water captured depends on the permeability of the soils. Each basin is designed to be site specific. Infiltration basins provide groundwater recharge
-                                                        and reduce overall runoff volume within adjacent waterways. These basins remove particulates and some soluble pollutants from runoff. Infiltration basins require a large area of land to be implemented
-                                                        and are not recommended for long-term use due to high maintenance and clogging. These basins are not suitable on steep slopes or where high amounts of sediment are deposited. Basins should not be
-                                                        constructed within 100 feet of drinking wells as they may accumulate pollutants to toxic levels. Monthly inspections will be necessary to remove debris/sediment build up. Vegetation and soil will
-                                                        require occasional upkeep and replacement. The basin should be installed at least 10 feet above the water table.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/InfiltrationBasin.jpg" alt="Located at https://www.stormwaterpartners.com/facilities-infiltration-basin">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view"class="GSIlink">South Bend Green Infrastructure Plan</a>
-                                                        <br>
-                                                        <a href="https://www.susdrain.org/delivering-suds/using-suds/suds-components/infiltration/infiltration-basin.html"class="GSIlink">Infiltration Basins</a>
-
-                                                    </p>
-                                                     <button class="button"> <span class = "MoreLessText">More</span> </button>
-                                                </div>
-
-
-                                                <div class="GSIoption" id="InfiltrationTrenchSubmit">
-                                                    <div class="optiontitle">INFILTRATION TRENCH</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Infiltration trenches are linear pits that provide a storage area for stormwater runoff to be temporarily held before it can infiltrate the soil or be carried to an outflow facility by an underdrain. These trenches can both capture volumes of stormwater
-                                                        and improve the water quality. Infiltration trenches are quite versatile as they can be designed to fit different locations and sites. These trenches divert runoff, which minimizes the impact on
-                                                        surrounding areas. These trenches can be implemented into uncommonly used areas, such as road medians. Infiltration trenches require good soil with adequate filtration. This system is only practical
-                                                        for smaller sites (5 to 10 acres). Infiltration trenches cannot be placed close to the water table or within 100 feet of a drinking well due to pollutant build up. These trenches are not suitable
-                                                        for areas with steep slopes, as sediment build-up can clog the system. A larger surface area for the trench will help to reduce the risk of clogging. Regular inspections should be performed to remove
-                                                        debris and sediment build-up. Inlet and outlet structures should be examined occasionally, checking for erosion or damage. During heavy rain events, it is important to keep an eye on the system to
-                                                        ensure proper drainage is occurring.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/InfiltrationTrench.jpg" alt="Located at http://www.gflrpc.org/green-infrastructure-practices.html">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view"class="GSIlink">South Bend Green Infrastructure Plan</a>
-                                                        <br>
-                                                        <a href="https://www.susdrain.org/delivering-suds/using-suds/suds-components/infiltration/infiltration_trench.html"class="GSIlink">Susdrain Infiltration Trenches</a>
-                                                        <br>
-                                                        <a href="https://www.esf.edu/ere/endreny/GICalculator/InfiltrationIntro.html"class="GSIlink">Infiltration Trenches</a>
-                                                    </p>
-                                                    <button class="button"> <span class = "MoreLessText">More</span> </button>
-                                                </div>
-
-
-                                                <div class="GSIoption" id="VegetativeSwaleSubmit">
-                                                    <div class="optiontitle">VEGETATIVE SWALE</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Vegetative swales, also known as bioswales, are shallow channels intended to carry stormwater runoff where pollutants can be reduced using herbaceous plant material and soil filtration. These swales are primarily used to transport runoff but can also
-                                                        assist in the process of pre-treatment. The flow of water captured depends on the permeability of the soils as well as the type and quantity of vegetation used. Each swale is designed to be site
-                                                        specific. Vegetative swales have relatively easy design, installation, and maintenance in comparison to other GSI options. Swales can be easily incorporated into normal site developments. Vegetation
-                                                        provides an appealing appearance as well as overall lower costs. Vegetative swales do not hold large volumes of water well. Dry periods will cause vegetation to need additional watering. Erosion
-                                                        and channelization may become long-term issues. Vegetative swales are only effective where soils with good drainage and high infiltration are readily available. Swales may provide a breeding ground
-                                                        for mosquitoes. Regular inspections are required to remove debris or sediment build-up. These swales will require regular but minimal mowing, pruning, and maintenance as well as occasional vegetation
-                                                        replacement. Installation costs vary based on the size and density of the plantings as well as grading.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/VegetativeSwale.JPG" alt="Located at http://www.missionengineersinc.com/19901/19922.html">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://drive.google.com/file/d/1GyEwTuPP2v7HWNIi_xJoLNGcWE7Dfyzg/view"class="GSIlink">South Bend Green Infrastructure Plan</a>
-                                                        <br>
-                                                        <a href="https://www.mapc.org/resource-library/fact-sheet-vegetated-swales/"class="GSIlink">Vegetative Swales</a>
-                                                    </p>
-                                                    <button class="button"> <span class = "MoreLessText">More</span> </button>
-                                                </div>
-
-
-                                                <div class="GSIoption" id="VegetativeFilterStripSubmit">
-                                                    <div class="optiontitle">VEGETATIVE FILTER STRIP</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Vegetative filter strips are areas of planted or indigenous vegetation located between a pollutant-source area and a surface-water body that receives runoff. They are often referred to as "buffer strips”. These strips are urban wildlife habitats that
-                                                        help prevent erosion along stream banks. Filter strips slow the velocity of runoff and provide a slight reduction in runoff volume and watershed imperviousness; however, they are not designed to
-                                                        treat high velocity runoff or provide large volumes of storage. They are also not very effective at removing pollutants. The water flow captured depends on the permeability of the soils. Filter strips
-                                                        require shallow slopes and permeable subsoils, as well as large amounts of land. Regular maintenance and inspection is required to remove debris and sediment, mow and weed the turf, and reseed/replace
-                                                        grass and other vegetation; however, these maintenance costs will likely overlap with regular landscape maintenance costs. For vegetative filter strips, vegetation with dense root structures should
-                                                        be used to prevent erosion, stabilize soil, and provide water absorption. Additionally, these strips should be installed in a way that would allow water to disperse evenly.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/VegetativeFilterStrip.JPG" alt="Located at https://agbmps.osu.edu/bmp/filter-stripsgrassed-riparian-buffers-nrcs-393-390">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/filterstrips.html"class="GSIlink">Parking Lot Filter Strips</a>
-                                                    </p>
-                                                    <button class="button"> <span class = "MoreLessText">More</span> </button>
-                                                </div>
-
-
-                                                <div class="GSIoption" id="GreenRoofSubmit">
-                                                    <div class="optiontitle">GREEN ROOF</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        A green roof is an extension of the roof of a building that has been partially or completely covered with vegetation and a waterproofing membrane. Green roofs are made from layered mediums that allow stormwater to run through the layers without causing
-                                                        damage to the building. Layers could include a root growth prevention layer, drainage system, waterproofing membrane, filtering layer, growing medium, and vegetation. These layers can potentially
-                                                        add extra insulation to the building. When implementing a green roof, other factors to consider include the height of the building, slope of the roof, amount of sunlight and wind, and the structural
-                                                        weightload of the roof. The building must be able to support the added weight (the layers can potentially add between 20-100 lbs. per square foot on top of the weight of the roof). It is also important
-                                                        to consider how excess water will be handled as well as which vegetation to select. The selected vegetation can be used for alternative purposes such as gardening or insect repellant. This vegetation
-                                                        will require regular maintenance, so roof access would need to be easily accessible. Green roofs have relatively higher installation and maintenance costs and may need replacement every 30-50 years
-                                                        based upon inspection.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/GreenRoof.JPG" alt="Located at https://zinco-greenroof.com/references/al-shaheed">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.htm#:~:text=A%20green%20roof%20is%20a,as%20vegetative%20or%20eco%E2%80%93roofs"class="GSIlink">Green Roofs</a>
-                                                        <br>
-                                                        <a href="https://greenroofs.org/about-green-roofs"class="GSIlink">More About Green Roofs</a>
-                                                        <br>
-                                                        <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/greenroofs.html"class="GSIlink">More About Green Roofs</a>
-                                                    </p>
-                                                    <button class="button"> <span class = "MoreLessText">More</span> </button>
-                                                </div>
-
-
-                                                <div class="GSIoption" id="UndergroundDetentionSubmit">
-                                                    <div class="optiontitle">UNDERGROUND DETENTION</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Underground detention systems are designed to capture runoff during rain events and distribute it into adjacent storm sewers at a controlled rate.
-                                                        These systems can be placed beneath unused land or beneath active structures, such as lawns, parking facilities, and roadways.
-                                                        However, underground detention is difficult to retrofit into existing infrastructure.The initial installation of underground detention systems can be somewhat expensive. This system does not involve any treatment
-                                                        of the water before introducing it into the storm sewers. Regular maintenance includes sediment removal and regular structural inspections to assess erosion.
-
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/UndergroundDetention.JPG" alt="Located at http://www.beverlyma.gov/construction-of-underground-stormwater-detention-system-progressing/">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://www.constructionecoservices.com/products-bmps/permanent-bmps/underground-detention-retention/"class="GSIlink">Underground Detention & Retention</a>
-                                                        <br>
-                                                        <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/underground.html"class="GSIlink">Underground Storage</a>
-                                                    </p>
-                                                </div>
-
-                                                <div class="GSIoption" id="ConstructedWetlandSubmit">
-                                                    <div class="optiontitle">CONSTRUCTED WETLAND</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Wetland retention systems apply the natural benefits of wetlands to treat stormwater
-                                                        runoff and provide a natural habitat for animals. As excess stormwater enters the wetlands,
-                                                        plants absorb many pollutants and microbes within
-                                                        the soil help break down harmful chemicals, cleaning and filtering the water
-                                                        in the process.
-                                                        These systems are great for larger, regional areas because they need lots of space to function
-                                                        properly. Wetlands are especially viable
-                                                        in areas with a high water table. Regular maintenance is required, including periodical vegetation
-                                                        replacement, frequent sediment removal, and annual assessments of embankment stability and water levels.
-                                                        Wetlands can attract and become a breeding ground for mosquitoes.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/ConstructedWetland.PNG" alt="Located at https://www.researchgate.net/figure/cross-section-of-subsurface-flow-constructed-wetland_fig1_264239694">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://ossf.tamu.edu/constructed-wetland/"class="GSIlink">Constructed Wetlands</a>
-                                                    </p>
-                                                </div>
-
-                                                <div class="GSIoption" id="WetPondSubmit">
-                                                    <div class="optiontitle">WET POND</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Wet ponds, also referred to as retention ponds, are permanent pools intended to capture sediment, organic nutrients,
-                                                        and metals from stormwater runoff.
-                                                        Having a steady amount of water stored within the pond allows for natural biological
-                                                        functions to occur that reduce soluble nutrients. Thus, when filled properly, the pond
-                                                        systems are very efficient at removing pollutants. Wet ponds hold large volumes
-                                                        of water, with feasible drainage areas of 10 acres or larger.
-                                                        Frequent debris removal is necessary, as well as routine inspection of valves, pumps, fencing, mechanical components,
-                                                        outlets, and inlet pipes.
-                                                        Additionally, it is important to ensure that banks remain vegetated, in order to increase
-                                                        stability and minimize erosion.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/WetPond.JPG" alt="Located at https://www.montgomerycountymd.gov/water/stormwater/improvements.html">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://stormwater.pca.state.mn.us/index.php?title=Stormwater_wet_pond_fact_sheet"class="GSIlink">Wet Ponds</a>
-                                                    </p>
-                                                </div>
-
-                                                <div class="GSIoption" id="RainBarrelsCisternsSubmit">
-                                                    <div class="optiontitle">RAIN BARRELS</div>
-                                                    <div class="ResultsTabs">
-                                                        <button class="AboutTab">About</button>
-                                                        <button class="CostTab">View Cost</button>
-                                                    </div>
-                                                    <p class="AboutText">
-                                                        Rain barrels and cisterns are closed tank storage systems that are designed to collect stormwater runoff
-                                                        from buildings/roofs before it can enter into the sewage system. The collected water can then be repurposed
-                                                        for garden irrigation, car washing, or
-                                                        lawn care. Otherwise, the water can be slowly released back into local soil once the rain has subsided. Cisterns are larger than rain barrels, thus holding
-                                                        more runoff. These systems can be placed above or below ground. Additionally, rain barrels are readily available
-
-                                                        and can be installed by the owner without professional help. Rain barrels must be regularly drained,
-                                                        particularly before heavy rain events, so that there is space for incoming rain. Other maintenance includes annual
-                                                        cleanings and inspections. These systems simply store the water — they do not provide
-                                                        any treatment to it.
-                                                    </p>
-                                                    <img class="GSIimage" src="../Images/Cistern_RainBarrel.JPG" alt="Located at https://www.lakecountyil.gov/2215/Rainwater-Harvesting-Cisterns">
-                                                    <p class="CostInfoText"> For more information visit:
-                                                        <br>
-                                                        <a href="https://www.homedepot.com/p/FreeGarden-RAIN-55-Gal-Rain-Barrel-Green-with-Brass-Spigot-EWC-15/302880776"class="GSIlink">Purchase Rain Barrel</a>
-                                                        <br>
-                                                        <a href="https://extension.psu.edu/rainwater-cisterns-design-construction-and-treatment"class="GSIlink">Rainwater Cisterns</a>
-                                                        <br>
-                                                        <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/rainbarrels.html"class="GSIlink">Rain Barrels</a>
-                                                    </p>
-                                                </div> -->
                 <script>
                     // The next few lines use Jquery to determine which button/tab was clicked and for which div
                     $('button').click(function() {

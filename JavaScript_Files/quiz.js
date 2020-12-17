@@ -9,6 +9,10 @@ function check() {
     var downspoutDisconnect = document.quiz.downspoutDisconnect.value;
 
     var i;
+    var resultsID = document.getElementById("resultsID");
+
+    console.log(resultsID.style.display)
+
 
     // Calculations/math
 
@@ -33,21 +37,26 @@ function check() {
     if (downspoutDisconnect == "Y") {
         inLieuFee = 0; // if their downspout is disconnected, no in-lieu-of fee
     }
-    totalYearlyFees = inLieuFee + stormFee;
+    totalYearlyFees = Math.round(inLieuFee + stormFee);
 
     // Stormwater calculator
     var runoff = runoffCalc(propType, totalImpervious, areaPermanent);
     var totalRunoff = runoff[0];
     var maxRunoff = runoff[1];
 
-    totalRunoff = totalRunoff * 35.315; // [m^3 to ft^3]
-    maxRunoff = maxRunoff * 35.315; // [m^3/s to ft^3/s]
+    totalRunoff = Math.round(totalRunoff * 35.315); // [m^3 to ft^3]
+    maxRunoff = Math.round(maxRunoff * 35.315); // [m^3/s to ft^3/s]
 
     // OPTION CALCULATOR
     //this is only for the results tab
-    var resultsOption = "resultsID";
-    var resultsOptionBool = 0;
-
+    var resultsSummary = document.getElementById("resultsID");
+    var resultsID = document.getElementById("resultsID");
+    if (resultsID.style.display == "block") {
+        var ResultsScroll = document.querySelector('.ResultsSummaryInfo');
+        var initialPos = ResultsScroll.getBoundingClientRect().top;
+        console.log(initialPos)
+        window.addEventListener('scroll', adaptiveScroll(initialPos));
+    }
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
     var GSIoptions = ["VegetativeInfiltrationID", // 0
         "DryWellsID", // 1
@@ -63,7 +72,6 @@ function check() {
     if (propType == "R") {
 
         // Residential: Vegetative Infiltration, Dry wells, porous pavement, rain barrels
-        resultsOptionBool = 1;
         GSIoptionsBool[0] = 1;
         GSIoptionsBool[1] = 1;
         GSIoptionsBool[2] = 1;
@@ -79,13 +87,12 @@ function check() {
     } else if (propType == "C") {
 
         // Commercial: all
-        resultsOptionBool = 1;
+
         for (i = 0; i < 7; i++) {
             GSIoptionsBool[i] = 1;
         }
     } else if (propType == "I") {
         // Industrial: everything except green pavers, permable unit pavers, bioretention, rain gardens
-        resultsOptionBool = 1;
         GSIoptionsBool[0] = 1;
         GSIoptionsBool[1] = 1;
         GSIoptionsBool[2] = 1;
@@ -109,7 +116,7 @@ function check() {
     }
 
     // Hides all options to reset if they enter new values
-    document.getElementById(resultsOption).style.display = "none";
+    resultsSummary.style.display = "none";
     for (i = 0; i < GSIoptions.length; i++) {
         document.getElementById(GSIoptions[i]).style.display = "none";
     }
@@ -119,7 +126,7 @@ function check() {
         document.getElementById("alert").style.display = "block";
     } else {
         document.getElementById("alert").style.display = "none";
-        document.getElementById(resultsOption).style.display = "block";
+        resultsSummary.style.display = "block";
         for (i = 0; i < GSIoptions.length; i++) {
             if (GSIoptionsBool[i]) {
                 document.getElementById(GSIoptions[i]).style.display = "block";
@@ -131,6 +138,8 @@ function check() {
     document.getElementById("totalAreaResult").innerHTML = totalArea;
     document.getElementById("totalImperviousAreaResult").innerHTML = totalImpervious;
     document.getElementById("totalYearlyFees").innerHTML = totalYearlyFees;
+    document.getElementById("totalRunoff").innerHTML = totalRunoff;
+
 
 }
 
@@ -344,4 +353,29 @@ function runoffCalc(propType, totalImpervious, areaPermanent) {
 
     Qmax = Math.max(...Qout);
     return [Vtotal, Qmax];
+};
+
+// get results tab to stay visible when scrolling through results
+
+
+
+function adaptiveScroll(initalPos) {
+    var ResultsScroll = document.querySelector('.ResultsSummaryInfo');
+    var ResultsPosition = ResultsScroll.getBoundingClientRect();
+    var placeholder = document.createElement('div');
+    placeholder.style.width = ResultsPosition.width + 'px';
+    placeholder.style.height = ResultsPosition.height + 'px';
+    var isAdded = false;
+    if (window.pageYOffset >= initalPos && !isAdded) {
+        ResultsScroll.classList.add('sticky');
+        ResultsScroll.parentNode.insertBefore(placeholder, ResultsScroll);
+        isAdded = true;
+    } else if (window.pageYOffset < initialPos && isAdded) {
+        ResultsScroll.classList.remove('sticky');
+        ResultsScroll.parentNode.removeChild(placeholder);
+        isAdded = false;
+
+    }
+
+
 };
