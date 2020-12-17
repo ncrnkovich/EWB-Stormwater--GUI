@@ -377,5 +377,4 @@ function adaptiveScroll(initalPos) {
 
     }
 
-
 };
