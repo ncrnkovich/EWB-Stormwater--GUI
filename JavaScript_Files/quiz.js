@@ -11,8 +11,6 @@ function check() {
     var i;
     var resultsID = document.getElementById("resultsID");
 
-    console.log(resultsID.style.display)
-
 
     // Calculations/math
 
@@ -107,13 +105,14 @@ function check() {
     }
 
     //Set about tab to be active by default
-    //Set about tab to be active by default
     var AboutTab = document.getElementsByClassName("AboutTab");
     var variationsHeader = document.getElementsByClassName("variationsHeader");
 
     for (i = 0; i < AboutTab.length; i++) {
         AboutTab[i].className = AboutTab[i].className + " active";
+        variationsHeader[i].style.display = "none";
     }
+
 
     // Hides all options to reset if they enter new values
     resultsSummary.style.display = "none";
@@ -149,7 +148,7 @@ function changeview(clickedIndex, tabName, optionsOrder) {
     var CostInfoText = document.getElementsByClassName("CostInfoText");
     // Get class vectors for each tab type
     var AboutTab = document.getElementsByClassName("AboutTab");
-    var CostTab = document.getElementsByClassName("CostTab");
+    var MoreInfoTab = document.getElementsByClassName("MoreInfoTab");
     var varitationsHeader = document.getElementsByClassName("variationsHeader");
 
     // Get class vectors for each div content. 
@@ -165,12 +164,22 @@ function changeview(clickedIndex, tabName, optionsOrder) {
     // This returns the ID of which GSI was activated
     var selectedOption = optionsOrder[clickedIndex];
 
+    // make it possible for variations to show up
+    var variations = document.getElementsByClassName("variations");
+    for (i = 0; i < variations.length; i++) {
+        variations[i].style.display = "block";
+    }
+
     // This resets any active tab to being inactive so the active class doesn't accumulate
     AboutTab[clickedIndex].className = AboutTab[clickedIndex].className.replace(" active", "");
-    CostTab[clickedIndex].className = CostTab[clickedIndex].className.replace(" active", "");
+    MoreInfoTab[clickedIndex].className = MoreInfoTab[clickedIndex].className.replace(" active", "");
 
     // Change the display of each tab for the selected div to none
     CostInfoText[clickedIndex].style.display = "none";
+    AboutText[clickedIndex].style.display = "none";
+
+    document.getElementsByClassName("Variations").removeChild;
+
     switch (selectedOption) {
         case "VegetativeInfiltrationID":
             for (i = 0; i < VegInfilt.length; i++) {
@@ -213,13 +222,10 @@ function changeview(clickedIndex, tabName, optionsOrder) {
     };
 
     // If the the button was the CostInfoText tab, make that div visible. have the summary visible by default
-    if (tabName == "CostTab" || tabName == "CostTab active") {
+    if (tabName == "MoreInfoTab" || tabName == "MoreInfoTab active") {
         CostInfoText[clickedIndex].style.display = "block";
-        varitationsHeader[clickedIndex].style.display = "none";
-        CostTab[clickedIndex].className = CostTab[clickedIndex].className + " active"; //Make button active
+        MoreInfoTab[clickedIndex].className = MoreInfoTab[clickedIndex].className + " active"; //Make button active
         AboutTab[clickedIndex].className = AboutTab[clickedIndex].className.replace(" active", "");
-
-    } else {
 
         switch (selectedOption) {
             case "VegetativeInfiltrationID":
@@ -258,34 +264,17 @@ function changeview(clickedIndex, tabName, optionsOrder) {
             case "InfiltrationChamberID":
                 for (i = 0; i < InfiltChamber.length; i++) {
                     InfiltChamber[i].style.display = "block";
-
                 }
-
+                break;
                 // add case for IDs of all offered options
         };
 
-        AboutTab[clickedIndex].className = AboutTab[clickedIndex].className + " active";
-        CostTab[clickedIndex].className = CostTab[clickedIndex].className.replace(" active", "");
-
-
-    }
-
-};
-
-
-function showmoreless(clickedIndex) {
-
-    var LearnMore = document.getElementsByClassName("learn_more");
-    var morelessbtntext = document.getElementsByClassName("MoreLessText");
-
-    if (LearnMore[clickedIndex].style.display === "block") {
-        LearnMore[clickedIndex].style.display = "none";
-        morelessbtntext[clickedIndex].innerHTML = "More";
-
-
     } else {
-        LearnMore[clickedIndex].style.display = "block";
-        morelessbtntext[clickedIndex].innerHTML = "Less";
+        varitationsHeader[clickedIndex].style.display = "none";
+        AboutText[clickedIndex].style.display = "block";
+        AboutTab[clickedIndex].className = AboutTab[clickedIndex].className + " active";
+        MoreInfoTab[clickedIndex].className = MoreInfoTab[clickedIndex].className.replace(" active", "");
+
     }
 
 };

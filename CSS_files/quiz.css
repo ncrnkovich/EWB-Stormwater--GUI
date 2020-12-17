@@ -218,6 +218,10 @@
         line-height: normal;
     }
     
+    .Variations div {
+        display: none;
+    }
+    
     .directions {
         all: revert;
         text-align: center;
@@ -293,11 +297,11 @@
         opacity: 100%;
     }
     
-    .ResultsTabs .CostTab:hover {
+    .ResultsTabs .MoreInfoTab:hover {
         background-color: rgb(136, 231, 136);
     }
     
-    .ResultsTabs .CostTab.active {
+    .ResultsTabs .MoreInfoTab.active {
         background-color: tomato;
         opacity: 100%;
     }
