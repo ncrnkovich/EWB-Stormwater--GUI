@@ -19,9 +19,6 @@ function check() {
     var propRate; // $5 / ERU for commercial, $2 / ERU for residential properties per month for stormwater fee (tentative)
     var totalYearlyFees;
     var perviousArea = totalArea - totalImpervious;
-    var Cimpermeable = 1;
-    var Cpermeable = 0.45; // averaging runoff coeff for permeable land
-    var I10year;
 
     // Fee calculations
 
@@ -121,6 +118,10 @@ function check() {
             }
         }
     }
+
+    document.getElementById("totalAreaResult").value = totalArea;
+
+
 }
 
 function changeview(clickedIndex, tabName, optionsOrder) {
