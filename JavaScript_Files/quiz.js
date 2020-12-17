@@ -44,8 +44,11 @@ function check() {
     maxRunoff = maxRunoff * 35.315; // [m^3/s to ft^3/s]
 
     // OPTION CALCULATOR
-    //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
+    //this is only for the results tab
+    var resultsOption = "resultsID";
+    var resultsOptionBool = 0;
 
+    //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
     var GSIoptions = ["VegetativeInfiltrationID", // 0
         "DryWellsID", // 1
         "PermeablePavementID", // 2
@@ -60,6 +63,7 @@ function check() {
     if (propType == "R") {
 
         // Residential: Vegetative Infiltration, Dry wells, porous pavement, rain barrels
+        resultsOptionBool = 1;
         GSIoptionsBool[0] = 1;
         GSIoptionsBool[1] = 1;
         GSIoptionsBool[2] = 1;
@@ -75,11 +79,13 @@ function check() {
     } else if (propType == "C") {
 
         // Commercial: all
+        resultsOptionBool = 1;
         for (i = 0; i < 7; i++) {
             GSIoptionsBool[i] = 1;
         }
     } else if (propType == "I") {
         // Industrial: everything except green pavers, permable unit pavers, bioretention, rain gardens
+        resultsOptionBool = 1;
         GSIoptionsBool[0] = 1;
         GSIoptionsBool[1] = 1;
         GSIoptionsBool[2] = 1;
@@ -103,6 +109,7 @@ function check() {
     }
 
     // Hides all options to reset if they enter new values
+    document.getElementById(resultsOption).style.display = "none";
     for (i = 0; i < GSIoptions.length; i++) {
         document.getElementById(GSIoptions[i]).style.display = "none";
     }
@@ -112,6 +119,7 @@ function check() {
         document.getElementById("alert").style.display = "block";
     } else {
         document.getElementById("alert").style.display = "none";
+        document.getElementById(resultsOption).style.display = "block";
         for (i = 0; i < GSIoptions.length; i++) {
             if (GSIoptionsBool[i]) {
                 document.getElementById(GSIoptions[i]).style.display = "block";
@@ -119,8 +127,10 @@ function check() {
         }
     }
 
-    document.getElementById("totalAreaResult").value = totalArea;
-
+    // prints out needed results in the results tab
+    document.getElementById("totalAreaResult").innerHTML = totalArea;
+    document.getElementById("totalImperviousAreaResult").innerHTML = totalImpervious;
+    document.getElementById("totalYearlyFees").innerHTML = totalYearlyFees;
 
 }
 
