@@ -113,6 +113,14 @@
         font-weight: bold;
     }
     
+    .resultsTitle {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        font-family: arial black;
+    }
+    
     .optiontitle {
         font-size: 20px;
         font-weight: bold;
@@ -230,6 +238,18 @@
         opacity: 100%;
     }
     
+    .ResultsInfo {
+        border: none;
+        padding: 10px 20px 10px 20px;
+        width: 800px;
+        float: left;
+        margin-left: 10%;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        background: transparent;
+        border-radius: 20px;
+    }
+    
     .GSIimage {
         margin: 20px 5px 30px 5px;
         height: 180px;
@@ -272,6 +292,10 @@
         margin-bottom: 2px;
         background: #c07c82;
         border-radius: 20px;
+    }
+    
+    #resultsID {
+        display: none;
     }
     
     #VegetativeInfiltrationID {
