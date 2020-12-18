@@ -170,6 +170,9 @@
         margin-right: 1%;
         background-color: #bd222e;
         border-radius: 20px;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 40px;
     }
     
     .sticky {
@@ -291,20 +294,20 @@
     }
     
     .ResultsTabs .AboutTab:hover {
-        background-color: #c2424c;
+        background-color: #faacb3; 
     }
     
     .ResultsTabs .AboutTab.active {
-        background-color: #c2424c;
+        background-color: #faacb3; 
         opacity: 100%;
     }
     
     .ResultsTabs .MoreInfoTab:hover {
-        background-color: #c2424c;
+        background-color: #faacb3;
     }
     
     .ResultsTabs .MoreInfoTab.active {
-        background-color: #c2424c;
+        background-color: #faacb3;
         opacity: 100%;
     }
     

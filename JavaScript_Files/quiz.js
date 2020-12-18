@@ -350,27 +350,3 @@ function runoffCalc(propType, totalImpervious, areaPermanent) {
     Qmax = Math.max(...Qout);
     return [Vtotal, Qmax];
 };
-
-// get results tab to stay visible when scrolling through results
-
-
-
-function adaptiveScroll(initalPos) {
-    var ResultsScroll = document.querySelector('.ResultsSummaryInfo');
-    var ResultsPosition = ResultsScroll.getBoundingClientRect();
-    var placeholder = document.createElement('div');
-    placeholder.style.width = ResultsPosition.width + 'px';
-    placeholder.style.height = ResultsPosition.height + 'px';
-    var isAdded = false;
-    if (window.pageYOffset >= initalPos && !isAdded) {
-        ResultsScroll.classList.add('sticky');
-        ResultsScroll.parentNode.insertBefore(placeholder, ResultsScroll);
-        isAdded = true;
-    } else if (window.pageYOffset < initialPos && isAdded) {
-        ResultsScroll.classList.remove('sticky');
-        ResultsScroll.parentNode.removeChild(placeholder);
-        isAdded = false;
-
-    }
-
-};
