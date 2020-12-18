@@ -307,6 +307,12 @@
         background-color: #c2424c;
         opacity: 100%;
     }
+
+	.resultsdisclaimer {
+		font-size: 10px;
+		color: white;
+		text-align: center;
+	}
     
     .GSIimage {
         margin: 20px 5px 30px 5px;
