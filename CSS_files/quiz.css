@@ -34,7 +34,7 @@
     }
     
     .infoHeader {
-        color: rgb(28, 29, 86);
+        color:rgb(28, 29, 86); 
         font-weight: normal;
         font-size: 24;
         font-family: arial black;
@@ -166,8 +166,9 @@
         float: left;
         margin-top: 8px;
         margin-bottom: 2px;
+		margin-top:30px;
         margin-right: 1%;
-        background-color: #c07c82;
+        background-color: #bd222e;
         border-radius: 20px;
     }
     
@@ -290,20 +291,20 @@
     }
     
     .ResultsTabs .AboutTab:hover {
-        background-color: rgb(136, 231, 136);
+        background-color: #c2424c; 
     }
     
     .ResultsTabs .AboutTab.active {
-        background-color: tomato;
+        background-color: #c2424c; 
         opacity: 100%;
     }
     
     .ResultsTabs .MoreInfoTab:hover {
-        background-color: rgb(136, 231, 136);
+        background-color: #c2424c;
     }
     
     .ResultsTabs .MoreInfoTab.active {
-        background-color: tomato;
+        background-color: #c2424c;
         opacity: 100%;
     }
     
@@ -352,7 +353,7 @@
         margin-top: 2px;
         margin-bottom: 2px;
         margin-right: 2%;
-        background: #c07c82;
+        background: #d16971;
         border-radius: 20px;
     }
     
