@@ -106,12 +106,10 @@ function check() {
 
     //Set about tab to be active by default
     var AboutTab = document.getElementsByClassName("AboutTab");
-    var variationsHeader = document.getElementsByClassName("variationsHeader");
-
     for (i = 0; i < AboutTab.length; i++) {
         AboutTab[i].className = AboutTab[i].className + " active";
-        variationsHeader[i].style.display = "none";
     }
+
 
 
     // Hides all options to reset if they enter new values
@@ -140,7 +138,7 @@ function check() {
     document.getElementById("totalRunoff").innerHTML = totalRunoff;
 
 
-}
+};
 
 function changeview(clickedIndex, tabName, optionsOrder) {
     // Get the class vectors for each tab content
@@ -168,6 +166,12 @@ function changeview(clickedIndex, tabName, optionsOrder) {
     var variations = document.getElementsByClassName("variations");
     for (i = 0; i < variations.length; i++) {
         variations[i].style.display = "block";
+    }
+
+    var variationsHeader = document.getElementsByClassName("variationsHeader");
+    for (i = 0; i < AboutTab.length; i++) {
+        AboutTab[i].className = AboutTab[i].className + " active";
+        variationsHeader[i].style.display = "none";
     }
 
     // This resets any active tab to being inactive so the active class doesn't accumulate
