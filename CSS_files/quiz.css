@@ -216,10 +216,12 @@
         text-align: left;
         color: white;
         line-height: normal;
+        width: 70%;
     }
     
     .Variations div {
         display: none;
+        margin: 0;
     }
     
     .directions {
@@ -229,7 +231,6 @@
         color: rgb(28, 29, 86);
         font-family: arial black;
     }
-    /* For testing purposes, diplay state is changed to "block". In the final website code all display states will be "none". */
     
     .button {
         background: wheat;
@@ -311,7 +312,8 @@
         height: 180px;
         width: 180px;
         border-radius: 5%;
-        opacity: 80%;
+        opacity: 100%;
+        float: left;
     }
     
     .AboutText {
@@ -319,7 +321,7 @@
         display: block;
         float: right;
         color: white;
-        padding-top: 10px;
+        padding-top: 15px;
         width: 70%;
         line-height: 1.2;
         text-align: left;
@@ -329,14 +331,17 @@
     .CostInfoText {
         display: none;
         float: right;
+        font-size: 16px;
+        padding-top: 15px;
         width: 70%;
+        line-height: 1.2;
         text-align: left;
         color: white;
-        font-size: 14;
     }
     
     .GSIlink {
-        color: white;
+        color: #bd222e;
+        font-weight: bold;
     }
     
     .GSIoption {
