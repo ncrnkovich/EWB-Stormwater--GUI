@@ -173,7 +173,6 @@ function changeview(clickedIndex, tabName, optionsOrder) {
 
     var variationsHeader = document.getElementsByClassName("variationsHeader");
     for (i = 0; i < AboutTab.length; i++) {
-        AboutTab[i].className = AboutTab[i].className + " active";
         variationsHeader[i].style.display = "none";
     }
 
