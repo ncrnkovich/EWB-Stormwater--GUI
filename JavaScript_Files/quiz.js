@@ -13,12 +13,15 @@ function check() {
 
 
     // Calculations/math
-
-    var inLieuFee = totalImpervious * 0.61; // $0.61 / sq ft of impervious land for disconnect fee
-    var stormFee;
-    var stormRunoff;
+    // ASSUMED PARAMTERS
+    var inLieuFeeRate = 0.61; // Supplied value of $0.61 / sq ft of impervious land for in-lieu-of disconnect fee
+    var resStormFee = 2; // $5 / ERU for commercial, $2 / ERU for residential properties per month for stormwater fee (tentative)
+    var comStormFee = 5;
     var ERU = 2700; // 2700 sq ft in one Equivalent Residental Unit
-    var propRate; // $5 / ERU for commercial, $2 / ERU for residential properties per month for stormwater fee (tentative)
+
+    var inLieuFee = totalImpervious * inLieuFeeRate; // 
+    var stormFee;
+    var propRate;
     var totalYearlyFees;
     var perviousArea = totalArea - totalImpervious;
 
@@ -26,9 +29,9 @@ function check() {
 
     // based on property type, set property fee
     if (propType == "R") {
-        propRate = 2;
+        propRate = resStormFee;
     } else {
-        propRate = 5;
+        propRate = comStormFee;
     }
     stormFee = (totalArea / ERU) * propRate * 12; // YEARLY fee (note the x12)
 
