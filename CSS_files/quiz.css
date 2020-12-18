@@ -34,7 +34,7 @@
     }
     
     .infoHeader {
-        color:rgb(28, 29, 86); 
+        color: rgb(28, 29, 86);
         font-weight: normal;
         font-size: 24;
         font-family: arial black;
@@ -166,7 +166,7 @@
         float: left;
         margin-top: 8px;
         margin-bottom: 2px;
-		margin-top:30px;
+        margin-top: 30px;
         margin-right: 1%;
         background-color: #bd222e;
         border-radius: 20px;
@@ -181,7 +181,7 @@
         font-size: 16px;
         float: left;
         color: white;
-        line-height: 1.2;
+        line-height: 1.5;
         text-align: left;
         font-weight: none;
     }
@@ -291,11 +291,11 @@
     }
     
     .ResultsTabs .AboutTab:hover {
-        background-color: #c2424c; 
+        background-color: #c2424c;
     }
     
     .ResultsTabs .AboutTab.active {
-        background-color: #c2424c; 
+        background-color: #c2424c;
         opacity: 100%;
     }
     
@@ -307,12 +307,12 @@
         background-color: #c2424c;
         opacity: 100%;
     }
-
-	.resultsdisclaimer {
-		font-size: 10px;
-		color: white;
-		text-align: center;
-	}
+    
+    .resultsdisclaimer {
+        font-size: 10px;
+        color: white;
+        text-align: center;
+    }
     
     .GSIimage {
         margin: 20px 5px 30px 5px;
