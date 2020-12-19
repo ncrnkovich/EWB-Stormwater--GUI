@@ -126,10 +126,10 @@
     }
     
     #button:hover {
-        background: white;
+       	background: white;
         border: 1px solid #bd222e;
         color: black;
-        cursor: pointer;
+        cursor: pointer; 
     }
     
     #alert {
@@ -172,7 +172,7 @@
         border-radius: 20px;
 		position: -webkit-sticky;
 		position: sticky;
-		top: 40px;
+		top:10px;
     }
     
     .sticky {
@@ -275,7 +275,7 @@
     
     .ResultsTabs {
         overflow: hidden;
-        border: 1px solid #ccc;
+        border:2px solid #bd222e;
         background-color: #bd222e;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -286,7 +286,8 @@
         background-color: inherit;
         float: left;
         outline-style: solid;
-        outline-color: white;
+        outline-color: #bd222e;
+		border: 1px solid white;
         cursor: pointer;
         padding: 10px 12px;
         transition: 0.3s;
@@ -294,21 +295,31 @@
     }
     
     .ResultsTabs .AboutTab:hover {
-        background-color: #faacb3; 
+		background: white;
+        border: 1px solid #bd222e;
+        color: black;
+        cursor: pointer; 
     }
     
     .ResultsTabs .AboutTab.active {
-        background-color: #faacb3; 
-        opacity: 100%;
+       	background: white;
+        border: 1px solid #bd222e;
+        color: black;
+        cursor: pointer; 
     }
     
     .ResultsTabs .MoreInfoTab:hover {
-        background-color: #faacb3;
+		background: white;
+        border: 1px solid #bd222e;
+        color: black;
+        cursor: pointer;
     }
     
     .ResultsTabs .MoreInfoTab.active {
-        background-color: #faacb3;
-        opacity: 100%;
+       	background: white;
+        border: 1px solid #bd222e;
+        color: black;
+        cursor: pointer;
     }
     
     .resultsdisclaimer {
