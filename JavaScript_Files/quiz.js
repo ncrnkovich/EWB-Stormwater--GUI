@@ -52,12 +52,7 @@ function check() {
     //this is only for the results tab
     var resultsSummary = document.getElementById("resultsID");
     var resultsID = document.getElementById("resultsID");
-    if (resultsID.style.display == "block") {
-        var ResultsScroll = document.querySelector('.ResultsSummaryInfo');
-        var initialPos = ResultsScroll.getBoundingClientRect().top;
-        console.log(initialPos)
-        window.addEventListener('scroll', adaptiveScroll(initialPos));
-    }
+
     //for each option, add a new element (KEEP IN ORDER! & keep string name the same as the id)
     var GSIoptions = ["VegetativeInfiltrationID", // 0
         "DryWellsID", // 1
@@ -69,7 +64,7 @@ function check() {
     ];
     var GSIoptionsBool = [0, 0, 0, 0, 0, 0, 0];
 
-    // // Series of NESTED if/else statements... if (condition) then change the GSIoptionsBool to 0 for all of the  incompatible options (element # correlates with GSIoptions)
+    // // Series of NESTED if/else statements... if (condition) then change the GSIoptionsBool to 1 for all of the  compatible options (element # correlates with GSIoptions)
     if (propType == "R") {
 
         // Residential: Vegetative Infiltration, Dry wells, porous pavement, rain barrels
@@ -89,11 +84,11 @@ function check() {
 
         // Commercial: all
 
-        for (i = 0; i < 7; i++) {
+        for (i = 0; i < GSIoptionsBool.length; i++) {
             GSIoptionsBool[i] = 1;
         }
     } else if (propType == "I") {
-        // Industrial: everything except green pavers, permable unit pavers, bioretention, rain gardens
+        // Industrial: everything except green pavers, permable unit pavers, rain gardens
         GSIoptionsBool[0] = 1;
         GSIoptionsBool[1] = 1;
         GSIoptionsBool[2] = 1;
@@ -101,18 +96,10 @@ function check() {
         GSIoptionsBool[4] = 1;
         GSIoptionsBool[5] = 1;
         GSIoptionsBool[6] = 1;
-        document.getElementById("Bioretention").style.display = "none";
         document.getElementById("GrassPavers").style.display = "none";
         document.getElementById("UnitPavers").style.display = "none";
         document.getElementById("RainGarden").style.display = "none";
     }
-
-    //Set about tab to be active by default
-    var AboutTab = document.getElementsByClassName("AboutTab");
-    for (i = 0; i < AboutTab.length; i++) {
-        AboutTab[i].className = AboutTab[i].className + " active";
-    }
-
 
 
     // Hides all options to reset if they enter new values
@@ -132,6 +119,11 @@ function check() {
                 document.getElementById(GSIoptions[i]).style.display = "block";
             }
         }
+    }
+    //Set about tab to be active by default
+    var AboutTab = document.getElementsByClassName("AboutTab");
+    for (i = 0; i < AboutTab.length; i++) {
+        AboutTab[i].className = AboutTab[i].className + " active";
     }
 
     // prints out needed results in the results tab
@@ -171,10 +163,10 @@ function changeview(clickedIndex, tabName, optionsOrder) {
         variations[i].style.display = "block";
     }
 
-    var variationsHeader = document.getElementsByClassName("variationsHeader");
-    for (i = 0; i < AboutTab.length; i++) {
-        variationsHeader[i].style.display = "none";
-    }
+    // var variationsHeader = document.getElementsByClassName("variationsHeader");
+    // for (i = 0; i < AboutTab.length; i++) {
+    //     variationsHeader[i].style.display = "none";
+    // }
 
     // This resets any active tab to being inactive so the active class doesn't accumulate
     AboutTab[clickedIndex].className = AboutTab[clickedIndex].className.replace(" active", "");
