@@ -33,7 +33,7 @@ function check() {
     } else {
         propRate = comStormFee;
     }
-    stormFee = (totalImpervious / ERU) * propRate * 12; // YEARLY fee (note the x12)
+    stormFee = (totalArea / ERU) * propRate * 12; // YEARLY fee (note the x12)
 
     if (downspoutDisconnect == "Y") {
         inLieuFee = 0; // if their downspout is disconnected, no in-lieu-of fee
