@@ -165,9 +165,8 @@
         width: 31%;
         float: left;
         margin-top: 8px;
-        margin-bottom: 2pxpx;
-        margin-top: 30px;
-        margin-right: 1%;
+        margin-bottom: 8px;
+        margin-top: 30px; 
         background-color: #bd222e;
         border-radius: 20px;
         position: -webkit-sticky;
@@ -288,8 +287,8 @@
         float: left;
         outline-style: solid;
         outline-color: #bd222e;
-        border: 1px solid white;
-        cursor: pointer;
+       /* border: 1px solid white;*/
+	   cursor: pointer;
         padding: 10px 12px;
         transition: 0.3s;
         opacity: 100%;
@@ -297,34 +296,35 @@
     
     .ResultsTabs .AboutTab:hover {
         background: white;
-        border: 1px solid #bd222e;
+        /*border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
     }
     
     .ResultsTabs .AboutTab.active {
         background: white;
-        border: 1px solid #bd222e;
+       /* border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
     }
     
     .ResultsTabs .MoreInfoTab:hover {
         background: white;
-        border: 1px solid #bd222e;
+        /*border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
     }
     
     .ResultsTabs .MoreInfoTab.active {
         background: white;
-        border: 1px solid #bd222e;
+        /*border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
     }
     
-    .resultsdisclaimer {
+    .resultsdisclaimer {	
         font-size: 10px;
+		font-weight:bold;
         color: white;
         text-align: center;
     }
