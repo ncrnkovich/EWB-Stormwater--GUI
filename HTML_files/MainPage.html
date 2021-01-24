@@ -469,9 +469,9 @@
                                         <p class="infoHeader"> ABOUT THIS TOOL</p>
                                         <p class="infoText">
                                             To help address problems with flooding and combined sewage overflows (CSO), South Bend is mandating that all <span class="importantText">downspouts be disconnected</span> from the sewer system by April 2021.
-                                            <br> Additionally, a <span class="importantText"> stormwater tax</span> will be enacted. This tax will be $2 per Equivalent Residential Unit (ERU) per month for residential properties, and $5 per ERU per month
-                                            for commerical properties. However, if a property incorporates green infrastructure, a portion of this tax will be negated.
-                                            <br> This tool is designed for property owners to calculate what they will face per year in taxes, and offer green infrastructure solutions with this in mind.
+                                            <br> Additionally, a <span class="importantText"> stormwater fee</span> will be enacted. This fee will be a flat $2 per month for residential properties, and for commercial properties will be scaled by amount
+                                            of impervious area. for commerical properties. However, if a property incorporates green infrastructure, a portion of this fee will be negated.
+                                            <br> This tool is designed for property owners to calculate what they will face per year in fees, and offer green infrastructure solutions with this in mind.
                                         </p>
                                     </div>
                                     <div class="generalInfo">
@@ -479,8 +479,8 @@
                                         <p class="infoText">
                                             Green infrastructure is a general term for measures that use plants, soil systems, and permeable substrates to help reduce the amount of runoff that flows into sewer systems. When land is increasingly replaced with parking lots and new housing developments,
                                             the area able to absorb rainfall is greatly reduced, and the sewer system is forced to handle the excess runoff. South Bend, like many older US cities, has a
-                                            <span class="importantText"> combined sewer system, </span> so stormwater and raw sewage are contained in the same pipes. <br> During rain events, this often leads to overflows, and the treatment facilities
-                                            are forced to release raw sewage into the St. Joseph River, even as the system backs up and neighborhoods flood. By greatly reducing the amount of runoff into the system, <span class="importantText"> green infrastructure reduces these raw sewage overflows, mitigates localized flooding,
+                                            <span class="importantText"> combined sewer system, </span> so stormwater and raw sewage are contained in the same pipes. <br> During rain events, this often leads to overflows, and the sewers are forced to
+                                            release raw sewage into the St. Joseph River, even as the system backs up and neighborhoods flood. By greatly reducing the amount of runoff into the system, <span class="importantText"> green infrastructure reduces these raw sewage overflows, mitigates localized flooding,
                                             and provides many other benefits. <span class= "importantText"></span>
                                             <br> Learn more about green infrastructure
                                             <a href="https://www.epa.gov/green-infrastructure/what-green-infrastructure">here</a>, the environmental benefits <a href="https://www.epa.gov/green-infrastructure/benefits-green-infrastructure">here</a>, and
@@ -577,14 +577,19 @@
                     <div class="resultsSummaryTitle">RESULTS SUMMARY</div>
                     <div>
                         <span class="resultsSummaryText">
-                            Reported area of property: <b><span class = "resultsSummaryData" id="totalAreaResult"></span></b> sq. ft.<br> Reported impervious area: <b><span class = "resultsSummaryData" id="totalImperviousAreaResult"></span></b>                        sq. ft.<br> Estimated runoff for design storm*: <b><span class = "resultsSummaryData" id="totalRunoff"></span></b> cu ft. <br> Estimated yearly stormwater fee: <b>$<span class = "resultsSummaryData" id="totalYearlyFees"></span></b>
+                            Reported area of property: <b><span class = "resultsSummaryData" id="totalAreaResult"></span></b> sq. ft.
+                        <br> Reported impervious area: <b><span class = "resultsSummaryData" id="totalImperviousAreaResult"></span></b>sq. ft.
+                        <br> Estimated runoff for design storm*: <b><span class = "resultsSummaryData" id="totalRunoff"></span></b> cu ft.
+                        <br> Estimated in-lieu-of disconnect fee: <b>$<span class = "resultsSummaryData" id="inLieuFee"></span></b>
+                        <br> Estimated yearly stormwater fee: <b>$<span class = "resultsSummaryData" id="totalYearlyFees"></span></b>
                         <br><br>
                         <div class="resultsdisclaimer">
-                            *Based on 12 hour, 10 year storm event
+                            *Based on standard 10 year, 6 hour storm
                         </div>
                         </span>
                     </div>
                 </div>
+
                 <script>
                     var resultsID = document.getElementById("resultsID");
                     while (resultsID.style.display == "block") {
@@ -594,7 +599,6 @@
                         window.addEventListener('scroll', adaptiveScroll(initialPos));
                     }
                 </script>
-                <!-- This is a test -->
 
                 <div class="GSIoption" id="VegetativeInfiltrationID">
                     <div class="optiontitle">VEGETATIVE INFILTRATION</div>

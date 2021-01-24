@@ -15,30 +15,38 @@ function check() {
     // Calculations/math
     // ASSUMED PARAMTERS
     var inLieuFeeRate = 0.61; // Supplied value of $0.61 / sq ft of impervious land for in-lieu-of disconnect fee
-    var resStormFee = 2; // $5 / ERU for commercial, $2 / ERU for residential properties per month for stormwater fee (tentative)
-    var comStormFee = 5;
     var ERU = 2700; // 2700 sq ft in one Equivalent Residental Unit
-
-    var inLieuFee = totalImpervious * inLieuFeeRate; // 
-    var stormFee;
-    var propRate;
-    var totalYearlyFees;
-    var perviousArea = totalArea - totalImpervious;
+    var baseFeeRate = 2.002; // $2 /month base rate  
 
     // Fee calculations
-
+    var inLieuFee; // one time in-lieu-of disconnect fee
+    var stormwaterFee;
+    var totalYearlyFees;
     // based on property type, set property fee
     if (propType == "R") {
-        propRate = resStormFee;
+        multiplier = 1.0;
     } else {
-        propRate = comStormFee;
+        if (totalImpervious < 5001) {
+            multiplier = 2.0;
+        } else if (totalImpervious < 40001) {
+            multiplier = 12.0;
+        } else if (totalImpervious < 100001) {
+            multiplier = 25.0;
+        } else if (totalImpervious < 200001) {
+            multiplier = 45.0;
+        } else {
+            multiplier = 55.0;
+        }
     }
-    stormFee = (totalArea / ERU) * propRate * 12; // YEARLY fee (note the x12)
+    stormwaterFee = baseFeeRate * multiplier; //monthly stormwater fee
 
-    if (downspoutDisconnect == "Y") {
+    if (downspoutDisconnect == "Y" || propType == "R") {
         inLieuFee = 0; // if their downspout is disconnected, no in-lieu-of fee
+    } else {
+        inLieuFee = totalImpervious * inLieuFeeRate;
     }
-    totalYearlyFees = Math.round(inLieuFee + stormFee);
+
+    totalYearlyFees = Math.round(stormwaterFee * 12);
 
     // Stormwater calculator
     var runoff = runoffCalc(propType, totalImpervious, areaPermanent);
@@ -130,6 +138,7 @@ function check() {
     document.getElementById("totalAreaResult").innerHTML = totalArea;
     document.getElementById("totalImperviousAreaResult").innerHTML = totalImpervious;
     document.getElementById("totalYearlyFees").innerHTML = totalYearlyFees;
+    document.getElementById("inLieuFee").innerHTML = inLieuFee;
     document.getElementById("totalRunoff").innerHTML = totalRunoff;
 
 
@@ -293,7 +302,7 @@ function runoffCalc(propType, totalImpervious, areaPermanent) {
     };
 
     // just input a new precip pattern and new Ptotal to change the storm
-    var Ptotal = 3.55 * 25.4; // [mm] from NOAA, precipitation total for 10 year, 12 hour storm
+    var Ptotal = 3.09 * 25.4; // [mm] from NOAA, precipitation total for 10 year, 6 hour storm
     // I want to change this model to reflect CSO's, but can't until EmNet gets back to us
     var precipPattern = [0, 2, 5, 10, 15, 15, 10, 6, 5, 5, 5, 8, 12, 18, 22, 45, 60, 32, 33, 24, 22, 10, 15, 17, 18, 19, 22, 38, 50, 45, 45, 40, 42, 12, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     var precipVector = new Array();

@@ -53,13 +53,14 @@ only screen and (-o-min-device-pixel-ratio: 2 / 1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
     .geocoder-control-input {
-        background-image: url("img/search@2x.png")
+        background-image: url("../assets/searchIcon.png");
+        background-size: 50%;
     }
     .geocoder-control-input-disabled {
-        background-image: url("img/search@2x-disabled.png")
+        background-image: url("../assets/searchIcon.png");
     }
     .geocoder-control-input.geocoder-control-loading {
-        background-image: url("img/loading@2x.gif")
+        background-image: url("../assets/loadingIcon.png");
     }
 }
 
