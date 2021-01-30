@@ -31,13 +31,13 @@
 
 
 
-        // //create popup marker
-        var popup = L.popup()
-            //control where it is on map with Latitude/longitude
-            .setLatLng([41.68, -86.25])
-            .setContent("Welcome to South Bend!")
-            .openOn(mymap) //places on the map called "mymap"
-            //openOn automatically closes previously opened popup when opening new one
+        // // //create popup marker
+        // var popup = L.popup()
+        //     //control where it is on map with Latitude/longitude
+        //     .setLatLng([41.68, -86.25])
+        //     .setContent("Welcome to South Bend!")
+        //     .openOn(mymap) //places on the map called "mymap"
+        //     //openOn automatically closes previously opened popup when opening new one
 
         var searchControl = L.esri.Geocoding.geosearch().addTo(mymap);
 
