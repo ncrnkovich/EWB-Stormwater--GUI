@@ -6,10 +6,10 @@
         display: block;
         float: left;
         background-color: rgb(230, 236, 249);
-        width: 39%;
+        width: 41%;
         border-radius: 10px;
         padding: 2%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     
     .importantText {
@@ -17,14 +17,18 @@
         font-weight: 1000;
     }
     
+    .info {
+        height: 100%;
+    }
+    
     .generalInfo {
         display: block;
         float: right;
         background-color: rgb(230, 236, 249);
-        width: 59%;
+        width: 57%;
         border-radius: 10px;
         padding: 2%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     
     .infoText {
@@ -166,7 +170,7 @@
         float: left;
         margin-top: 8px;
         margin-bottom: 8px;
-        margin-top: 30px; 
+        margin-top: 30px;
         background-color: #bd222e;
         border-radius: 20px;
         position: -webkit-sticky;
@@ -287,8 +291,8 @@
         float: left;
         outline-style: solid;
         outline-color: #bd222e;
-       /* border: 1px solid white;*/
-	   cursor: pointer;
+        /* border: 1px solid white;*/
+        cursor: pointer;
         padding: 10px 12px;
         transition: 0.3s;
         opacity: 100%;
@@ -303,7 +307,7 @@
     
     .ResultsTabs .AboutTab.active {
         background: white;
-       /* border: 1px solid #bd222e;*/
+        /* border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
     }
@@ -322,9 +326,9 @@
         cursor: pointer;
     }
     
-    .resultsdisclaimer {	
+    .resultsdisclaimer {
         font-size: 10px;
-		font-weight:bold;
+        font-weight: bold;
         color: white;
         text-align: center;
     }

@@ -302,9 +302,9 @@ function runoffCalc(propType, totalImpervious, areaPermanent) {
     };
 
     // just input a new precip pattern and new Ptotal to change the storm
-    var Ptotal = 3.09 * 25.4; // [mm] from NOAA, precipitation total for 10 year, 6 hour storm
+    var Ptotal = 4.9 * 25.4; // [mm] from NOAA, precipitation total for 25 year, 24 hour storm
     // I want to change this model to reflect CSO's, but can't until EmNet gets back to us
-    var precipPattern = [0, 2, 5, 10, 15, 15, 10, 6, 5, 5, 5, 8, 12, 18, 22, 45, 60, 32, 33, 24, 22, 10, 15, 17, 18, 19, 22, 38, 50, 45, 45, 40, 42, 12, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var precipPattern = [0, 2, 5, 10, 15, 15, 10, 6, 5, 5, 5, 8, 12, 18, 22, 45, 60, 32, 33, 24, 22, 10, 15, 17, 18, 19, 22, 38, 50, 45, 45, 40, 42, 12, 5, 0, 2, 5, 10, 15, 15, 10, 6, 5, 5, 5, 8, 12, 18, 22, 45, 60, 32, 33, 24, 22, 10, 15, 17, 18, 19, 22, 38, 50, 45, 45, 40, 42, 12, 5, 0, 2, 5, 10, 15, 15, 10, 6, 5, 5, 5, 8, 12, 18, 22, 45, 60, 32, 33, 24, 22, 10, 15, 17, 18, 19, 22, 38, 50, 45, 45, 40, 42, 12, 5, 0, 2, 5, 10, 15, 15, 10, 6, 5, 5, 5, 8, 12, 18, 22, 45, 60, 32, 33, 24, 22, 10, 15, 17, 18, 19, 22, 38, 50, 45, 45, 40, 42, 12, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     var precipVector = new Array();
 
     var deltaT = 60; // [s]
