@@ -56,6 +56,10 @@
         font-size: 16px;
     }
     
+    #discount {
+        display: none;
+    }
+    
     #textbox {
         display: inline;
         height: 20px;
@@ -113,7 +117,7 @@
         opacity: 85%;
     }
     
-    #mc {
+    .mc {
         text-align: default;
         margin-left: 20px;
     }
@@ -381,8 +385,7 @@
         background: #d16971;
         border-radius: 20px;
     }
-    
-    #VegetativeInfiltrationID {
+    /* #VegetativeInfiltrationID {
         display: none;
     }
     
@@ -626,7 +629,7 @@
         font-family: "Lucida Console", monospace;
         color: white;
         font-style: normal;
-    }
+    } */
     
     #link {
         color: white;

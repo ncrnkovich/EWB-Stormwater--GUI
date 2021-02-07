@@ -545,22 +545,42 @@
 				    							Which best describes your property?
 											</b>
                     <br>
-                    <input type="radio" id="mc" name="propType" value="R" checked class="mcanswers"> Residential<br>
-                    <input type="radio" id="mc" name="propType" value="C" class="mcanswers"> Commercial<br>
-                    <input type="radio" id="mc" name="propType" value="I" class="mcanswers"> Industrial<br>
+                    <input type="radio" class="mc" name="propType" value="R" checked class="mcanswers"> Residential<br>
+                    <input type="radio" class="mc" name="propType" value="C" class="mcanswers"> Commercial<br>
+                    <input type="radio" class="mc" name="propType" value="I" class="mcanswers"> Industrial<br>
 
                     <br>
                     <b>
-				    							Is your downspout disconnected from the sewer system, or will it soon be?
-											</b>
+				    Is your downspout disconnected from the sewer system, or will it soon be?
+					</b>
                     <br>
-                    <input type="radio" id="mc" name="downspoutDisconnect" value="Y" checked class="mcanswers"> Yes<br>
-                    <input type="radio" id="mc" name="downspoutDisconnect" value="N" class="mcanswers"> No<br>
+                    <input type="radio" class="mc" name="downspoutDisconnect" value="Y" checked class="mcanswers"> Yes<br>
+                    <input type="radio" class="mc" name="downspoutDisconnect" value="N" class="mcanswers"> No<br>
 
+
+                    <label for="discount" class="questions">Select a classification:</label>
+                    <br>
+                    <select name="discount" id="discount">
+                        <option value="501c3free">501(c)(3) charitable organization with fewer than 20 fulltime employees</option>
+                        <option value="501c350%">501(c)(3) charitable organization with between 20 and 100 fulltime employees</option>
+                        <option value="forprofit50%">For profit business with frewer than 20 fulltime employees</option>
+                        <option selected value="none">My property does not classify as any of these</option>
+                    </select>
 
                     <input id="button" type="button" value="Get Results!" onclick="check();">
 
                 </form>
+                <script>
+                    // HI GINAAAAA this is supposed to work but it is not please make it work. The argument for query selector isn't working
+                    var disconnectedResponse = document.querySelector('input[name = "downspoutDisconnect"]: checked').value;
+                    console.log(disconnectedResponse)
+                    if (disconnectedResponse == "N") {
+                        document.getElementById("discount").style.display = "block";
+                    } else {
+                        document.getElementById("discount").style.display = "none";
+
+                    }
+                </script>
 
 
                 <!-- SHOW OPTIONS

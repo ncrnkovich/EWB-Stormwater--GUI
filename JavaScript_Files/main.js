@@ -1,4 +1,4 @@
-function check() {
+function check() { // function called when Get Results! button fired
     //Each variable represents an answer to a question
     //Keep in order
     //need parseInt() for free response questions
@@ -7,7 +7,7 @@ function check() {
     var areaPermanent = parseInt(document.quiz.areaPermanent.value, 10); // roof area
     var propType = document.quiz.propType.value;
     var downspoutDisconnect = document.quiz.downspoutDisconnect.value;
-
+    var discountValue = document.quiz.discount.value;
     var i;
     var resultsID = document.getElementById("resultsID");
 
@@ -22,6 +22,7 @@ function check() {
     var inLieuFee; // one time in-lieu-of disconnect fee
     var stormwaterFee;
     var totalYearlyFees;
+    var discount;
     // based on property type, set property fee
     if (propType == "R") {
         multiplier = 1.0;
@@ -44,6 +45,14 @@ function check() {
         inLieuFee = 0; // if their downspout is disconnected, no in-lieu-of fee
     } else {
         inLieuFee = totalImpervious * inLieuFeeRate;
+        if (discountValue == "501c3free") {
+            discount = 0; // 501(c)(3) with <20 employees 100% discount
+        } else if (discountValue == "501c350%" || discountValue == "forprofit50%") {
+            discount = 0.5; // 501(c)(3) with 20 < employees < 100 50% discount, for profit <20, 50% discount
+        } else {
+            discount = 1.0;
+        }
+        inLieuFee = inLieuFee * discount;
     }
 
     totalYearlyFees = Math.round(stormwaterFee * 12);
