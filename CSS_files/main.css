@@ -391,7 +391,8 @@
         background: #d16971;
         border-radius: 20px;
     }
-    /* #VegetativeInfiltrationID {
+    
+    #VegetativeInfiltrationID {
         display: none;
     }
     
@@ -635,7 +636,7 @@
         font-family: "Lucida Console", monospace;
         color: white;
         font-style: normal;
-    } */
+    }
     
     #link {
         color: white;
