@@ -60,6 +60,12 @@
         display: none;
     }
     
+    #discount-dropdown {
+        width: 95%;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
     #textbox {
         display: inline;
         height: 20px;
