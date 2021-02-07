@@ -500,10 +500,11 @@
             <body>
                 <!-- places the map in the webpage-->
                 <div id="mapid" style="width: 65%;
-                                        height: 555px;
+                                        height: 635px;
                                         float: left;
                                         border-radius: 10px;
-                                        margin-top: 7.5px;"></div>
+                                        margin-top: 7.5px;
+                                        margin-bottom:17px;"></div>
 
                 <!-- Add Leaflet Measuring tool -->
                 <link rel="stylesheet" href="../CSS_files/leaflet-measure.css">
@@ -558,8 +559,8 @@
                     <input type="radio" class="mc" name="downspoutDisconnect" value="Y" checked class="mcanswers"> Yes<br>
                     <input type="radio" class="mc" name="downspoutDisconnect" value="N" class="mcanswers"> No<br>
 
-                    <br>
                     <div id="discount">
+                        <br>
                         <b><label for="discount" class="questions">Select a classification:</label></b>
                         <br>
                         <select name="discount" id="discount-dropdown">
@@ -568,6 +569,7 @@
                                 <option id="dropdown-option" value="forprofit50%">For profit business with fewer than 20 fulltime employees</option>
                                 <option id="dropdown-option" selected value="none">My property does not classify as any of these</option>
                         </select>
+                        <br>
                     </div>
 
                     <input id="button" type="button" value="Get Results!" onclick="check();">
