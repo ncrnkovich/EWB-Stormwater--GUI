@@ -61,10 +61,12 @@
     }
     
     #discount-dropdown {
-        width: 95%;
+        width: 97%;
         font-size: 14px;
         font-family: Arial, Helvetica, sans-serif;
         color: rgb(99, 99, 99);
+        border: none;
+        padding: 2px;
     }
     
     #textbox {
