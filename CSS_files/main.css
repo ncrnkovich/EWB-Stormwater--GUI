@@ -2,6 +2,16 @@
         all: revert;
     }
     
+    .ND-Box {
+        display: block;
+        background-color: rgb(52, 53, 124);
+        color: white;
+        margin: auto;
+        border-radius: 10px;
+        padding: 2px;
+        text-align: center;
+    }
+    
     .toolInfo {
         display: block;
         float: left;
@@ -181,7 +191,7 @@
         padding-right: 10px;
         width: 31%;
         float: left;
-        margin-top: 30px;
+        margin-top: 30gipx;
         margin-bottom: 8px;
         background-color: #bd222e;
         border-radius: 20px;
