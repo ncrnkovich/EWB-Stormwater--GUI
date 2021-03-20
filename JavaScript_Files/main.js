@@ -16,7 +16,7 @@ function check() { // function called when Get Results! button fired
     // ASSUMED PARAMTERS
     var inLieuFeeRate = 0.61; // Supplied value of $0.61 / sq ft of impervious land for in-lieu-of disconnect fee
     var ERU = 2700; // 2700 sq ft in one Equivalent Residental Unit
-    var baseFeeRate = 2.002; // $2 /month base rate  
+    var baseFeeRate = 2.00; // $2 /month base rate  
 
     // Fee calculations
     var inLieuFee; // one time in-lieu-of disconnect fee

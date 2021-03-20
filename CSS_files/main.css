@@ -12,6 +12,10 @@
         text-align: center;
     }
     
+    .tab {
+        margin-left: 5%;
+    }
+    
     .toolInfo {
         display: block;
         float: left;
@@ -88,8 +92,7 @@
         padding-left: 5px;
         width: 20%;
     }
-    
-    .imperviousDef {
+    /* .imperviousDef {
         visibility: hidden;
         opacity: 0;
         transition: display 0s, opacity 0.5s linear;
@@ -104,14 +107,12 @@
         color: white;
         font-size: 11px;
         padding: 2px 2px 2px 2px;
-    }
-    
-    .imperviousSurfaces {
+    } */
+    /* .imperviousSurfaces {
         color: rgb(16, 17, 68);
         font-weight: bold;
-    }
-    
-    .imperviousSurfaces:hover~div[class="imperviousDef"] {
+    } */
+    /* .imperviousSurfaces:hover~div[class="imperviousDef"] {
         visibility: visible;
         background-color: rgb(52, 53, 124);
         opacity: 100%;
@@ -120,7 +121,7 @@
     .imperviousSurfaces:hover {
         color: #bd222e;
         transition-duration: 0.5s;
-    }
+    } */
     
     b.questions {
         line-height: 1.5;
@@ -193,11 +194,22 @@
         float: left;
         margin-top: 30gipx;
         margin-bottom: 8px;
-        background-color: #bd222e;
+        /* background-color: #bd222e; */
+        background-color: #fff;
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgb(28, 29, 86);
         border-radius: 20px;
         position: -webkit-sticky;
         position: sticky;
         top: 10px;
+    }
+    
+    .resultsdisclaimer {
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+        text-align: left;
     }
     
     .sticky {
@@ -208,7 +220,7 @@
     .resultsSummaryText {
         font-size: 16px;
         float: left;
-        color: white;
+        color: black;
         line-height: 1.5;
         text-align: left;
         font-weight: none;
@@ -346,13 +358,6 @@
         /*border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
-    }
-    
-    .resultsdisclaimer {
-        font-size: 10px;
-        font-weight: bold;
-        color: white;
-        text-align: center;
     }
     
     .GSIimage {
