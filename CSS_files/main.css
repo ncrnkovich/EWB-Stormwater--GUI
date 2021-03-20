@@ -15,15 +15,16 @@
     .toolInfo {
         display: block;
         float: left;
-        background-color: rgb(230, 236, 249);
         width: 51%;
-        border-radius: 10px;
+        /*background-color: rgb(230, 236, 249);
+        border-radius: 10px;*/
         padding: 2%;
         margin-bottom: 15px;
+        text-align: left;
     }
     
     .importantText {
-        color: rgb(28, 29, 86);
+        /*color: rgb(28, 29, 86);*/
         font-weight: 1000;
     }
     
@@ -34,11 +35,12 @@
     .generalInfo {
         display: block;
         float: right;
-        background-color: rgb(230, 236, 249);
         width: 47%;
-        border-radius: 10px;
+        /*background-color: rgb(230, 236, 249);
+        border-radius: 10px;*/
         padding: 2%;
         margin-bottom: 15px;
+        text-align: left;
     }
     
     .infoText {
@@ -51,8 +53,8 @@
         color: rgb(28, 29, 86);
         font-weight: normal;
         font-size: 24;
-        font-family: arial black;
-        text-align: center;
+        font-family: sans-serif;
+        text-align: left;
     }
     
     #quiz {
