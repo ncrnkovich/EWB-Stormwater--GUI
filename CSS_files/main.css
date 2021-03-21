@@ -234,7 +234,7 @@
     .optiontitle {
         font-size: 25px;
         font-weight: bold;
-        text-align: center;
+        text-align: left;
         color: #555;
         font-family: arial black;
     }
@@ -405,8 +405,6 @@
         padding: 10px 20px 10px 20px;
         width: 66%;
         float: right;
-        margin-top: 2px;
-        margin-bottom: 2px;
         margin-right: 2%;
         /*border: black 4px;
         background: #d16971;
