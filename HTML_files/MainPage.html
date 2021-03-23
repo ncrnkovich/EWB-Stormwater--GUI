@@ -507,7 +507,7 @@
                                         height: 625px;
                                         float: left;
                                         border-radius: 10px;
-                                        margin-top: 5px;"></div>
+                                        margin-top: 7.5px;"></div>
 
                 <!-- Add Leaflet Measuring tool -->
                 <link rel="stylesheet" href="../CSS_files/leaflet-measure.css">
@@ -530,14 +530,15 @@
                     <b class="questions">Total area of property (sq. ft):</b>
                     <input id="textbox" type="text" name="totalArea" placeholder="e.g. 10000">
                     <div class="imperviousQuestion">
-                        Area of <a class="popup" hhref="https://www.usgs.gov/special-topic/water-science-school/science/impervious-surfaces-and-flooding?qt-science_center_objects=0#qt-science_center_objects">impervious surfaces</a> (sq. ft):
+                        <b>Area of <a class="popupLink" hhref="#" onclick="openPopup()">impervious surfaces</a> (sq. ft):</b>
                         <!-- <span class="imperviousSurfaces">Area of impervious surfaces (sq. ft):</span> -->
                         <input id="textbox" type="text" name="totalImpervious" placeholder="e.g. 10000">
-                        <!-- <div class="imperviousDef">
-                            <p class="popupText">
-                                Impervious surfaces are surfaces that water is unable to drain through. This primarily includes rooftops, concrete, and asphalt.
-                            </p>
-                        </div> -->
+
+                    </div>
+                    <div class="popup" id="imperviousPopup">
+                        <p class="popuptext">
+                            Impervious surfaces are surfaces that water is unable to drain through. This primarily includes rooftops, concrete, and asphalt.
+                        </p>
                     </div>
 
                     <b class="questions">
@@ -692,8 +693,8 @@
                     <img class="GSIimage" src="../Images/DryWells.jpg" alt="Located at https://www.ndspro.com/products/drainage/dry-wells.html">
                     <p class="CostInfoText">
                         <b>Recommended number:</b> One unit per drainage area, with size based on runoff. <br> <br> <b>Costs: </b> Costs range greatly by size, from as around $1,500 for a smaller tank suitable for residential, to $15k for the largest
-                        available. Occational maintenance required to inspect for sediment accumulation.<br><br> Learn more <a href="https://www.americangeosciences.org/geoscience-currents/dry-wells-stormwater-management#:~:text=A%20dry%20well%20is%20a,or%20rock%20or%20left%20empty."
-                            class="GSIlink">here</a>!
+                        available. Occational maintenance required to inspect for sediment accumulation.<br><br> Learn more about <a href="https://www.americangeosciences.org/geoscience-currents/dry-wells-stormwater-management#:~:text=A%20dry%20well%20is%20a,or%20rock%20or%20left%20empty."
+                            class="GSIlink">dry wells</a>!
                     </p>
                 </div>
 
@@ -801,8 +802,8 @@
                     <img class="GSIimage" src="../Images/RainBarrel.jpg" alt="Located at https://www.glacvcd.org/app/uploads/2016/01/rain-barrel.jpg">
                     <p class="CostInfoText">
                         <b>Recommended size:</b> One rain barrel per downspout or one cistern per house. <br> <br> <b>Costs: </b> Each rain barrel costs about $100 - $300 and each cistern costs about $1,000 - $10,000. Some yearly maintenace will be required.
-                        <br><br> Learn more about rain barrels <a href="https://www.epa.gov/soakuptherain/soak-rain-rain-barrels" class="GSIlink">here</a>. <br> Learn more about cisterns <a href="https://extension.psu.edu/cisterns-for-capturing-and-reusing-stormwater#:~:text=A%20cistern%20is%20a%20storage,shapes%20and%20sizes%2C%20see%20Fig."
-                            class="GSIlink">here</a>.
+                        <br><br> Learn more about <a href="https://www.epa.gov/soakuptherain/soak-rain-rain-barrels" class="GSIlink">rain barrels</a>. <br> Learn more about <a href="https://extension.psu.edu/cisterns-for-capturing-and-reusing-stormwater#:~:text=A%20cistern%20is%20a%20storage,shapes%20and%20sizes%2C%20see%20Fig."
+                            class="GSIlink">cisterns</a>.
                     </p>
                 </div>
 
@@ -821,8 +822,8 @@
                     <div class="variationsHeader novariations">Types</div>
                     <img class="GSIimage" src="../Images/GreenRoof.jpg" alt="Located at https://www.ads-pipe.com/products/stormwater-detention-infiltration/stormtech-chambers">
                     <p class="CostInfoText">
-                        <b>Recommended size:</b> As much of roof as possible.<br> <br> <b>Costs: </b> Installation costs about $15 - $25 per square foot with yearly maintenance and upkeep. <br><br> Learn more <a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.htm#:~:text=A%20green%20roof%20is%20a,as%20vegetative%20or%20eco%E2%80%93roofs"
-                            class="GSIlink">here</a> and <a href="https://www.lakesuperiorstreams.org/stormwater/toolkit/greenroofs.html" class="GSIlink">here</a>.
+                        <b>Recommended size:</b> As much of roof as possible.<br> <br> <b>Costs: </b> Installation costs about $15 - $25 per square foot with yearly maintenance and upkeep. <br><br> Learn more about<a href="https://www.nps.gov/tps/sustainability/new-technology/green-roofs/define.htm#:~:text=A%20green%20roof%20is%20a,as%20vegetative%20or%20eco%E2%80%93roofs"
+                            class="GSIlink"> green roofs.</a>
                     </p>
                 </div>
 
@@ -841,8 +842,8 @@
                     <div class="variationsHeader novariations">Types</div>
                     <img class="GSIimage" src="../Images/InfChamber.jpg" alt="Located at https://https://inspectapedia.com/septic/Chamber2e.jpg">
                     <p class="CostInfoText">
-                        <b>Recommended size:</b> Determined by expected runoff. <br> <br> <b>Costs: </b> Installation costs about $5 - $10 per cubic foot of water stored with yearly maintenance costs. <br><br> Learn more
-                        <a href="https://www.infiltratorwater.com/faq/chambers/" class="GSIlink">here</a>.
+                        <b>Recommended size:</b> Determined by expected runoff. <br> <br> <b>Costs: </b> Installation costs about $5 - $10 per cubic foot of water stored with yearly maintenance costs. <br><br> Learn more about
+                        <a href="https://www.infiltratorwater.com/faq/chambers/" class="GSIlink">infiltration chambers.</a>
                     </p>
                 </div>
 
