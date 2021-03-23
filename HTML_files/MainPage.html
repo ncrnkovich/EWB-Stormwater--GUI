@@ -585,8 +585,10 @@
                         $('input[type="radio"]').click(function() {
                             if ($(this).attr('value') == 'N') {
                                 $('#discount').show();
+                                $('#quiz').css("margin-bottom", "30px");
                             } else {
                                 $('#discount').hide();
+                                $('#quiz').css("margin-bottom", "100px");
                             }
                         });
                     });
