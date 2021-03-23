@@ -139,8 +139,14 @@ function check() { // function called when Get Results! button fired
     }
     //Set about tab to be active by default
     var AboutTab = document.getElementsByClassName("AboutTab");
+    var MoreInfoTab = document.getElementsByClassName("MoreInfoTab");
     for (i = 0; i < AboutTab.length; i++) {
-        AboutTab[i].className = AboutTab[i].className + " active";
+        if (MoreInfoTab[i].className !== "MoreInfoTab active" && AboutTab[i].className !== "AboutTab active") {
+            AboutTab[i].className = AboutTab[i].className + " active";
+
+        }
+
+        // MoreInfoTab[i].className = MoreInfoTab[i].className.replace(" active", "");
     }
 
     // prints out needed results in the results tab
@@ -181,10 +187,6 @@ function changeview(clickedIndex, tabName, optionsOrder) {
         variations[i].style.display = "block";
     }
 
-    // var variationsHeader = document.getElementsByClassName("variationsHeader");
-    // for (i = 0; i < AboutTab.length; i++) {
-    //     variationsHeader[i].style.display = "none";
-    // }
 
     // This resets any active tab to being inactive so the active class doesn't accumulate
     AboutTab[clickedIndex].className = AboutTab[clickedIndex].className.replace(" active", "");
@@ -294,6 +296,11 @@ function changeview(clickedIndex, tabName, optionsOrder) {
     }
 
 };
+
+function openPopup() {
+    var popup = document.getElementById("imperviousPopup");
+    popup.classList.toggle("show");
+}
 
 function runoffCalc(propType, totalImpervious, areaPermanent) {
 
