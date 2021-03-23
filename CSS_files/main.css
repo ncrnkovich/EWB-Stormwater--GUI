@@ -408,7 +408,7 @@
     
     .ResultsTabs button {
         background-color: inherit;
-        float: left;
+        float: center;
         outline-style: solid;
         outline-color: #bd222e;
         /* border: 1px solid white;*/
