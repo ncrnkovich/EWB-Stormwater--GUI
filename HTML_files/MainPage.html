@@ -473,23 +473,23 @@
                                     <div class="toolInfo" class="info">
                                         <h3 class="widget-title"> ABOUT THIS TOOL</h3>
                                         <p class="infoText">
-                                            This tool is designed for customers of municipal utilities to calculate their estimated yearly fees and find recommendations for green infrastructure.
+                                            This tool was developed in collaboration with the Notre Dame chapter of Engineers Without Borders for customers of municipal utilities to calculate their estimated annual stormwater fees and find recommendations for green infrastructure.
                                             <br> To help address the issues of flooding and combined sewage overflows (CSOs), the City of South Bend passed Ordinance No. 5253-70, mandating that all downspouts be disconnected from the sewer system by January
-                                            2021; however, the city is still offering its <a href="https://311.southbendin.gov/knowledgecenter/article/?id=KA-04414">Downspout Disconnection Program</a> for residential properties. Any customer that is unable
+                                            2021; however, the City is still offering its <a href="https://311.southbendin.gov/knowledgecenter/article/?id=KA-04414">Downspout Disconnection Program</a> for residential properties. Any customer that is unable
                                             to disconnect their downspout can pay a one-time “In-Lieu-of” fee, which will be assessed based on impervious area.
-                                            <br> Additionally, <b>a stormwater fee has been exacted.</b> Currently, this fee is a flat $2 per month for residential properties, and $5 per month for all other properties. However, in the future the fee for
-                                            nonresidential properties will be scaled based on impervious area. By implementing green stormwater infrastructure (GSI) on a property, customers will receive a break in their fees. This tool was developed in
-                                            collaboration with the Notre Dame chapter of Engineers Without Borders.
+                                            <br> <strong> The City's stormwater fee went into effect in June 2019.</strong> Currently, this fee is a flat $2 per month for residential properties, and $5 per month for all other properties. However, in the
+                                            future the fee for nonresidential properties will be scaled based on impervious area. <strong>By implementing green stormwater infrastructure (GSI) on a property, customers will receive a break in their fees.</strong>
                                         </p>
                                     </div>
                                     <div class="generalInfo" class="info">
-                                        <h3 class="widget-title"> WHAT IS GREEN INFRASTRUCTURE?</h3>
+                                        <h3 class="widget-title"> WHAT IS GSI?</h3>
                                         <p class="infoText">
-                                            <a href="https://www.epa.gov/green-infrastructure/what-green-infrastructure">Green infrastructure</a> is a general term for measures that use plants, soil systems, and permeable substrates to help reduce the
-                                            amount of runoff that flows into sewer systems. When land is increasingly replaced with parking lots and new housing developments, the area available to absorb rainfall is greatly reduced, and the sewer system
-                                            is forced to handle the excess runoff. <br> South Bend, like many older US cities, has a combined sewer system, where stormwater and raw sewage are contained in the same pipes. This often leads to overflows
-                                            during rain events, and the sewers are forced to release raw sewage into the St. Joseph River, even as the system backs up and neighborhoods flood. By greatly reducing the amount of runoff into the system, green
-                                            infrastructure reduces these raw sewage overflows, mitigates localized flooding, and provides many other environmental benefits, including air and water quality.
+                                            <a href="https://www.epa.gov/green-infrastructure/what-green-infrastructure">Green stormwater infrastructure (GSI)</a> is a general term for measures that use plants, soil systems, and permeable substrates to
+                                            help reduce the amount of runoff that flows into sewer systems. When land is increasingly replaced with parking lots and new housing developments, the area available to absorb rainfall is greatly reduced, and
+                                            the sewer system is forced to handle the excess runoff. <br> South Bend, like many older US cities, has a combined sewer system, where stormwater and raw sewage are contained in the same pipes. This often leads
+                                            to overflows during rain events, and the sewers are forced to release raw sewage into the St. Joseph River, even as the system backs up and neighborhoods flood. By greatly reducing the amount of runoff into
+                                            the system, <strong>
+                                            GSI reduces these raw sewage overflows, mitigates localized flooding, and provides many other environmental benefits, including improving air and water quality.</strong>
                                         </p>
                                     </div>
                                     <div class="so-panel widget widget_text"> </div>
@@ -529,18 +529,19 @@
                     <br>
                     <b class="questions">Total area of property (sq. ft):</b>
                     <input id="textbox" type="text" name="totalArea" placeholder="e.g. 10000">
-                    <div class="imperviousQuestion">
-                        <b>Area of <a class="popupLink" hhref="#" onclick="openPopup()">impervious surfaces</a> (sq. ft):</b>
-                        <!-- <span class="imperviousSurfaces">Area of impervious surfaces (sq. ft):</span> -->
-                        <input id="textbox" type="text" name="totalImpervious" placeholder="e.g. 10000">
+                    <br>
+                    <b>Area of <a class= "popup" class="popupLink" hhref="#" onclick="openPopup()">impervious surfaces</a> (sq. ft):</b>
+                    <!-- <span class="imperviousSurfaces">Area of impervious surfaces (sq. ft):</span> -->
+                    <input id="textbox" type="text" name="totalImpervious" placeholder="e.g. 10000">
 
-                    </div>
-                    <div class="popup" id="imperviousPopup">
+                    <!-- <div id="imperviousPopup">
                         <p class="popuptext">
                             Impervious surfaces are surfaces that water is unable to drain through. This primarily includes rooftops, concrete, and asphalt.
                         </p>
-                    </div>
+                    </div> -->
 
+
+                    <br>
                     <b class="questions">
 				    						    Area of roof(s) (sq. ft):
                                             </b>
@@ -561,8 +562,8 @@
 					</b>
                     <br>
 
-                    <input type="radio" class="mc" name="downspoutDisconnect" value="Y" checked class="mcanswers"> Yes<br>
-                    <input type="radio" class="mc" name="downspoutDisconnect" value="N" class="mcanswers"> No<br>
+                    <input type="radio" class="mc" name="downspoutDisconnect" value="Y" class="mcanswers"> Yes<br>
+                    <input type="radio" class="mc" name="downspoutDisconnect" value="N" checked class="mcanswers"> No<br>
 
                     <div id="discount">
                         <br>
@@ -643,8 +644,7 @@
                         <!-- About Information -->
                         <p class="AboutText" id="VegInfiltGeneral">
                             This type of green infrastructure involves creating a landscape bed in a small depression. This depression is densely filled with the owner's preference of native plants. As stormwater fills the depression, the plants infiltrate the water and absorb it
-                            into the soil. The most common type of vegetative infiltration is a rain garden, but other types include bioretention areas, vegetative swales, and vegetative filter strips. These solutions typically do not require significant
-                            maintenance efforts or costs; normal yard maintenance will suffice. Occasionally, the depression will need to be checked for sediment buildup.
+                            into the soil. The most common type of vegetative infiltration is a <strong> rain garden,</strong> but other types include <strong> bioretention areas, vegetative swales, and vegetative filter strips. </strong>                            These solutions typically do not require significant maintenance efforts or costs; normal yard maintenance will suffice. Occasionally, the depression will need to be checked for sediment buildup.
 
                         </p>
                         <!-- Cost/ Links to more info -->
@@ -687,9 +687,9 @@
                         <button class="MoreInfoTab">More Info</button>
                     </div>
                     <p class="AboutText" id="DryWellsGeneral">
-                        Dry wells are open, subsurface drainage structures that allow stormwater to infiltrate directly back into the soil. These porous-walled chambers allow for stormwater collected in roof gutters to slowly drain back into the ground. Sediment can build up
-                        in dry wells, so filtration may be necessary, as well as annual cleaning and inspection. These wells provide an opportunity for urban areas to store and slowly release excess runoff without putting it directly into the sewer system.
-                        The overall cost of the dry well will depend on the size, depth, number of units, and length of piping to the well.
+                        <strong>Dry wells</strong> are open, subsurface drainage structures that allow stormwater to infiltrate directly back into the soil. These porous-walled chambers allow for stormwater collected in roof gutters to slowly drain back
+                        into the ground. Sediment can build up in dry wells, so filtration may be necessary, as well as annual cleaning and inspection. These wells provide an opportunity for urban areas to store and slowly release excess runoff without
+                        putting it directly into the sewer system. The overall cost of the dry well will depend on the size, depth, number of units, and length of piping to the well.
                     </p>
                     <div class="variationsHeader novariations">Types</div>
                     <img class="GSIimage" src="../Images/DryWells.jpg" alt="Located at https://www.ndspro.com/products/drainage/dry-wells.html">
@@ -708,9 +708,9 @@
                     </div>
                     <img class="GSIimage" src="../Images/GreenPavers3.jpg" alt="Located at https://i.pinimg.com/originals/32/0f/12/320f121ab870f8970150e30551640bdf.jpg">
                     <p class="AboutText ">
-                        Permeable pavement is an alternative to traditional concrete or asphalt, which is highly impervious and contributes significantly to runoff on a property. Various options include pervious concrete, porous asphault, permeable interlocking unit pavers,
-                        or grass pavers. Each have slight technical differences, and are best suited for slightly different applications, though all are capable of bearing loads from vehicle traffic. These alternatives have very high infiltration rates,
-                        allowing them to absorb water very efficiently. Even replacing just a portion of a driveway or parking lot can greatly reduce runoff.
+                        Permeable pavement is an alternative to traditional concrete or asphalt, which is highly impervious and contributes significantly to runoff on a property. Various options include <strong> pervious concrete, porous asphault, permeable interlocking unit pavers,
+                        or grass pavers. </strong> Each have slight technical differences, and are best suited for slightly different applications, though all are capable of bearing loads from vehicle traffic. These alternatives have very high infiltration
+                        rates, allowing them to absorb water very efficiently. Even replacing just a portion of a driveway or parking lot can greatly reduce runoff.
                     </p>
                     <!-- More Info tab -->
                     <p class="CostInfoText">
@@ -755,7 +755,8 @@
                     <!-- ABOUT TEXT -->
                     <p class="AboutText">
                         Similar to vegetative infiltration, nonvegetative infiltration involves a depression at a drain outlet where runoff can pool while it infiltrates into the soil. However, unlike vegetative infiltration, these are typically just covered in grass and when
-                        dry can be used as a regular lawn space. They can range greatly in size, from small scale infiltration basins to large surface detention areas based on available space and the expected runoff.
+                        dry can be used as a regular lawn space. They can range greatly in size, from small scale <strong>infiltration basins</strong> to large <strong>surface detention</strong> areas based on available space and
+                        the expected runoff.
                     </p>
                     <!-- MORE INFO TAB -->
                     <p class="CostInfoText">
@@ -796,9 +797,9 @@
                         <button class="MoreInfoTab">More Info</button>
                     </div>
                     <p class="AboutText">
-                        A rain barrel is a container that collects and stores rainwater during rain occurrences. This water can then be used at a later date to water one’s lawn/garden, wash cars, and so on. Cisterns are similar to rain barrels, but are notably larger in size.
-                        These solutions are relatively simple and inexpensive to implement. A disadvantage, however, is that these solutions do not do anything to filter or treat the water — they simply store it. This is not a major issue, but it means
-                        that sediment and pollutants can build up inside the system.
+                        A <strong>rain barrel</strong> is a container that collects and stores rainwater during rain occurrences. This water can then be used at a later date to water one’s lawn/garden, wash cars, and so on. <strong>Cisterns</strong> are
+                        similar to rain barrels, but are notably larger in size. These solutions are relatively simple and inexpensive to implement. A disadvantage, however, is that these solutions do not do anything to filter or treat the water — they
+                        simply store it. This is not a major issue, but it means that sediment and pollutants can build up inside the system.
                     </p>
                     <div class="variationsHeader novariations">Types</div>
                     <img class="GSIimage" src="../Images/RainBarrel.jpg" alt="Located at https://www.glacvcd.org/app/uploads/2016/01/rain-barrel.jpg">
@@ -817,8 +818,8 @@
                         <button class="MoreInfoTab">More Info</button>
                     </div>
                     <p class="AboutText">
-                        Green roofs are great options for properties with roof access and little outdoor space, as is common in commercial districts and urban settings. Green roofs consist of layers of soil and vegetation placed on waterproof membranes on rooftops. The vegetation
-                        and soil capture rainfall, and can reduce runoff by up to 50%. Green roofs also help to improve urban air quality and naturally cool a building.
+                        <strong>Green roofs</strong> are great options for properties with roof access and little outdoor space, as is common in commercial districts and urban settings. Green roofs consist of layers of soil and vegetation placed on waterproof
+                        membranes on rooftops. The vegetation and soil capture rainfall, and can reduce runoff by up to 50%. Green roofs also help to improve urban air quality and naturally cool a building.
 
                     </p>
                     <div class="variationsHeader novariations">Types</div>
@@ -837,9 +838,9 @@
                         <button class="MoreInfoTab">More Info</button>
                     </div>
                     <p class="AboutText">
-                        Infiltration chambers are buried stormwater detention structures with permeable bottoms designed to hold runoff until it can slowly enter back into the ground. These structures can be placed under lawns, pavement, or spaces of natural vegetation. Infiltration
-                        chambers serve to contain flood water as well as improve stormwater quality. Large infiltration chamber systems can also be constructed to suit large areas of land. Regular maintenance is required, and a lack of proper maintenance
-                        can create a breeding ground for mosquitoes. Infiltration chambers may have an ecological impact on existing wetlands and habitats.
+                        <strong>Infiltration chambers</strong> are buried stormwater detention structures with permeable bottoms designed to hold runoff until it can slowly enter back into the ground. These structures can be placed under lawns, pavement,
+                        or spaces of natural vegetation. Infiltration chambers serve to contain flood water as well as improve stormwater quality. Large infiltration chamber systems can also be constructed to suit large areas of land. Regular maintenance
+                        is required, and a lack of proper maintenance can create a breeding ground for mosquitoes. Infiltration chambers may have an ecological impact on existing wetlands and habitats.
                     </p>
                     <div class="variationsHeader novariations">Types</div>
                     <img class="GSIimage" src="../Images/InfChamber.jpg" alt="Located at https://https://inspectapedia.com/septic/Chamber2e.jpg">
