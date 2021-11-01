@@ -16,30 +16,36 @@ function check() { // function called when Get Results! button fired
     // ASSUMED PARAMTERS
     var inLieuFeeRate = 0.61; // Supplied value of $0.61 / sq ft of impervious land for in-lieu-of disconnect fee
     var ERU = 2700; // 2700 sq ft in one Equivalent Residental Unit
-    var baseFeeRate = 2.00; // $2 /month base rate  
+    // var baseFeeRate = 2.00; // $2 /month base rate  
 
     // Fee calculations
     var inLieuFee; // one time in-lieu-of disconnect fee
     var stormwaterFee;
+    var stormwaterFeeYr;
     var totalYearlyFees;
     var discount;
+    var finalFee = 0; // final monthly fee amount in 2025
+
+
     // based on property type, set property fee
+
     if (propType == "R") {
-        multiplier = 1.0;
+        finalFee = 2.50;
     } else {
         if (totalImpervious < 5001) {
-            multiplier = 2.0;
+            finalFee = 8.00;
         } else if (totalImpervious < 40001) {
-            multiplier = 12.0;
+            finalFee = 14.00;
         } else if (totalImpervious < 100001) {
-            multiplier = 25.0;
+            finalFee = 22.00;
         } else if (totalImpervious < 200001) {
-            multiplier = 45.0;
+            finalFee = 34.00;
         } else {
-            multiplier = 55.0;
+            finalFee = 65.00;
         }
     }
-    stormwaterFee = baseFeeRate * multiplier; //monthly stormwater fee
+    console.log(finalFee, stormwaterFeeYr)
+    stormwaterFeeYr = finalFee * 12;
 
     if (downspoutDisconnect == "Y" || propType == "R") {
         inLieuFee = 0; // if their downspout is disconnected, no in-lieu-of fee
@@ -55,7 +61,6 @@ function check() { // function called when Get Results! button fired
         inLieuFee = inLieuFee * discount;
     }
 
-    totalYearlyFees = Math.round(stormwaterFee * 12);
 
     // Stormwater calculator
     var runoff = runoffCalc(propType, totalImpervious, areaPermanent);
@@ -152,7 +157,7 @@ function check() { // function called when Get Results! button fired
     // prints out needed results in the results tab
     document.getElementById("totalAreaResult").innerHTML = totalArea;
     document.getElementById("totalImperviousAreaResult").innerHTML = totalImpervious;
-    document.getElementById("totalYearlyFees").innerHTML = totalYearlyFees;
+    document.getElementById("stormwaterFeeYr").innerHTML = stormwaterFeeYr;
     document.getElementById("inLieuFee").innerHTML = inLieuFee;
     document.getElementById("totalRunoff").innerHTML = totalRunoff;
 
