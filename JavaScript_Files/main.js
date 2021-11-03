@@ -2,9 +2,9 @@ function check() { // function called when Get Results! button fired
     //Each variable represents an answer to a question
     //Keep in order
     //need parseInt() for free response questions
-    var totalArea = parseInt(document.quiz.totalArea.value, 10); //area of total property
-    var totalImpervious = parseInt(document.quiz.totalImpervious.value, 10); // area land
-    var areaPermanent = parseInt(document.quiz.areaPermanent.value, 10); // roof area
+    var totalArea = parseFloat(document.quiz.totalArea.value).toFixed(2); //area of total property
+    var totalImpervious = parseFloat(document.quiz.totalImpervious.value).toFixed(2); // area land
+    var areaPermanent = parseFloat(document.quiz.areaPermanent.value).toFixed(2); // roof area
     var propType = document.quiz.propType.value;
     var downspoutDisconnect = document.quiz.downspoutDisconnect.value;
     var discountValue = document.quiz.discount.value;
