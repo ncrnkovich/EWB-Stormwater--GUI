@@ -8,7 +8,6 @@ function check() { // function called when Get Results! button fired
     var propType = document.quiz.propType.value;
     var downspoutDisconnect = document.quiz.downspoutDisconnect.value;
     var discountValue = document.quiz.discount.value;
-    
     var i;
     var resultsID = document.getElementById("resultsID");
 
