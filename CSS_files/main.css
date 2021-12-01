@@ -1,7 +1,7 @@
     .new * {
         all: revert;
     }
-    
+
     .ND-Box {
         display: block;
         background-color: rgb(52, 53, 124);
@@ -11,11 +11,11 @@
         padding: 2px;
         text-align: center;
     }
-    
+
     .tab {
         margin-left: 5%;
     }
-    
+
     .toolInfo {
         display: block;
         float: left;
@@ -26,16 +26,16 @@
         margin-bottom: 15px;
         text-align: left;
     }
-    
+
     .importantText {
         /*color: rgb(28, 29, 86);*/
         font-weight: 1000;
     }
-    
+
     .info {
         height: 100%;
     }
-    
+
     .generalInfo {
         display: block;
         float: right;
@@ -46,13 +46,13 @@
         margin-bottom: 15px;
         text-align: left;
     }
-    
+
     .infoText {
         color: black;
         font-size: 15;
         text-align: left;
     }
-    
+
     .infoHeader {
         color: rgb(28, 29, 86);
         font-weight: normal;
@@ -60,7 +60,7 @@
         font-family: sans-serif;
         text-align: left;
     }
-    
+
     #quiz {
         display: block;
         float: right;
@@ -72,11 +72,11 @@
         font-size: 16px;
         margin-bottom: 30px;
     }
-    
+
     #discount {
         display: block;
     }
-    
+
     #discount-dropdown {
         width: 97%;
         font-size: 14px;
@@ -85,7 +85,7 @@
         border: none;
         padding: 2px;
     }
-    
+
     #textbox {
         display: inline;
         height: 20px;
@@ -95,12 +95,12 @@
         padding-left: 5px;
         width: 20%;
     }
-    
+
     .popupLink {
         cursor: help;
     }
-    
-    .popup:after {
+
+    .popup::after {
         content: "?";
         display: inline-block;
         margin-left: 0.2em;
@@ -113,7 +113,7 @@
         font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
         border-radius: 1em;
     }
-    
+
     .popup {
         position: relative;
         display: inline-block;
@@ -124,9 +124,8 @@
         user-select: none;
     }
     /* The actual popup */
-    
+
     .popup .popuptext {
-        visibility: hidden;
         width: 160px;
         background-color: #555;
         color: #fff;
@@ -138,9 +137,14 @@
         bottom: 125%;
         left: 50%;
         margin-left: -80px;
+        visibility: hidden;
     }
     /* Popup arrow */
-    
+
+    .popup:hover .popuptext {
+      visibility: visible;
+    }
+/*
     .popup .popuptext::after {
         content: "";
         position: absolute;
@@ -152,14 +156,14 @@
         border-color: #555 transparent transparent transparent;
     }
     /* Toggle this class - hide and show the popup */
-    
+
     .popup .show {
         visibility: visible;
         -webkit-animation: fadeIn 1s;
         animation: fadeIn 1s;
     }
     /* Add animation (fade in the popup) */
-    
+
     @-webkit-keyframes fadeIn {
         from {
             opacity: 0;
@@ -168,7 +172,7 @@
             opacity: 1;
         }
     }
-    
+
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -187,7 +191,7 @@
         z-index: 999;
         width: 28%;
     }
-    
+
     .imperviousDef .popupText {
         color: white;
         font-size: 11px;
@@ -202,31 +206,31 @@
         background-color: rgb(52, 53, 124);
         opacity: 100%;
     }
-    
+
     .imperviousSurfaces:hover {
         color: #bd222e;
         transition-duration: 0.5s;
     } */
-    
+
     b.questions {
         line-height: 1.5;
     }
-    
+
     .mcanswers {
         line-height: 0.9;
     }
-    
+
      ::placeholder {
         color: gray;
         font-size: 12px;
         opacity: 85%;
     }
-    
+
     .mc {
         text-align: default;
         margin-left: 20px;
     }
-    
+
     #button {
         background: #bd222e;
         border: none;
@@ -237,14 +241,14 @@
         margin-top: 15px;
         margin-left: 25%;
     }
-    
+
     #button:hover {
         background: white;
         border: 1px solid #bd222e;
         color: black;
         cursor: pointer;
     }
-    
+
     #alert {
         display: none;
         float: right;
@@ -258,7 +262,7 @@
         text-align: center;
         font-weight: bold;
     }
-    
+
     .resultsSummaryTitle {
         font-size: 20px;
         font-weight: bold;
@@ -266,11 +270,11 @@
         color: white;
         font-family: arial black;
     }
-    
+
     #resultsID {
         display: none;
     }
-    
+
     .ResultsSummaryInfo {
         border: none;
         padding: 10px 20px 10px 10px;
@@ -281,7 +285,7 @@
         margin-bottom: 8px;
         background-color: #ebf0f8;
         border-radius: 5px;
-        /* background-color: #bd222e; 
+        /* background-color: #bd222e;
         border-width: 5px;
         border-style: solid;
         border-color: rgb(28, 29, 86);
@@ -290,19 +294,19 @@
         position: sticky;
         top: 10px;
     }
-    
+
     .resultsdisclaimer {
         font-size: 10px;
         font-weight: bold;
         color: black;
         text-align: left;
     }
-    
+
     .sticky {
         top: 0;
         position: fixed;
     }
-    
+
     .resultsSummaryText {
         font-size: 16px;
         float: left;
@@ -312,7 +316,7 @@
         font-weight: none;
         padding-bottom: 0%;
     }
-    
+
     .optiontitle {
         font-size: 25px;
         font-weight: bold;
@@ -320,7 +324,7 @@
         color: #555;
         font-family: arial black;
     }
-    
+
     .variationsHeader {
         display: none;
         font-size: 19px;
@@ -329,15 +333,15 @@
         color: #555;
         font-family: arial black;
     }
-    
+
     .novariations {
         display: none;
     }
-    
+
     .hasvariations {
         display: block;
     }
-    
+
     .Variations {
         all: revert;
         float: right;
@@ -346,12 +350,12 @@
         line-height: normal;
         width: 70%;
     }
-    
+
     .Variations div {
         display: none;
         margin: 0;
     }
-    
+
     .directions {
         all: revert;
         text-align: left;
@@ -359,7 +363,7 @@
         color: rgb(28, 29, 86);
         font-family: arial black;
     }
-    
+
     .button {
         background: wheat;
         border: none;
@@ -372,14 +376,14 @@
         width: 50px;
         padding: 10px;
     }
-    
+
     .button span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
     }
-    
+
     .button span:after {
         content: '\00bb';
         position: absolute;
@@ -387,16 +391,16 @@
         top: 0;
         transition: 0.5s;
     }
-    
+
     .button:hover span {
         padding-right: 15px;
     }
-    
+
     .button:hover span:after {
         opacity: 1;
         right: 0;
     }
-    
+
     .ResultsTabs {
         overflow: hidden;
         border: 2px solid #bd222e;
@@ -405,7 +409,7 @@
         border-top-right-radius: 5px;
         max-width: 100%;
     }
-    
+
     .ResultsTabs button {
         background-color: inherit;
         float: center;
@@ -418,35 +422,35 @@
         transition: 0.3s;
         opacity: 100%;
     }
-    
+
     .ResultsTabs .AboutTab:hover {
         background: white;
         /*border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
     }
-    
+
     .ResultsTabs .AboutTab.active {
         background: white;
         /* border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
     }
-    
+
     .ResultsTabs .MoreInfoTab:hover {
         background: white;
         /*border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
     }
-    
+
     .ResultsTabs .MoreInfoTab.active {
         background: white;
         /*border: 1px solid #bd222e;*/
         color: black;
         cursor: pointer;
     }
-    
+
     .GSIimage {
         margin: 20px 5px 30px 5px;
         height: 180px;
@@ -455,7 +459,7 @@
         opacity: 100%;
         float: left;
     }
-    
+
     .AboutText {
         font-size: 16px;
         display: block;
@@ -467,7 +471,7 @@
         text-align: left;
         font-weight: none;
     }
-    
+
     .CostInfoText {
         display: none;
         float: right;
@@ -478,12 +482,12 @@
         text-align: left;
         color: #555;
     }
-    
+
     .GSIlink {
         color: #d16971;
         font-weight: bold;
     }
-    
+
     .GSIoption {
         padding: 10px 20px 10px 20px;
         width: 66%;
@@ -493,253 +497,253 @@
         background: #d16971;
         border-radius: 20px;*/
     }
-    
+
     #VegetativeInfiltrationID {
         display: none;
     }
-    
+
     #DryWellsID {
         display: none;
     }
-    
+
     #PermeablePavementID {
         display: none;
     }
-    
+
     #NonvegetativeInfiltrationID {
         display: none;
     }
-    
+
     #RainbarrelsCisternsID {
         display: none;
     }
-    
+
     #GreenRoofsID {
         display: none;
     }
-    
+
     #InfiltrationChamberID {
         display: none;
     }
-    
+
     #RainGardensSubmit {
         display: none;
     }
-    
+
     #RainGardensSubmit h1,
     #RainGardensSubmit h2 {
         margin: 0;
         font-weight: normal;
     }
-    
+
     #RainGardensSubmit h1 {
         font-size: 30px;
         font-family: "Lucida Console", monospace;
         color: #555;
     }
-    
+
     #RainGardensSubmit h2 {
         font-size: 15px;
         font-family: "Lucida Console", monospace;
         color: #555;
         font-style: normal;
     }
-    
+
     #TreeBoxesSubmit {
         display: none;
     }
-    
+
     #TreeBoxesSubmit h1,
     #TreeBoxesSubmit h2 {
         margin: 0;
         font-weight: normal;
     }
-    
+
     #TreeBoxesSubmit h1 {
         font-size: 30px;
         font-family: "Lucida Console", monospace;
         color: #555;
     }
-    
+
     #TreeBoxesSubmit h2 {
         font-size: 15px;
         font-family: "Lucida Console", monospace;
         color: #555;
         font-style: normal;
     }
-    
+
     #DryWellsSubmit {
         display: none;
     }
-    
+
     #PorousPavementSubmit {
         display: none;
     }
-    
+
     #GrassPaversSubmit {
         display: none;
     }
-    
+
     #PermeableUnitPaversSubmit {
         display: none;
     }
-    
+
     #InfiltrationChamberSubmit {
         display: none;
     }
-    
+
     #SurfaceDetentionSubmit {
         display: none;
     }
-    
+
     #BioretentionSubmit {
         display: none;
     }
-    
+
     #InfiltrationBasinSubmit {
         display: none;
     }
-    
+
     #InfiltrationTrenchSubmit {
         display: none;
     }
-    
+
     #VegetativeSwaleSubmit {
         display: none;
     }
-    
+
     #VegetativeFilterStripSubmit {
         display: none;
     }
-    
+
     #VegetativeFilterStripSubmit h2 {
         margin: 0;
         font-weight: normal;
     }
-    
+
     #VegetativeFilterStripSubmit h1 {
         font-size: 30px;
         font-family: "Lucida Console", monospace;
         color: #555;
     }
-    
+
     #VegetativeFilterStripSubmit h2 {
         font-size: 15px;
         font-family: "Lucida Console", monospace;
         color: #555;
         font-style: normal;
     }
-    
+
     #GreenRoofSubmit {
         display: none;
     }
-    
+
     #GreenRoofSubmit h2 {
         margin: 0;
         font-weight: normal;
     }
-    
+
     #GreenRoofSubmit h1 {
         font-size: 30px;
         font-family: "Lucida Console", monospace;
         color: #555;
     }
-    
+
     #GreenRoofSubmit h2 {
         font-size: 15px;
         font-family: "Lucida Console", monospace;
         color: #555;
         font-style: normal;
     }
-    
+
     #UndergroundDetentionSubmit {
         display: none;
     }
-    
+
     #UndergroundDetentionSubmit h2 {
         margin: 0;
         font-weight: normal;
     }
-    
+
     #UndergroundDetentionSubmit h1 {
         font-size: 30px;
         font-family: "Lucida Console", monospace;
         color: #555;
     }
-    
+
     #UndergroundDetentionSubmit h2 {
         font-size: 15px;
         font-family: "Lucida Console", monospace;
         color: #555;
         font-style: normal;
     }
-    
+
     #ConstructedWetlandSubmit {
         display: none;
     }
-    
+
     #ConstructedWetlandSubmit h2 {
         margin: 0;
         font-weight: normal;
     }
-    
+
     #ConstructedWetlandSubmit h1 {
         font-size: 30px;
         font-family: "Lucida Console", monospace;
         color: #555;
     }
-    
+
     #ConstructedWetlandSubmit h2 {
         font-size: 15px;
         font-family: "Lucida Console", monospace;
         color: #555;
         font-style: normal;
     }
-    
+
     #WetPondSubmit {
         display: none;
     }
-    
+
     #WetPondSubmit h2 {
         margin: 0;
         font-weight: normal;
     }
-    
+
     #WetPondSubmit h1 {
         font-size: 30px;
         font-family: "Lucida Console", monospace;
         color: #555;
     }
-    
+
     #WetPondSubmit h2 {
         font-size: 15px;
         font-family: "Lucida Console", monospace;
         color: #555;
         font-style: normal;
     }
-    
+
     #RainBarrelsCisternsSubmit {
         display: none;
     }
-    
+
     #RainBarrelsCisternsSubmit h2 {
         margin: 0;
         font-weight: normal;
     }
-    
+
     #RainBarrelsCisternsSubmit h1 {
         font-size: 30px;
         font-family: "Lucida Console", monospace;
         color: #555;
     }
-    
+
     #RainBarrelsCisternsSubmit h2 {
         font-size: 15px;
         font-family: "Lucida Console", monospace;
         color: #555;
         font-style: normal;
     }
-    
+
     #link {
         color: #bd222e;
     }
